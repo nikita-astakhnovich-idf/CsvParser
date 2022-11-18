@@ -7,7 +7,7 @@ class ParseService {
 
   private val settlementParents = mutableListOf<SettlementParent>()
   private val settlementDirectories = mutableListOf<SettlementDirectory>()
-  private val directoryPath = "C:\\opt\\project\\CsvParser\\src\\main\\resources\\KATO_17.10.2022_ru.csv"
+  private val directoryPath = "D:\\test\\kotlin\\src\\main\\resources\\KATO_17.10.2022_ru.csv"
   private val settlementsFromKATO = DefaultCsvConverter().convert(directoryPath, SettlementKATO::class.java)
 
   fun getSettlementsDirectory(): List<SettlementDirectory> {
@@ -17,7 +17,7 @@ class ParseService {
   }
 
   fun getSettlementsFromProd(): List<ProductionSettlementKATO> {
-    val directoryPath = "C:\\opt\\project\\CsvParser\\src\\main\\resources\\KATO SOLVA PROD.csv"
+    val directoryPath = "D:\\test\\kotlin\\src\\main\\resources\\KATO SOLVA PROD.csv"
     return DefaultCsvConverter().convert(directoryPath, ProductionSettlementKATO::class.java)
   }
 
