@@ -1,12 +1,11 @@
 package com.idf.kz.model
 
-enum class SettlementType(val type: String, val code: String) {
-  CITY("г.", "settlement.type.city"),
-  SELO("c.", "settlement.type.selo"),
-  ZIMOVKA("зимовка", "settlement.type.zimovka"),
-//  UCHASTOK("уч.", "settlement.type.uchastok"),
-  RAZEZD("рзд.", "settlement.type.razezd"),
-  POSELOK("п.", "settlement.type.poselok"),
-  STANCIA("ст.", "settlement.type.stancia"),
-
+enum class SettlementType(val type: String, val typeId: String) {
+  CITY("г.", "1"),
+  SELO("с.", "41"),
+  ZIMOVKA("зимовка", "62"),
+  UCHASTOK("уч.", "54"),
+  RAZEZD("рзд.", "39"),
+  POSELOK("п.", "31"),
+  STANCIA("ст.", "44")
 }
