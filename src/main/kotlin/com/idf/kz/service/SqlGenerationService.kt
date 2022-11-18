@@ -19,13 +19,16 @@ class SqlGenerationService {
     return fullSqlScript.toString()
   }
 
-  fun generateUpdateSql(updateList: List<SettlementUpdateDB>, tableName: String): String {
-    val updateSQLScript = StringBuilder();
+  fun generateUpdateSql(updateList: List<SettlementUpdateDB>): String {
+    val updateSQLScript = StringBuilder()
     updateList.forEach {
-      updateSQLScript.append("UPDATE $tableName\n" +
+      updateSQLScript.append("UPDATE address_settlement \n" +
           "SET address_settlement_type_id = ${it.addressSettlementTypeId}, kato_id = ${it.katoId}," +
           " parent_name = ${it.parentName}\n" +
           "WHERE id = ${it.id} AND name = ${it.name};\n\n")
+      updateSQLScript.append("UPDATE address_settlement_kato \n" +
+          "SET kato_id = ${it.katoId}\n" +
+          "WHERE address_settlement_id=${it.id};\n\n")
     }
     return updateSQLScript.toString()
   }
