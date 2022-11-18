@@ -2,13 +2,16 @@ package com.idf.kz.model
 
 import com.opencsv.bean.CsvBindByPosition
 
-data class CsvModel(
+data class CsvDirectoryModel(
   @CsvBindByPosition(position = 0)
-  var id: String? = null,
+  var id: String = "",
+
   @CsvBindByPosition(position = 1)
-  var parent_id: String? = null,
+  var parentId: String = "",
+
   @CsvBindByPosition(position = 2)
-  var code: String? = null,
+  var code: String = "",
+
   @CsvBindByPosition(position = 3)
-  var name: String? = null
+  var name: String = ""
 )
