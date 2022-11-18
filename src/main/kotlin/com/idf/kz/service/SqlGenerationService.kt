@@ -23,9 +23,11 @@ class SqlGenerationService {
     val updateSQLScript = StringBuilder()
     updateList.forEach {
       updateSQLScript.append("UPDATE address_settlement \n" +
-          "SET address_settlement_type_id = ${it.addressSettlementTypeId}, kato_id = ${it.katoId}," +
+          "SET address_settlement_type_id = ${it.addressSettlementTypeId}," +
+          " kato_id = ${it.katoId}," +
           " parent_name = ${it.parentName}\n" +
           "WHERE id = ${it.id} AND name = ${it.name};\n\n")
+
       updateSQLScript.append("UPDATE address_settlement_kato \n" +
           "SET kato_id = ${it.katoId}\n" +
           "WHERE address_settlement_id = ${it.id};\n\n")
