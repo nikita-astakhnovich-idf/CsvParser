@@ -8,15 +8,21 @@ class ParseService {
   private val settlementParents = mutableListOf<SettlementParent>()
   private val settlementDirectories = mutableListOf<SettlementDirectory>()
   private val directoryPath = "C:\\opt\\project\\CsvParser\\src\\main\\resources\\KATO_17.10.2022_ru.csv"
-  private val directorySettlements = DefaultCsvConverter().convert(directoryPath, SettlementKATO::class.java)
+  private val settlementsFromKATO = DefaultCsvConverter().convert(directoryPath, SettlementKATO::class.java)
 
   fun getSettlementsDirectory(): List<SettlementDirectory> {
     parseParentType()
     parseSettlement()
     return settlementDirectories
   }
+
+  fun getSettlementsFromProd(): List<ProductionSettlementKATO> {
+    val directoryPath = "C:\\opt\\project\\CsvParser\\src\\main\\resources\\KATO SOLVA PROD.csv"
+    return DefaultCsvConverter().convert(directoryPath, ProductionSettlementKATO::class.java)
+  }
+
   private fun parseParentType() {
-    directorySettlements.map {
+    settlementsFromKATO.map {
       for (i in SettlementParentType.values()) {
         if (it.name.contains(i.type)) {
           settlementParents.add(SettlementParent(it.id.toLong(), it.name))
@@ -26,30 +32,47 @@ class ParseService {
   }
 
   private fun parseSettlement() {
-    val districts = mutableListOf("район", "Г.А.")
+    val block = "район"
+    val cityAkimat = "Г.А."
+    var shortDistrictName = ""
+    val districts = mutableListOf(block, cityAkimat)
     var tempDistrictInfo = SettlementKATO()
-    directorySettlements.map {
+    for (el in settlementsFromKATO) {
       for (i in districts) {
-        if (it.name.contains(i)) tempDistrictInfo = it
+        if (el.name.contains(i)) {
+          tempDistrictInfo = el
+          shortDistrictName = tempDistrictInfo.name.replace(i, "").trim()
+        }
       }
       for (i in SettlementType.values()) {
-        if (it.name.contains(i.type)) {
-          val shortName = it.name.replace(i.type, "")
+        if (isParent(i.name)) continue
+        if (el.name.contains(i.type)) {
+          val settlementName = el.name.replace(i.type, "").trim()
           settlementDirectories
               .add(SettlementDirectory(
-                  it.id.toLong(),
-                  tempDistrictInfo.name,
-                  i.code,
-                  shortName,
-                  it.code.toLong(),
-                  getParentName(it.parentId)))
+                  el.id.toLong(),
+                  shortDistrictName,
+                  i.typeId,
+                  settlementName,
+                  el.code,
+                  getParentName(el.parentId)))
         }
       }
     }
   }
 
+  private fun isParent(name: String): Boolean {
+    var isParent = false
+    for (i in SettlementParentType.values()) {
+      if (name.contains(i.type)) {
+        isParent = true
+      }
+    }
+    return isParent
+  }
+
   private fun getParentName(parentId: String): String {
-    for (i in directorySettlements) {
+    for (i in settlementsFromKATO) {
       if (i.id == parentId) {
         return i.name
       }
@@ -58,7 +81,4 @@ class ParseService {
   }
 }
 
-fun main() {
-  val parseService = ParseService()
-  println(parseService.getSettlementsDirectory())
-}
+
