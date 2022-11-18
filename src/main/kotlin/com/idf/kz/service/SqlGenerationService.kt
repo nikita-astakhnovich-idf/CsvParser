@@ -28,7 +28,7 @@ class SqlGenerationService {
           "WHERE id = ${it.id} AND name = ${it.name};\n\n")
       updateSQLScript.append("UPDATE address_settlement_kato \n" +
           "SET kato_id = ${it.katoId}\n" +
-          "WHERE address_settlement_id=${it.id};\n\n")
+          "WHERE address_settlement_id = ${it.id};\n\n")
     }
     return updateSQLScript.toString()
   }
