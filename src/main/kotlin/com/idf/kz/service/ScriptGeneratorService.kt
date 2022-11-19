@@ -1,22 +1,43 @@
 package com.idf.kz.service
 
+import com.idf.kz.model.InsertSettlement
 import com.idf.kz.model.UpdateSettlement
 
 class ScriptGeneratorService(
-  val readyForUpdate: MutableList<UpdateSettlement> = mutableListOf()
+  val readyForUpdate: MutableMap<String, UpdateSettlement> = mutableMapOf(),
+  val readyForInsert: MutableList<InsertSettlement> = mutableListOf()
 ) {
 
-  fun getUpdateScript() {
-    val parse = ParseService()
-    val settlementsDirectory = parse.getSettlementsDirectory()
-    val settlementsFromProd = parse.getSettlementsFromProd()
+  fun fillInsertList() {
+    fillUpdateMap()
+    settlementsDirectory.forEach {
+      if (!readyForUpdate.containsKey(it.katoId)) {
+        readyForInsert.add(InsertSettlement(
+            "забить руками id области".toLong(),
+            "ссылка на район".toLong(),
+            it.typeId.toLong(),
+            it.name,
+            it.katoId.toLong(),
+            it.parentName, null
+          )
+        )
+      }
+    }
+  }
+
+  private fun fillUpdateMap() {
     settlementsDirectory.forEach {
       for (prodKato in settlementsFromProd) {
         if (it.name == prodKato.settlementName && it.districtName == prodKato.districtName) {
-          readyForUpdate.add(UpdateSettlement(prodKato.id, it.typeId, it.katoId, it.parentName))
+          readyForUpdate[it.katoId] = UpdateSettlement(prodKato.id, it.typeId, it.katoId, it.parentName)
         }
       }
     }
+  }
+
+  companion object {
+    private val settlementsDirectory = ParseService().getSettlementsDirectory()
+    private val settlementsFromProd = ParseService().getSettlementsFromProd()
   }
 }
 //

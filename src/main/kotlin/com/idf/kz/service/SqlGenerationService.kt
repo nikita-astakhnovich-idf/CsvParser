@@ -1,11 +1,11 @@
 package com.idf.kz.service
 
-import com.idf.kz.model.SettlementInsertDB
+import com.idf.kz.model.InsertSettlement
 import com.idf.kz.model.UpdateSettlement
 
 class SqlGenerationService {
 
-  fun generateFullInsertSql(insertList: List<SettlementInsertDB>): String {
+  fun generateFullInsertSql(insertList: List<InsertSettlement>): String {
     val fullSqlScript = StringBuilder()
     insertList.forEach {
       fullSqlScript.append(
@@ -34,7 +34,7 @@ class SqlGenerationService {
     return fullSqlScript.toString()
   }
 
-  fun generateUpdateSql(updateList: List<UpdateSettlement>): String {
+  fun generateUpdateSql(updateList: MutableCollection<UpdateSettlement>): String {
     val updateSQLScript = StringBuilder()
     updateList.forEach {
       updateSQLScript.append(

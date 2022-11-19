@@ -1,10 +1,11 @@
 package com.idf.kz.model
 
-data class SettlementInsertDB(
+data class InsertSettlement(
   val regionId: Long,
   val addressDistrictId: Long,
   val addressSettlementTypeId: Long,
   val name: String,
   val katoId: Long,
   val parentName: String,
-  val resource: String)
+  val resource: String?
+)
