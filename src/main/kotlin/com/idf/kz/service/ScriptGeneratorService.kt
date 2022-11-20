@@ -2,9 +2,7 @@ package com.idf.kz.service
 
 import com.idf.kz.model.UpdateSettlement
 
-class ScriptGeneratorService(
-  val readyForUpdate: MutableList<UpdateSettlement> = mutableListOf()
-) {
+class ScriptGeneratorService(val readyForUpdate: MutableList<UpdateSettlement> = mutableListOf()) {
 
   fun getUpdateScript() {
     val parse = ParseService()

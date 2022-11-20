@@ -7,8 +7,14 @@ class ParseService {
 
   private val settlementParents = mutableListOf<SettlementParent>()
   private val settlementDirectories = mutableListOf<SettlementDirectory>()
-  private val directoryPath = "D:\\test\\kotlin\\src\\main\\resources\\KATO_17.10.2022_ru.csv"
+  private val directoryPath = "KATO_17.10.2022_ru.csv"
   private val settlementsFromKATO = DefaultCsvConverter().convert(directoryPath, SettlementKATO::class.java)
+//  private val districts = getDistricts()
+
+//  private fun getDistricts(): List<District> {
+//    settlementsFromKATO.filter { it.name.contains("Г.А.|") || it.name.contains("район") }
+//      .map { it.name.replace("()") }
+//  }
 
   fun getSettlementsDirectory(): List<SettlementDirectory> {
     parseParentType()
@@ -54,7 +60,7 @@ class ParseService {
                   shortDistrictName,
                   i.typeId,
                   settlementName,
-                  el.code,
+                  el.katoId,
                   getParentName(el.parentId)))
         }
       }

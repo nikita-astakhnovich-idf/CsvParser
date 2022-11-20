@@ -10,7 +10,7 @@ data class SettlementKATO(
   var parentId: String = "",
 
   @CsvBindByPosition(position = 2)
-  var code: String = "",
+  var katoId: String = "",
 
   @CsvBindByPosition(position = 3)
   var name: String = ""
