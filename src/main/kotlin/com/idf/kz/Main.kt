@@ -7,7 +7,7 @@ fun main() {
   val scriptGeneratorService = ScriptGeneratorService()
   scriptGeneratorService.fillInsertList()
   val sqlGenerationService = SqlGenerationService()
-  println(sqlGenerationService.generateUpdateSql(scriptGeneratorService.readyForUpdate.values))
+  sqlGenerationService.generateUpdateSql(scriptGeneratorService.readyForUpdate.values)
 
-  println(sqlGenerationService.generateFullInsertSql(scriptGeneratorService.readyForInsert))
+  sqlGenerationService.generateFullInsertSql(scriptGeneratorService.readyForInsert)
 }

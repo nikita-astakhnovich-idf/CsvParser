@@ -13,8 +13,8 @@ class ScriptGeneratorService(
     settlementsDirectory.forEach {
       if (!readyForUpdate.containsKey(it.katoId)) {
         readyForInsert.add(InsertSettlement(
-            "забить руками id области".toLong(),
-            "ссылка на район".toLong(),
+            69, //забить руками id области
+            69, //забить руками id области
             it.typeId.toLong(),
             it.name,
             it.katoId.toLong(),
@@ -29,7 +29,13 @@ class ScriptGeneratorService(
     settlementsDirectory.forEach {
       for (prodKato in settlementsFromProd) {
         if (it.name == prodKato.settlementName && it.districtName == prodKato.districtName) {
-          readyForUpdate[it.katoId] = UpdateSettlement(prodKato.id, it.typeId, it.katoId, it.parentName)
+          if(readyForUpdate.containsKey(it.katoId)){
+            println(it)
+            println(readyForUpdate[it.katoId])
+            println()
+          }else{
+            readyForUpdate[it.katoId] = UpdateSettlement(prodKato.id, it.typeId, it.katoId, it.parentName)
+          }
         }
       }
     }

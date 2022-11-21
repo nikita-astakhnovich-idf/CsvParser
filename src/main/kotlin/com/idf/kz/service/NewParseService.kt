@@ -8,10 +8,6 @@ class NewParseService {
     private val settlementsKato = getSettlementsKato()
 
     fun getDistricts(): List<District> {
-        val settlementTypeRegex = Regex(SettlementType.values().joinToString(separator = "|") { it.type })
-        val settlementParentTypeRegex = Regex(SettlementParentType.values().joinToString(separator = "|") { it.type })
-        val districtRegex = Regex(DistrictType.values().joinToString(separator = "|") { it.type })
-        val districts = mutableListOf<District>()
         var tempDistrict = District()
         for (it in settlementsKato) {
             if (it.name.contains(districtRegex)) {
@@ -49,7 +45,7 @@ class NewParseService {
         .replace(regex, "")
         .trim()
 
-    fun getType(name: String): String {
+    private fun getType(name: String): String {
         for (el in SettlementType.values()) {
             if (name.contains(el.type)) {
                 return el.typeId
@@ -67,8 +63,16 @@ class NewParseService {
         val prodPath = "src/main/resources/KATO SOLVA PROD.csv"
         return DefaultCsvConverter().convert(prodPath, ProductionSettlementKATO::class.java)
     }
-}
 
-fun main() {
-    NewParseService().getDistricts().forEach { println(it) }
+    companion object{
+        private val settlementTypeRegex = Regex(SettlementType.values().joinToString(separator = "|") { it.type })
+        private val settlementParentTypeRegex = Regex(SettlementParentType.values().joinToString(separator = "|") {
+            it.type })
+        private val districtRegex = Regex(DistrictType.values().joinToString(separator = "|") { it.type })
+        private val districts: MutableList<District> = mutableListOf()
+    }
 }
+//
+//fun main() {
+//    NewParseService().getDistricts().forEach { println(it) }
+//}
