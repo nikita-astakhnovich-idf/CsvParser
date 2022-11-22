@@ -1,38 +1,8 @@
 package com.idf.kz.service
 
-import com.idf.kz.model.InsertSettlement
 import com.idf.kz.model.UpdateSettlement
 
 class SqlGenerationService {
-
-  fun generateFullInsertSql(insertList: List<InsertSettlement>): String {
-    val fullSqlScript = StringBuilder()
-    insertList.forEach {
-      fullSqlScript.append(
-        "INSERT INTO address_settlement (region_id, address_district_id, address_settlement_type_id," +
-            " name, kato_id, parent_name, resource)" +
-            "\nVALUES (" +
-            "${it.regionId}, " +
-            "${it.addressDistrictId}, " +
-            "${it.addressSettlementTypeId}, " +
-            "${it.name}, ${it.katoId}, " +
-            "${it.parentName}, " +
-            "${it.resource})" +
-            "\n\n"
-      )
-
-      fullSqlScript.append(
-        "INSERT INTO address_settlement_kato (kato_version, address_settlement_id, kato_id)" +
-            "\nVALUES (" +
-            "0, " +
-            "(SELECT LAST_INSERT_ID()), " +
-            "${it.katoId})" +
-            "\n\n"
-      )
-    }
-    fullSqlScript.delete(fullSqlScript.length - 2, fullSqlScript.length - 1)
-    return fullSqlScript.toString()
-  }
 
   fun generateUpdateSql(updateList: MutableCollection<UpdateSettlement>): String {
     val updateSQLScript = StringBuilder()
@@ -41,7 +11,7 @@ class SqlGenerationService {
         "UPDATE address_settlement \n" +
             "SET address_settlement_type_id = ${it.addressSettlementTypeId}, " +
             "kato_id = ${it.katoId}, " +
-            "parent_name = '${it.parentName}' \n" +
+            "parent_name = '${getParentName(it.parentName)}' \n" +
             "WHERE id = ${it.id};\n\n"
       )
 
@@ -52,5 +22,10 @@ class SqlGenerationService {
       )
     }
     return updateSQLScript.toString()
+  }
+
+  private fun getParentName(parentName: String?): String? {
+    if (parentName != null) return parentName
+    else return null
   }
 }
