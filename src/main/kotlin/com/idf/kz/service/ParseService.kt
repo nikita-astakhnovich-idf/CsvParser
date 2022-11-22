@@ -5,7 +5,8 @@ import com.idf.kz.model.*
 
 class ParseService {
   val manualList = mutableListOf<UpdateSettlement>()
-  val repeatableUpdateSettlements = mutableListOf<UpdateSettlement>()
+  val repeatableUpdateSettlements = mutableListOf<Settlement>()
+  val settlementsKato: List<SettlementKATO> = setSettlementsKato()
 
   fun getUpdateSettlement(): List<UpdateSettlement> {
     setSettlementsKato()
@@ -23,7 +24,9 @@ class ParseService {
               updateSettlements.add(UpdateSettlement(prodSettlement.id, settlement.typeId, settlement.katoId,
                   settlement.parentName))
             } else if (repeatedWithDistrict > 1) {
-              repeatableUpdateSettlements.add(updateSettlements.removeLast())
+              updateSettlements.removeLast()
+              settlement.district = district.name
+              repeatableUpdateSettlements.add(settlement)
             }
           }
         }
@@ -32,7 +35,7 @@ class ParseService {
     return updateSettlements
   }
 
-  private fun getDistricts(): List<District> {
+  fun getDistricts(): List<District> {
     var tempDistrict = District()
     for (it in settlementsKato) {
       if (it.name.contains(districtRegex)) {
@@ -40,11 +43,20 @@ class ParseService {
         districts.add(tempDistrict)
       }
       if (it.name.contains(settlementParentTypeRegex) || it.name.contains(districtRegex)) continue
-      if (it.name.contains(settlementTypeRegex)) {
+      if (it.name.contains(settlementTypeRegex) && isContains(it.name)) {
         tempDistrict.settlements.add(convertSettlementKatoToSettlement(it, settlementTypeRegex))
       }
     }
     return districts
+  }
+
+  private fun isContains(name: String): Boolean {
+    for (prod in getSettlementsFromProd()) {
+      if (prod.settlementName == getName(name, settlementTypeRegex)) {
+        return true
+      }
+    }
+    return false
   }
 
   private fun convertSettlementKatoToSettlement(settlementKATO: SettlementKATO, regex: Regex): Settlement {
@@ -78,18 +90,17 @@ class ParseService {
     return "Unknown type"
   }
 
-  private fun setSettlementsKato() {
+  private fun setSettlementsKato(): List<SettlementKATO> {
     val directoryPath = "src/main/resources/KATO_17.10.2022_ru.csv"
-    settlementsKato = DefaultCsvConverter().convert(directoryPath, SettlementKATO::class.java)
+    return DefaultCsvConverter().convert(directoryPath, SettlementKATO::class.java)
   }
 
-  private fun getSettlementsFromProd(): List<ProductionSettlementKATO> {
+  fun getSettlementsFromProd(): List<ProductionSettlementKATO> {
     val prodPath = "src/main/resources/KATO SOLVA PROD.csv"
     return DefaultCsvConverter().convert(prodPath, ProductionSettlementKATO::class.java)
   }
 
   private companion object {
-    lateinit var settlementsKato: List<SettlementKATO>
     val settlementTypeRegex = Regex(SettlementType.values().joinToString(separator = "|") { it.typeRegex })
     val settlementParentTypeRegex = Regex(SettlementParentType.values().joinToString(separator = "|") { it.typeRegex })
     val districtRegex = Regex(DistrictType.values().joinToString(separator = "|") { it.typeRegex })
@@ -100,8 +111,6 @@ class ParseService {
 fun main() {
   val parseService = ParseService()
   println(parseService.getUpdateSettlement().size)
-  parseService.repeatableUpdateSettlements.forEach {
-    println(it)
-  }
-  println(parseService.manualList.size)
+  parseService.repeatableUpdateSettlements.forEach { println(it) }
+
 }
