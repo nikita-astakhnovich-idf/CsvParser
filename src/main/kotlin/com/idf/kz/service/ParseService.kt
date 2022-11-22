@@ -4,19 +4,12 @@ import com.idf.kz.converter.DefaultCsvConverter
 import com.idf.kz.model.*
 
 class ParseService {
-  val manualList = mutableListOf<UpdateSettlement>()
   val repeatableUpdateSettlements = mutableListOf<Settlement>()
-  val settlementsKato: List<SettlementKATO> = setSettlementsKato()
 
   fun getUpdateSettlement(): List<UpdateSettlement> {
-    setSettlementsKato()
-
-    val updateSettlements = mutableListOf<UpdateSettlement>()
-    val settlementsFromProd = getSettlementsFromProd()
     getDistricts().forEach { district ->
       district.settlements.forEach { settlement ->
         var repeatedWithDistrict = 0
-        var repeatedName = 0
         for (prodSettlement in settlementsFromProd) {
           if (settlement.name == prodSettlement.settlementName && district.name == prodSettlement.districtName) {
             repeatedWithDistrict++
@@ -51,7 +44,7 @@ class ParseService {
   }
 
   private fun isContains(name: String): Boolean {
-    for (prod in getSettlementsFromProd()) {
+    for (prod in settlementsFromProd) {
       if (prod.settlementName == getName(name, settlementTypeRegex)) {
         return true
       }
@@ -90,21 +83,21 @@ class ParseService {
     return "Unknown type"
   }
 
-  private fun setSettlementsKato(): List<SettlementKATO> {
-    val directoryPath = "src/main/resources/KATO_17.10.2022_ru.csv"
-    return DefaultCsvConverter().convert(directoryPath, SettlementKATO::class.java)
-  }
-
-  fun getSettlementsFromProd(): List<ProductionSettlementKATO> {
-    val prodPath = "src/main/resources/KATO SOLVA PROD.csv"
-    return DefaultCsvConverter().convert(prodPath, ProductionSettlementKATO::class.java)
-  }
-
   private companion object {
+    const val directoryPath = "src/main/resources/KATO_17.10.2022_ru.csv"
+    const val prodPath = "src/main/resources/KATO SOLVA PROD.csv"
+
+    var settlementsKato: List<SettlementKATO> = DefaultCsvConverter()
+      .convert(directoryPath, SettlementKATO::class.java)
+    var settlementsFromProd: List<ProductionSettlementKATO> = DefaultCsvConverter()
+      .convert(prodPath, ProductionSettlementKATO::class.java)
+
+    val updateSettlements: MutableList<UpdateSettlement> = mutableListOf()
+    val districts: MutableList<District> = mutableListOf()
+
     val settlementTypeRegex = Regex(SettlementType.values().joinToString(separator = "|") { it.typeRegex })
     val settlementParentTypeRegex = Regex(SettlementParentType.values().joinToString(separator = "|") { it.typeRegex })
     val districtRegex = Regex(DistrictType.values().joinToString(separator = "|") { it.typeRegex })
-    val districts = mutableListOf<District>()
   }
 }
 
