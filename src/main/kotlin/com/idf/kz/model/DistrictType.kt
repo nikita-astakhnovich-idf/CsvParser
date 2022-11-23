@@ -1,6 +1,6 @@
 package com.idf.kz.model
 
-enum class DistrictType(val type:String) {
+enum class DistrictType(val typeRegex:String) {
   DISTRICT("район"),
-  CITYAKIMAT("Г.А.")
+  CITYAKIMAT("Г\\.А\\.")
 }

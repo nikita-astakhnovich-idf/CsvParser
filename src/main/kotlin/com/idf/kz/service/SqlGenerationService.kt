@@ -4,14 +4,14 @@ import com.idf.kz.model.UpdateSettlement
 
 class SqlGenerationService {
 
-  fun generateUpdateSql(updateList: MutableCollection<UpdateSettlement>): String {
+  fun generateUpdateSql(updateList: List<UpdateSettlement>): String {
     val updateSQLScript = StringBuilder()
     updateList.forEach {
       updateSQLScript.append(
         "UPDATE address_settlement \n" +
             "SET address_settlement_type_id = ${it.addressSettlementTypeId}, " +
             "kato_id = ${it.katoId}, " +
-            "parent_name = '${getParentName(it.parentName)}' \n" +
+            "parent_name = ${getParentName(it.parentName)} \n" +
             "WHERE id = ${it.id};\n\n"
       )
 
@@ -25,7 +25,7 @@ class SqlGenerationService {
   }
 
   private fun getParentName(parentName: String?): String? {
-    if (parentName != null) return parentName
-    else return null
+    return if(parentName=="") null
+           else "'$parentName'"
   }
 }
