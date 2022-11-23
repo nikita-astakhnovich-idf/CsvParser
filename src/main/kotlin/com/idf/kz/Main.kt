@@ -5,17 +5,18 @@ import com.idf.kz.service.SqlGenerationService
 import com.idf.kz.service.VerificationManualModelService
 
 fun main() {
-  ParseService().getUpdateSettlement()
+  val a = ParseService().getUpdateSettlement()
   val s = VerificationManualModelService(
     ParseService.manualList,
     ParseService.updateSettlements,
     ParseService.settlementsFromProd
   )
-
-  println(ParseService.updateSettlements.size)
+//  println(a.size)
+  println(SqlGenerationService().generateUpdateSql(a))
   println("////////////////////////////////////////////////////////////////////////////////////////////////////////")
-  println(s.findUncheckedModel().size)
-  s.findNewDistrictModel().forEach{ println(it) }
+  s.findUncheckedModel()
+  s.findNewDistrictModel()
+
   println("//////////////////////////////////////////////////////")
-  VerificationManualModelService.checkedList.forEach { println(it) }
+  println(SqlGenerationService().generateAksuatSql(s.fillAksuatList()))
 }

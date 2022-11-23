@@ -40,8 +40,20 @@ class VerificationManualModelService(
     return newDistrictList
   }
 
+  fun fillAksuatList(): List<UpdateSettlement>{
+    newDistrictList.forEach {
+      for ( prod in prodList){
+        if (prod.name == it.name){
+          aksuatList.add(UpdateSettlement(prod.id, it.typeId, it.katoId, it.parentName))
+        }
+      }
+    }
+    return aksuatList
+  }
+
   companion object {
     var checkedList: MutableList<Settlement> = mutableListOf()
     var newDistrictList: MutableList<Settlement> = mutableListOf()
+    var aksuatList: MutableList<UpdateSettlement> = mutableListOf()
   }
 }

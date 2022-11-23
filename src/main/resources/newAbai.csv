@@ -1,11 +1,11 @@
 Settlement(name=Жулдыз, typeId=41, katoId=101049212, parentName=, district=Семей) -
 Settlement(name=Карасай, typeId=54, katoId=101051208, parentName=, district=Семей) -
-Settlement(name=Аягоз, typeId=1, katoId=103620100, parentName=Аягоз г.а., district=Аягозский) 1035 добавить руками
-Settlement(name=Айгыржал, typeId=41, katoId=103620200, parentName=Аягоз г.а., district=Аягозский) 7292 добавить руками
-Settlement(name=Егизкызыл, typeId=41, katoId=103620300, parentName=Аягоз г.а., district=Аягозский) 7293 добавить руками
+Settlement(name=Аягоз, typeId=1, katoId=103620100, parentName=Аягоз г.а., district=Аягозский) 1035 добавить руками +
+Settlement(name=Айгыржал, typeId=41, katoId=103620200, parentName=Аягоз г.а., district=Аягозский) 7292 руками +
+Settlement(name=Егизкызыл, typeId=41, katoId=103620300, parentName=Аягоз г.а., district=Аягозский) 7293 руками +
 Settlement(name=Кошкентал, typeId=41, katoId=103620500, parentName=Аягоз г.а., district=Аягозский) 7295 добавить руками
 Settlement(name=Кызылкесек, typeId=41, katoId=103639112, parentName=, district=Аягозский) -
-Settlement(name=Сагындык, typeId=41, katoId=103639119, parentName=, district=Аягозский) 7874 руками
+Settlement(name=Сагындык, typeId=41, katoId=103639119, parentName=, district=Аягозский) - есть в ВКО
 Settlement(name=Кабыргатал, typeId=41, katoId=103665151, parentName=, district=Аягозский) -
 Settlement(name=18 км, typeId=39, katoId=103667700, parentName=Майлинский с.о., district=Аягозский) 7616?? 103667700??
 Settlement(name=Тугыл, typeId=41, katoId=103675122, parentName=, district=Аягозский) -
