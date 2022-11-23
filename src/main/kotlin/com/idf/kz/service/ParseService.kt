@@ -114,7 +114,7 @@ class ParseService {
     private const val DIRECTORY_PATH = "src/main/resources/KATO_17.10.2022_ru.csv"
     private const val PROD_PATH = "src/main/resources/KATO SOLVA PROD.csv"
 
-    private val settlementsKato: List<SettlementKATO> = DefaultCsvConverter()
+     val settlementsKato: List<SettlementKATO> = DefaultCsvConverter()
       .convert(DIRECTORY_PATH, SettlementKATO::class.java)
     private val settlementsFromProd = DefaultCsvConverter()
       .convert(PROD_PATH, ProductionSettlementKATO::class.java)
