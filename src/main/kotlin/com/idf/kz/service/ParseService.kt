@@ -134,6 +134,3 @@ class ParseService {
   }
 }
 
-fun main() {
-  println( SqlGenerationService().generateUpdateSql(ParseService().getUpdateSettlement()))
-}
