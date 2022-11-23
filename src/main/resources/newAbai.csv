@@ -11,8 +11,8 @@ Settlement(name=18 км, typeId=39, katoId=103667700, parentName=Майлинс�
 Settlement(name=Тугыл, typeId=41, katoId=103675122, parentName=, district=Аягозский)
 Settlement(name=Актобе, typeId=54, katoId=104277103, parentName=, district=Жарминский)
 Settlement(name=Каратогай, typeId=41, katoId=104281104, parentName=, district=Жарминский)
-Settlement(name=Тентек, typeId=41, katoId=104435105, parentName=, district=Кокпектинский)
-Settlement(name=Даулетбай, typeId=41, katoId=104469105, parentName=, district=Кокпектинский)
+Settlement(name=Тентек, typeId=41, katoId=104435105, parentName=, district=Кокпектинский) -
+Settlement(name=Даулетбай, typeId=41, katoId=104469105, parentName=, district=Кокпектинский) - есть в ВКО
 
 Settlement(name=Екпин, typeId=41, katoId=103433100, parentName=Екпинский с.о., district=Аксуат)
 Settlement(name=Аккала, typeId=41, katoId=103433200, parentName=Екпинский с.о., district=Аксуат)
