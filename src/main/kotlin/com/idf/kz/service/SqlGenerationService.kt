@@ -11,7 +11,7 @@ class SqlGenerationService {
         "UPDATE address_settlement \n" +
             "SET address_settlement_type_id = ${it.addressSettlementTypeId}, " +
             "kato_id = ${it.katoId}, " +
-            "parent_name = '${it.parentName}' \n" +
+            "parent_name = ${getParentName(it.parentName)} \n" +
             "WHERE id = ${it.id};\n\n"
       )
 
@@ -22,5 +22,10 @@ class SqlGenerationService {
       )
     }
     return updateSQLScript.toString()
+  }
+
+  private fun getParentName(parentName: String?): String? {
+    return if(parentName=="") null
+           else "'$parentName'"
   }
 }
