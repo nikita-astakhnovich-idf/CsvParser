@@ -1,16 +1,16 @@
-Settlement(name=Жулдыз, typeId=41, katoId=101049212, parentName=, district=Семей)
-Settlement(name=Карасай, typeId=54, katoId=101051208, parentName=, district=Семей)
-Settlement(name=Аягоз, typeId=1, katoId=103620100, parentName=Аягоз г.а., district=Аягозский)
-Settlement(name=Айгыржал, typeId=41, katoId=103620200, parentName=Аягоз г.а., district=Аягозский)
-Settlement(name=Егизкызыл, typeId=41, katoId=103620300, parentName=Аягоз г.а., district=Аягозский)
-Settlement(name=Кошкентал, typeId=41, katoId=103620500, parentName=Аягоз г.а., district=Аягозский)
-Settlement(name=Кызылкесек, typeId=41, katoId=103639112, parentName=, district=Аягозский)
-Settlement(name=Сагындык, typeId=41, katoId=103639119, parentName=, district=Аягозский)
-Settlement(name=Кабыргатал, typeId=41, katoId=103665151, parentName=, district=Аягозский)
-Settlement(name=18 км, typeId=39, katoId=103667700, parentName=Майлинский с.о., district=Аягозский)
-Settlement(name=Тугыл, typeId=41, katoId=103675122, parentName=, district=Аягозский)
-Settlement(name=Актобе, typeId=54, katoId=104277103, parentName=, district=Жарминский)
-Settlement(name=Каратогай, typeId=41, katoId=104281104, parentName=, district=Жарминский)
+Settlement(name=Жулдыз, typeId=41, katoId=101049212, parentName=, district=Семей) -
+Settlement(name=Карасай, typeId=54, katoId=101051208, parentName=, district=Семей) -
+Settlement(name=Аягоз, typeId=1, katoId=103620100, parentName=Аягоз г.а., district=Аягозский) 1035 добавить руками
+Settlement(name=Айгыржал, typeId=41, katoId=103620200, parentName=Аягоз г.а., district=Аягозский) 7292 добавить руками
+Settlement(name=Егизкызыл, typeId=41, katoId=103620300, parentName=Аягоз г.а., district=Аягозский) 7293 добавить руками
+Settlement(name=Кошкентал, typeId=41, katoId=103620500, parentName=Аягоз г.а., district=Аягозский) 7295 добавить руками
+Settlement(name=Кызылкесек, typeId=41, katoId=103639112, parentName=, district=Аягозский) -
+Settlement(name=Сагындык, typeId=41, katoId=103639119, parentName=, district=Аягозский) 7874 руками
+Settlement(name=Кабыргатал, typeId=41, katoId=103665151, parentName=, district=Аягозский) -
+Settlement(name=18 км, typeId=39, katoId=103667700, parentName=Майлинский с.о., district=Аягозский) 7616?? 103667700??
+Settlement(name=Тугыл, typeId=41, katoId=103675122, parentName=, district=Аягозский) -
+Settlement(name=Актобе, typeId=54, katoId=104277103, parentName=, district=Жарминский) участок -
+Settlement(name=Каратогай, typeId=41, katoId=104281104, parentName=, district=Жарминский) - есть в вко
 Settlement(name=Тентек, typeId=41, katoId=104435105, parentName=, district=Кокпектинский) -
 Settlement(name=Даулетбай, typeId=41, katoId=104469105, parentName=, district=Кокпектинский) - есть в ВКО
 

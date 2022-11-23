@@ -12,7 +12,7 @@ fun main() {
     ParseService.settlementsFromProd
   )
 
-//  ParseService.updateSettlements.forEach { println(it) }
+  println(ParseService.updateSettlements.size)
   println("////////////////////////////////////////////////////////////////////////////////////////////////////////")
   println(s.findUncheckedModel().size)
   s.findNewDistrictModel().forEach{ println(it) }
