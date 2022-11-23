@@ -4,30 +4,47 @@ import com.idf.kz.converter.DefaultCsvConverter
 import com.idf.kz.model.*
 
 class ParseService {
-  val manualList = mutableListOf<UpdateSettlement>()
+  val manualList = mutableListOf<Settlement>()
+  val manualListMoreOne = mutableListOf<Settlement>()
   val repeatableUpdateSettlements = mutableListOf<Settlement>()
   val settlementsKato: List<SettlementKATO> = setSettlementsKato()
+  val updateSettlements = mutableListOf<UpdateSettlement>()
+
 
   fun getUpdateSettlement(): List<UpdateSettlement> {
     setSettlementsKato()
-
-    val updateSettlements = mutableListOf<UpdateSettlement>()
+    setDistricts()
     val settlementsFromProd = getSettlementsFromProd()
-    getDistricts().forEach { district ->
+    districts.forEach { district ->
       district.settlements.forEach { settlement ->
         var repeatedWithDistrict = 0
-        var repeatedName = 0
+        var isAdded = false
         for (prodSettlement in settlementsFromProd) {
           if (settlement.name == prodSettlement.settlementName && district.name == prodSettlement.districtName) {
             repeatedWithDistrict++
             if (repeatedWithDistrict == 1) {
               updateSettlements.add(UpdateSettlement(prodSettlement.id, settlement.typeId, settlement.katoId,
                   settlement.parentName))
+              isAdded = true
             } else if (repeatedWithDistrict > 1) {
               updateSettlements.removeLast()
               settlement.district = district.name
               repeatableUpdateSettlements.add(settlement)
+              isAdded = true
             }
+          }
+        }
+        if (!isAdded) {
+          var count = 0
+          for (prod in settlementsFromProd) {
+            if (prod.settlementName == settlement.name) {
+              count++
+            }
+          }
+          if (count == 1) {
+            manualList.add(settlement)
+          } else {
+            manualListMoreOne.add(settlement)
           }
         }
       }
@@ -35,7 +52,7 @@ class ParseService {
     return updateSettlements
   }
 
-  fun getDistricts(): List<District> {
+  fun setDistricts(){
     var tempDistrict = District()
     for (it in settlementsKato) {
       if (it.name.contains(districtRegex)) {
@@ -47,7 +64,6 @@ class ParseService {
         tempDistrict.settlements.add(convertSettlementKatoToSettlement(it, settlementTypeRegex))
       }
     }
-    return districts
   }
 
   private fun isContains(name: String): Boolean {
@@ -71,7 +87,9 @@ class ParseService {
     var parentName = ""
     settlementsKato.forEach {
       if (parentId == it.id) {
-        parentName = it.name
+        if (it.name.contains(settlementParentTypeRegex)) {
+          parentName = it.name
+        }
       }
     }
     return parentName
@@ -100,17 +118,21 @@ class ParseService {
     return DefaultCsvConverter().convert(prodPath, ProductionSettlementKATO::class.java)
   }
 
-  private companion object {
+   companion object {
     val settlementTypeRegex = Regex(SettlementType.values().joinToString(separator = "|") { it.typeRegex })
     val settlementParentTypeRegex = Regex(SettlementParentType.values().joinToString(separator = "|") { it.typeRegex })
     val districtRegex = Regex(DistrictType.values().joinToString(separator = "|") { it.typeRegex })
-    val districts = mutableListOf<District>()
-  }
+     val districts = mutableListOf<District>()
+   }
 }
 
 fun main() {
   val parseService = ParseService()
-  println(parseService.getUpdateSettlement().size)
-  parseService.repeatableUpdateSettlements.forEach { println(it) }
-
+  parseService.getUpdateSettlement()
+  println("all in districts  ${ParseService.districts.flatMap { it.settlements }.count()}")
+  println("manual ${parseService.manualList.size}")
+  println("manualMoreOne ${parseService.manualListMoreOne.size}")
+  println("update ${parseService.updateSettlements.size}")
+  println("repeatable ${parseService.repeatableUpdateSettlements.size}")
+  parseService.manualList.forEach { println(it) }
 }
