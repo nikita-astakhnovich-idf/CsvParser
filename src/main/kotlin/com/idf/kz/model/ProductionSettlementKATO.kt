@@ -7,7 +7,7 @@ data class ProductionSettlementKATO(
     var id: String = "",
 
     @CsvBindByPosition(position = 1)
-    var settlementName: String = "",
+    var name: String = "",
 
     @CsvBindByPosition(position = 2)
     var districtId: String = "",
