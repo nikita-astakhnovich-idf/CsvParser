@@ -75,8 +75,12 @@ class ParseService {
 
   private fun isContains(name: String): Boolean {
     for (prod in settlementsFromProd) {
-      if (prod.name == getName(name, settlementTypeRegex)) {
+      val tempName = getName(name, settlementTypeRegex)
+      val regex = "«.+»".toRegex()
+      if (prod.name == tempName) {
         return true
+      } else if (tempName.contains(prod.name) && prod.name.contains(regex)) {
+        println("${tempName} //////////////////")
       }
     }
     return false

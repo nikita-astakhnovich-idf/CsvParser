@@ -5,13 +5,14 @@ import com.idf.kz.service.SqlGenerationService
 import com.idf.kz.service.VerificationManualModelService
 
 fun main() {
-  println(SqlGenerationService().generateUpdateSql(ParseService().getUpdateSettlement()))
-//  val parseService = ParseService()
-//  parseService.getUpdateSettlement()
+//  println(SqlGenerationService().generateUpdateSql(ParseService().getUpdateSettlement()))
+  val parseService = ParseService()
+  parseService.getUpdateSettlement()
   println("all in districts  ${ParseService.districts.flatMap { it.settlements }.count()}")
   println("manual ${ParseService.manualList.size}")
   println("manualMoreOne ${ParseService.manualListMoreOne.size}")
   println("update ${ParseService.updateSettlements.size}")
   println("repeatable ${ParseService.repeatableUpdateSettlements.size}")
-//  ParseService.manualList.forEach { println(it) }
+
+//  ParseService.updateSettlements.forEach { println(it) }
 }
