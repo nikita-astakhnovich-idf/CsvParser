@@ -9,7 +9,8 @@ class SqlGenerationService {
     updateList.forEach {
       updateSQLScript.append(
         "UPDATE address_settlement \n" +
-            "SET address_settlement_type_id = ${it.addressSettlementTypeId}, " +
+            "SET region_id = REGION_ID, " +
+            "address_settlement_type_id = ${it.addressSettlementTypeId}, " +
             "kato_id = ${it.katoId}, " +
             "parent_name = ${getParentName(it.parentName)} \n" +
             "WHERE id = ${it.id};\n\n"
@@ -27,5 +28,20 @@ class SqlGenerationService {
   private fun getParentName(parentName: String?): String? {
     return if(parentName=="") null
            else "'$parentName'"
+  }
+
+  fun generateAksuatSql(aksuatList: List<UpdateSettlement>): String{
+    val updateSQLScript = StringBuilder()
+    aksuatList.forEach {
+      updateSQLScript.append(
+        "UPDATE address_settlement \n" +
+            "SET address_district_id = ADDRESS_DISTRICT_ID_AKSUAT, " +
+            "address_settlement_type_id = ${it.addressSettlementTypeId}, " +
+            "kato_id = ${it.katoId}, " +
+            "parent_name = ${getParentName(it.parentName)} \n" +
+            "WHERE id = ${it.id};\n\n"
+      )
+    }
+    return updateSQLScript.toString()
   }
 }

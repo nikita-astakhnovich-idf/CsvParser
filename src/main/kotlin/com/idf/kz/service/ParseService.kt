@@ -19,7 +19,7 @@ class ParseService {
         var repeatedWithDistrict = 0
         var isAdded = false
         for (prodSettlement in settlementsFromProd) {
-          if (settlement.name == prodSettlement.settlementName && district.name == prodSettlement.districtName) {
+          if (settlement.name == prodSettlement.name && district.name == prodSettlement.districtName) {
             repeatedWithDistrict++
             if (repeatedWithDistrict == 1) {
               updateSettlements.add(
@@ -40,12 +40,16 @@ class ParseService {
         if (!isAdded) {
           var count = 0
           for (prod in settlementsFromProd) {
-            if (prod.settlementName == settlement.name) {
+            if (prod.name == settlement.name) {
               count++
             }
           }
           if (count == 1) {
-            manualList.add(settlement)
+            val s = Settlement(
+              settlement.name, settlement.typeId, settlement.katoId, settlement.parentName,
+              district.name
+            )
+            manualList.add(s)
           } else {
             manualListMoreOne.add(settlement)
           }
@@ -71,7 +75,7 @@ class ParseService {
 
   private fun isContains(name: String): Boolean {
     for (prod in settlementsFromProd) {
-      if (prod.settlementName == getName(name, settlementTypeRegex)) {
+      if (prod.name == getName(name, settlementTypeRegex)) {
         return true
       }
     }
@@ -114,9 +118,9 @@ class ParseService {
     private const val DIRECTORY_PATH = "src/main/resources/KATO_17.10.2022_ru.csv"
     private const val PROD_PATH = "src/main/resources/KATO SOLVA PROD.csv"
 
-    private val settlementsKato: List<SettlementKATO> = DefaultCsvConverter()
+     val settlementsKato: List<SettlementKATO> = DefaultCsvConverter()
       .convert(DIRECTORY_PATH, SettlementKATO::class.java)
-    private val settlementsFromProd = DefaultCsvConverter()
+    val settlementsFromProd: List<ProductionSettlementKATO> = DefaultCsvConverter()
       .convert(PROD_PATH, ProductionSettlementKATO::class.java)
 
     private val settlementTypeRegex = Regex(SettlementType.values()
