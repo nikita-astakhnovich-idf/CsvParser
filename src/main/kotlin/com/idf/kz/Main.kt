@@ -7,14 +7,6 @@ import com.idf.kz.service.VerificationManualModelService
 fun main() {
   println(SqlGenerationService().generateUpdateSql(ParseService().getUpdateSettlement()))
 
-//  val a = ParseService().getUpdateSettlement()
-//  ParseService.updateSettlements.forEach { println(it) }
-  val s = VerificationManualModelService(
-    ParseService.manualList,
-    ParseService.updateSettlements,
-    ParseService.settlementsFromProd
-  )
-//  s.findUncheckedModel().forEach { println(it) }
   println("/////////////")
   println("all in districts  ${ParseService.districts.flatMap { it.settlements }.count()}")
   println("manual ${ParseService.manualList.size}")
