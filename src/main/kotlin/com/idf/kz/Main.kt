@@ -14,6 +14,5 @@ fun main() {
   println("update ${ParseService.updateSettlements.size}")
   println("repeatable ${ParseService.repeatableUpdateSettlements.size}")
 //  ParseService.manualList.forEach { println(it) }
-  println(parseService.findUncheckedModel().size)
   ParseService.repeatableUpdateSettlements.forEach { println(it) }
 }

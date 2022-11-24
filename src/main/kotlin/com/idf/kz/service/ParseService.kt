@@ -142,7 +142,7 @@ class ParseService {
     checkedList.addAll(manualList)
     manualList.forEach { city ->    var prodModelId = ""
       for (prodModel in settlementsFromProd) {
-        if (city.name == prodModel.settlementName) {
+        if (city.name == prodModel.name) {
           prodModelId = prodModel.id
           break
         }
