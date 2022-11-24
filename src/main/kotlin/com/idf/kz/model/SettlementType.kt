@@ -7,5 +7,6 @@ enum class SettlementType(val typeRegex: String,val type:String, val typeId: Str
 //  UCHASTOK("уч\\.","уч.", "54"),
   RAZEZD("рзд\\.","рзд.", "39"),
   POSELOK("п\\.","п.", "31"),
-  STANCIA("ст\\.","ст.", "44")
+  STANCIA("ст\\.","ст.", "44"),
+  KRHZ("кр\\.хоз\\.","кр.хоз.", "57")
 }

@@ -22,6 +22,94 @@ WHERE address_settlement_id = 3888;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID,
+    address_settlement_type_id = 57,
+    kato_id                    = 621039102,
+    parent_name                = null
+WHERE id = 8170;
+
+UPDATE address_settlement_kato
+SET kato_id = 621039102
+WHERE address_settlement_id = 8170;
+
+UPDATE address_settlement
+SET region_id                  = REGION_ID,
+    address_settlement_type_id = 57,
+    kato_id                    = 621039103,
+    parent_name                = null
+WHERE id = 8172;
+
+UPDATE address_settlement_kato
+SET kato_id = 621039103
+WHERE address_settlement_id = 8172;
+
+UPDATE address_settlement
+SET region_id                  = REGION_ID,
+    address_settlement_type_id = 57,
+    kato_id                    = 621039104,
+    parent_name                = null
+WHERE id = 8173;
+
+UPDATE address_settlement_kato
+SET kato_id = 621039104
+WHERE address_settlement_id = 8173;
+
+UPDATE address_settlement
+SET region_id                  = REGION_ID,
+    address_settlement_type_id = 57,
+    kato_id                    = 621039105,
+    parent_name                = null
+WHERE id = 8174;
+
+UPDATE address_settlement_kato
+SET kato_id = 621039105
+WHERE address_settlement_id = 8174;
+
+UPDATE address_settlement
+SET region_id                  = REGION_ID,
+    address_settlement_type_id = 57,
+    kato_id                    = 621039106,
+    parent_name                = null
+WHERE id = 8175;
+
+UPDATE address_settlement_kato
+SET kato_id = 621039106
+WHERE address_settlement_id = 8175;
+
+UPDATE address_settlement
+SET region_id                  = REGION_ID,
+    address_settlement_type_id = 57,
+    kato_id                    = 621039107,
+    parent_name                = null
+WHERE id = 8176;
+
+UPDATE address_settlement_kato
+SET kato_id = 621039107
+WHERE address_settlement_id = 8176;
+
+UPDATE address_settlement
+SET region_id                  = REGION_ID,
+    address_settlement_type_id = 57,
+    kato_id                    = 621039108,
+    parent_name                = null
+WHERE id = 8177;
+
+UPDATE address_settlement_kato
+SET kato_id = 621039108
+WHERE address_settlement_id = 8177;
+
+UPDATE address_settlement
+SET region_id                  = REGION_ID,
+    address_settlement_type_id = 57,
+    kato_id                    = 621039112,
+    parent_name                = null
+WHERE id = 8180;
+
+UPDATE address_settlement_kato
+SET kato_id = 621039112
+WHERE address_settlement_id = 8180;
+
+UPDATE address_settlement
+SET region_id                  = REGION_ID,
     address_settlement_type_id = 41,
     kato_id                    = 621039200,
     parent_name                = 'Кенгирский с.о.'
@@ -30,6 +118,83 @@ WHERE id = 3889;
 UPDATE address_settlement_kato
 SET kato_id = 621039200
 WHERE address_settlement_id = 3889;
+
+UPDATE address_settlement
+SET region_id                  = REGION_ID,
+    address_settlement_type_id = 57,
+    kato_id                    = 621039206,
+    parent_name                = null
+WHERE id = 8181;
+
+UPDATE address_settlement_kato
+SET kato_id = 621039206
+WHERE address_settlement_id = 8181;
+
+UPDATE address_settlement
+SET region_id                  = REGION_ID,
+    address_settlement_type_id = 57,
+    kato_id                    = 621039207,
+    parent_name                = null
+WHERE id = 8182;
+
+UPDATE address_settlement_kato
+SET kato_id = 621039207
+WHERE address_settlement_id = 8182;
+
+UPDATE address_settlement
+SET region_id                  = REGION_ID,
+    address_settlement_type_id = 57,
+    kato_id                    = 621039211,
+    parent_name                = null
+WHERE id = 8185;
+
+UPDATE address_settlement_kato
+SET kato_id = 621039211
+WHERE address_settlement_id = 8185;
+
+UPDATE address_settlement
+SET region_id                  = REGION_ID,
+    address_settlement_type_id = 57,
+    kato_id                    = 621039213,
+    parent_name                = null
+WHERE id = 8186;
+
+UPDATE address_settlement_kato
+SET kato_id = 621039213
+WHERE address_settlement_id = 8186;
+
+UPDATE address_settlement
+SET region_id                  = REGION_ID,
+    address_settlement_type_id = 57,
+    kato_id                    = 621039214,
+    parent_name                = null
+WHERE id = 8187;
+
+UPDATE address_settlement_kato
+SET kato_id = 621039214
+WHERE address_settlement_id = 8187;
+
+UPDATE address_settlement
+SET region_id                  = REGION_ID,
+    address_settlement_type_id = 57,
+    kato_id                    = 621039215,
+    parent_name                = null
+WHERE id = 8188;
+
+UPDATE address_settlement_kato
+SET kato_id = 621039215
+WHERE address_settlement_id = 8188;
+
+UPDATE address_settlement
+SET region_id                  = REGION_ID,
+    address_settlement_type_id = 57,
+    kato_id                    = 621039216,
+    parent_name                = null
+WHERE id = 8189;
+
+UPDATE address_settlement_kato
+SET kato_id = 621039216
+WHERE address_settlement_id = 8189;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID,
@@ -63,6 +228,61 @@ WHERE id = 3892;
 UPDATE address_settlement_kato
 SET kato_id = 621039800
 WHERE address_settlement_id = 3892;
+
+UPDATE address_settlement
+SET region_id                  = REGION_ID,
+    address_settlement_type_id = 57,
+    kato_id                    = 621039807,
+    parent_name                = null
+WHERE id = 8190;
+
+UPDATE address_settlement_kato
+SET kato_id = 621039807
+WHERE address_settlement_id = 8190;
+
+UPDATE address_settlement
+SET region_id                  = REGION_ID,
+    address_settlement_type_id = 57,
+    kato_id                    = 621039808,
+    parent_name                = null
+WHERE id = 8191;
+
+UPDATE address_settlement_kato
+SET kato_id = 621039808
+WHERE address_settlement_id = 8191;
+
+UPDATE address_settlement
+SET region_id                  = REGION_ID,
+    address_settlement_type_id = 57,
+    kato_id                    = 621039809,
+    parent_name                = null
+WHERE id = 8192;
+
+UPDATE address_settlement_kato
+SET kato_id = 621039809
+WHERE address_settlement_id = 8192;
+
+UPDATE address_settlement
+SET region_id                  = REGION_ID,
+    address_settlement_type_id = 57,
+    kato_id                    = 621039811,
+    parent_name                = null
+WHERE id = 8193;
+
+UPDATE address_settlement_kato
+SET kato_id = 621039811
+WHERE address_settlement_id = 8193;
+
+UPDATE address_settlement
+SET region_id                  = REGION_ID,
+    address_settlement_type_id = 57,
+    kato_id                    = 621039813,
+    parent_name                = null
+WHERE id = 8171;
+
+UPDATE address_settlement_kato
+SET kato_id = 621039813
+WHERE address_settlement_id = 8171;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID,
