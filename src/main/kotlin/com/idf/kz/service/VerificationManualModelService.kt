@@ -30,7 +30,7 @@ class VerificationManualModelService(
     return checkedList
   }
 
-  fun findNewDistrictModel(): List<Settlement> {
+  private fun findNewDistrictModel(): List<Settlement> {
     checkedList.forEach {
       if (it.district == "Аксуат") {
         newDistrictList.add(it)
@@ -41,6 +41,7 @@ class VerificationManualModelService(
   }
 
   fun fillAksuatList(): List<UpdateSettlement>{
+    findNewDistrictModel()
     newDistrictList.forEach {
       for ( prod in prodList){
         if (prod.name == it.name){

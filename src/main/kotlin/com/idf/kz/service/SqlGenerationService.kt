@@ -19,7 +19,7 @@ class SqlGenerationService {
       updateSQLScript.append(
         "UPDATE address_settlement_kato \n" +
             "SET kato_id = ${it.katoId} \n" +
-            "WHERE address_settlement_id = ${it.id};\n\n"
+            "WHERE address_settlement_id = ${it.id} and kato_version = 1;\n\n"
       )
     }
     return updateSQLScript.toString()
@@ -40,6 +40,12 @@ class SqlGenerationService {
             "kato_id = ${it.katoId}, " +
             "parent_name = ${getParentName(it.parentName)} \n" +
             "WHERE id = ${it.id};\n\n"
+      )
+
+      updateSQLScript.append(
+        "UPDATE address_settlement_kato \n" +
+            "SET kato_id = ${it.katoId} \n" +
+            "WHERE address_settlement_id = ${it.id} and kato_version = 1;\n\n"
       )
     }
     return updateSQLScript.toString()

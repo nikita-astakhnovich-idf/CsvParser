@@ -1,3 +1,164 @@
+C
+:
+\Users
+\nikita.astahnovich
+\.jdks
+\corretto-11.0.17
+\bin
+\java.exe "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2022.2\lib\idea_rt.jar=59253:C:\Program Files\JetBrains\IntelliJ IDEA 2022.2\bin" -Dfile.encoding=UTF-8 -classpath D:
+\test
+\kotlin
+\build
+\classes
+\kotlin
+\main;D
+:
+\test
+\kotlin
+\build
+\resources
+\main;C
+:
+\Users
+\nikita.astahnovich
+\.gradle
+\caches
+\modules-2
+\files-2.1
+\org.jetbrains.kotlin
+\kotlin-stdlib-jdk8
+\1.7.10
+\d70d7d2c56371f7aa18f32e984e3e2e998fe9081
+\kotlin-stdlib-jdk8-1.7.10.jar;C
+:
+\Users
+\nikita.astahnovich
+\.gradle
+\caches
+\modules-2
+\files-2.1
+\com.opencsv
+\opencsv
+\5.7.1
+\d707c095bc8c7c22fb3e377de774458a76229da4
+\opencsv-5.7.1.jar;C
+:
+\Users
+\nikita.astahnovich
+\.gradle
+\caches
+\modules-2
+\files-2.1
+\org.jetbrains.kotlin
+\kotlin-stdlib-jdk7
+\1.7.10
+\1ef73fee66f45d52c67e2aca12fd945dbe0659bf
+\kotlin-stdlib-jdk7-1.7.10.jar;C
+:
+\Users
+\nikita.astahnovich
+\.gradle
+\caches
+\modules-2
+\files-2.1
+\org.jetbrains.kotlin
+\kotlin-stdlib
+\1.7.10
+\d2abf9e77736acc4450dc4a3f707fa2c10f5099d
+\kotlin-stdlib-1.7.10.jar;C
+:
+\Users
+\nikita.astahnovich
+\.gradle
+\caches
+\modules-2
+\files-2.1
+\org.apache.commons
+\commons-text
+\1.10.0
+\3363381aef8cef2dbc1023b3e3a9433b08b64e01
+\commons-text-1.10.0.jar;C
+:
+\Users
+\nikita.astahnovich
+\.gradle
+\caches
+\modules-2
+\files-2.1
+\org.apache.commons
+\commons-lang3
+\3.12.0
+\c6842c86792ff03b9f1d1fe2aab8dc23aa6c6f0e
+\commons-lang3-3.12.0.jar;C
+:
+\Users
+\nikita.astahnovich
+\.gradle
+\caches
+\modules-2
+\files-2.1
+\commons-beanutils
+\commons-beanutils
+\1.9.4
+\d52b9abcd97f38c81342bb7e7ae1eee9b73cba51
+\commons-beanutils-1.9.4.jar;C
+:
+\Users
+\nikita.astahnovich
+\.gradle
+\caches
+\modules-2
+\files-2.1
+\org.apache.commons
+\commons-collections4
+\4.4\62ebe7544cb7164d87e0637a2a6a2bdc981395e8
+\commons-collections4-4.4.jar;C
+:
+\Users
+\nikita.astahnovich
+\.gradle
+\caches
+\modules-2
+\files-2.1
+\org.jetbrains.kotlin
+\kotlin-stdlib-common
+\1.7.10
+\bac80c520d0a9e3f3673bc2658c6ed02ef45a76a
+\kotlin-stdlib-common-1.7.10.jar;C
+:
+\Users
+\nikita.astahnovich
+\.gradle
+\caches
+\modules-2
+\files-2.1
+\org.jetbrains
+\annotations
+\13.0\919f0dfe192fb4e063e7dacadee7f8bb9a2672a9
+\annotations-13.0.jar;C
+:
+\Users
+\nikita.astahnovich
+\.gradle
+\caches
+\modules-2
+\files-2.1
+\commons-logging
+\commons-logging
+\1.2\4bfc12adfe4842bf07b657f0369c4cb522955686
+\commons-logging-1.2.jar;C
+:
+\Users
+\nikita.astahnovich
+\.gradle
+\caches
+\modules-2
+\files-2.1
+\commons-collections
+\commons-collections
+\3.2.2
+\8ad72fe39fa8c91eaaf12aadb21e0c3661fe26d5
+\commons-collections-3.2.2.jar com.idf.kz.MainKt
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
     address_settlement_type_id = 1,
@@ -7,7 +168,8 @@ WHERE id = 1039;
 
 UPDATE address_settlement_kato
 SET kato_id = 101010000
-WHERE address_settlement_id = 1039;
+WHERE address_settlement_id = 1039
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -18,7 +180,8 @@ WHERE id = 7306;
 
 UPDATE address_settlement_kato
 SET kato_id = 101033100
-WHERE address_settlement_id = 7306;
+WHERE address_settlement_id = 7306
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -29,7 +192,8 @@ WHERE id = 8090;
 
 UPDATE address_settlement_kato
 SET kato_id = 101033132
-WHERE address_settlement_id = 8090;
+WHERE address_settlement_id = 8090
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -40,7 +204,8 @@ WHERE id = 7307;
 
 UPDATE address_settlement_kato
 SET kato_id = 101035100
-WHERE address_settlement_id = 7307;
+WHERE address_settlement_id = 7307
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -51,7 +216,8 @@ WHERE id = 7308;
 
 UPDATE address_settlement_kato
 SET kato_id = 101035200
-WHERE address_settlement_id = 7308;
+WHERE address_settlement_id = 7308
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -62,7 +228,8 @@ WHERE id = 7309;
 
 UPDATE address_settlement_kato
 SET kato_id = 101037100
-WHERE address_settlement_id = 7309;
+WHERE address_settlement_id = 7309
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -73,7 +240,8 @@ WHERE id = 8082;
 
 UPDATE address_settlement_kato
 SET kato_id = 101037132
-WHERE address_settlement_id = 8082;
+WHERE address_settlement_id = 8082
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -84,7 +252,8 @@ WHERE id = 8083;
 
 UPDATE address_settlement_kato
 SET kato_id = 101037133
-WHERE address_settlement_id = 8083;
+WHERE address_settlement_id = 8083
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -95,7 +264,8 @@ WHERE id = 8084;
 
 UPDATE address_settlement_kato
 SET kato_id = 101037134
-WHERE address_settlement_id = 8084;
+WHERE address_settlement_id = 8084
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -106,7 +276,8 @@ WHERE id = 8080;
 
 UPDATE address_settlement_kato
 SET kato_id = 101037135
-WHERE address_settlement_id = 8080;
+WHERE address_settlement_id = 8080
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -117,7 +288,8 @@ WHERE id = 8085;
 
 UPDATE address_settlement_kato
 SET kato_id = 101037136
-WHERE address_settlement_id = 8085;
+WHERE address_settlement_id = 8085
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -128,7 +300,8 @@ WHERE id = 8086;
 
 UPDATE address_settlement_kato
 SET kato_id = 101037137
-WHERE address_settlement_id = 8086;
+WHERE address_settlement_id = 8086
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -139,7 +312,8 @@ WHERE id = 8087;
 
 UPDATE address_settlement_kato
 SET kato_id = 101037138
-WHERE address_settlement_id = 8087;
+WHERE address_settlement_id = 8087
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -150,7 +324,8 @@ WHERE id = 8088;
 
 UPDATE address_settlement_kato
 SET kato_id = 101037139
-WHERE address_settlement_id = 8088;
+WHERE address_settlement_id = 8088
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -161,7 +336,8 @@ WHERE id = 8089;
 
 UPDATE address_settlement_kato
 SET kato_id = 101037141
-WHERE address_settlement_id = 8089;
+WHERE address_settlement_id = 8089
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -172,7 +348,8 @@ WHERE id = 8090;
 
 UPDATE address_settlement_kato
 SET kato_id = 101037142
-WHERE address_settlement_id = 8090;
+WHERE address_settlement_id = 8090
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -183,7 +360,8 @@ WHERE id = 8091;
 
 UPDATE address_settlement_kato
 SET kato_id = 101037143
-WHERE address_settlement_id = 8091;
+WHERE address_settlement_id = 8091
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -194,7 +372,8 @@ WHERE id = 8092;
 
 UPDATE address_settlement_kato
 SET kato_id = 101037144
-WHERE address_settlement_id = 8092;
+WHERE address_settlement_id = 8092
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -205,7 +384,8 @@ WHERE id = 8093;
 
 UPDATE address_settlement_kato
 SET kato_id = 101037145
-WHERE address_settlement_id = 8093;
+WHERE address_settlement_id = 8093
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -216,7 +396,8 @@ WHERE id = 7341;
 
 UPDATE address_settlement_kato
 SET kato_id = 101037200
-WHERE address_settlement_id = 7341;
+WHERE address_settlement_id = 7341
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -227,7 +408,8 @@ WHERE id = 7310;
 
 UPDATE address_settlement_kato
 SET kato_id = 101039100
-WHERE address_settlement_id = 7310;
+WHERE address_settlement_id = 7310
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -238,7 +420,8 @@ WHERE id = 7311;
 
 UPDATE address_settlement_kato
 SET kato_id = 101039109
-WHERE address_settlement_id = 7311;
+WHERE address_settlement_id = 7311
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -249,7 +432,8 @@ WHERE id = 7312;
 
 UPDATE address_settlement_kato
 SET kato_id = 101039113
-WHERE address_settlement_id = 7312;
+WHERE address_settlement_id = 7312
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -260,7 +444,8 @@ WHERE id = 7313;
 
 UPDATE address_settlement_kato
 SET kato_id = 101043100
-WHERE address_settlement_id = 7313;
+WHERE address_settlement_id = 7313
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -271,7 +456,8 @@ WHERE id = 7314;
 
 UPDATE address_settlement_kato
 SET kato_id = 101043200
-WHERE address_settlement_id = 7314;
+WHERE address_settlement_id = 7314
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -282,7 +468,8 @@ WHERE id = 7315;
 
 UPDATE address_settlement_kato
 SET kato_id = 101045100
-WHERE address_settlement_id = 7315;
+WHERE address_settlement_id = 7315
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -293,7 +480,8 @@ WHERE id = 7316;
 
 UPDATE address_settlement_kato
 SET kato_id = 101045200
-WHERE address_settlement_id = 7316;
+WHERE address_settlement_id = 7316
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -304,7 +492,8 @@ WHERE id = 7317;
 
 UPDATE address_settlement_kato
 SET kato_id = 101045300
-WHERE address_settlement_id = 7317;
+WHERE address_settlement_id = 7317
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -315,7 +504,8 @@ WHERE id = 7319;
 
 UPDATE address_settlement_kato
 SET kato_id = 101049100
-WHERE address_settlement_id = 7319;
+WHERE address_settlement_id = 7319
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -326,7 +516,8 @@ WHERE id = 7320;
 
 UPDATE address_settlement_kato
 SET kato_id = 101049200
-WHERE address_settlement_id = 7320;
+WHERE address_settlement_id = 7320
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -337,7 +528,8 @@ WHERE id = 7307;
 
 UPDATE address_settlement_kato
 SET kato_id = 101049209
-WHERE address_settlement_id = 7307;
+WHERE address_settlement_id = 7307
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -348,7 +540,8 @@ WHERE id = 7323;
 
 UPDATE address_settlement_kato
 SET kato_id = 101051108
-WHERE address_settlement_id = 7323;
+WHERE address_settlement_id = 7323
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -359,7 +552,8 @@ WHERE id = 7322;
 
 UPDATE address_settlement_kato
 SET kato_id = 101051200
-WHERE address_settlement_id = 7322;
+WHERE address_settlement_id = 7322
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -370,7 +564,8 @@ WHERE id = 7324;
 
 UPDATE address_settlement_kato
 SET kato_id = 101051245
-WHERE address_settlement_id = 7324;
+WHERE address_settlement_id = 7324
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -381,7 +576,8 @@ WHERE id = 7318;
 
 UPDATE address_settlement_kato
 SET kato_id = 101051500
-WHERE address_settlement_id = 7318;
+WHERE address_settlement_id = 7318
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -392,7 +588,8 @@ WHERE id = 7326;
 
 UPDATE address_settlement_kato
 SET kato_id = 101053200
-WHERE address_settlement_id = 7326;
+WHERE address_settlement_id = 7326
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -403,7 +600,8 @@ WHERE id = 7327;
 
 UPDATE address_settlement_kato
 SET kato_id = 101053300
-WHERE address_settlement_id = 7327;
+WHERE address_settlement_id = 7327
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -414,7 +612,8 @@ WHERE id = 7329;
 
 UPDATE address_settlement_kato
 SET kato_id = 101053305
-WHERE address_settlement_id = 7329;
+WHERE address_settlement_id = 7329
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -425,7 +624,8 @@ WHERE id = 7328;
 
 UPDATE address_settlement_kato
 SET kato_id = 101053400
-WHERE address_settlement_id = 7328;
+WHERE address_settlement_id = 7328
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -436,7 +636,8 @@ WHERE id = 7330;
 
 UPDATE address_settlement_kato
 SET kato_id = 101055100
-WHERE address_settlement_id = 7330;
+WHERE address_settlement_id = 7330
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -447,7 +648,8 @@ WHERE id = 8094;
 
 UPDATE address_settlement_kato
 SET kato_id = 101055102
-WHERE address_settlement_id = 8094;
+WHERE address_settlement_id = 8094
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -458,7 +660,8 @@ WHERE id = 8096;
 
 UPDATE address_settlement_kato
 SET kato_id = 101055104
-WHERE address_settlement_id = 8096;
+WHERE address_settlement_id = 8096
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -469,7 +672,8 @@ WHERE id = 8097;
 
 UPDATE address_settlement_kato
 SET kato_id = 101055105
-WHERE address_settlement_id = 8097;
+WHERE address_settlement_id = 8097
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -480,7 +684,8 @@ WHERE id = 8098;
 
 UPDATE address_settlement_kato
 SET kato_id = 101055106
-WHERE address_settlement_id = 8098;
+WHERE address_settlement_id = 8098
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -491,7 +696,8 @@ WHERE id = 8099;
 
 UPDATE address_settlement_kato
 SET kato_id = 101055107
-WHERE address_settlement_id = 8099;
+WHERE address_settlement_id = 8099
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -502,7 +708,8 @@ WHERE id = 8100;
 
 UPDATE address_settlement_kato
 SET kato_id = 101055108
-WHERE address_settlement_id = 8100;
+WHERE address_settlement_id = 8100
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -513,7 +720,8 @@ WHERE id = 8101;
 
 UPDATE address_settlement_kato
 SET kato_id = 101055109
-WHERE address_settlement_id = 8101;
+WHERE address_settlement_id = 8101
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -524,7 +732,8 @@ WHERE id = 8102;
 
 UPDATE address_settlement_kato
 SET kato_id = 101055111
-WHERE address_settlement_id = 8102;
+WHERE address_settlement_id = 8102
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -535,7 +744,8 @@ WHERE id = 8103;
 
 UPDATE address_settlement_kato
 SET kato_id = 101055113
-WHERE address_settlement_id = 8103;
+WHERE address_settlement_id = 8103
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -546,7 +756,8 @@ WHERE id = 7332;
 
 UPDATE address_settlement_kato
 SET kato_id = 101057100
-WHERE address_settlement_id = 7332;
+WHERE address_settlement_id = 7332
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -557,7 +768,8 @@ WHERE id = 7333;
 
 UPDATE address_settlement_kato
 SET kato_id = 101057200
-WHERE address_settlement_id = 7333;
+WHERE address_settlement_id = 7333
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -568,7 +780,8 @@ WHERE id = 7334;
 
 UPDATE address_settlement_kato
 SET kato_id = 101057300
-WHERE address_settlement_id = 7334;
+WHERE address_settlement_id = 7334
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -579,7 +792,8 @@ WHERE id = 7335;
 
 UPDATE address_settlement_kato
 SET kato_id = 101057400
-WHERE address_settlement_id = 7335;
+WHERE address_settlement_id = 7335
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -590,7 +804,8 @@ WHERE id = 7336;
 
 UPDATE address_settlement_kato
 SET kato_id = 101059100
-WHERE address_settlement_id = 7336;
+WHERE address_settlement_id = 7336
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -601,7 +816,8 @@ WHERE id = 7337;
 
 UPDATE address_settlement_kato
 SET kato_id = 101059200
-WHERE address_settlement_id = 7337;
+WHERE address_settlement_id = 7337
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -612,7 +828,8 @@ WHERE id = 7338;
 
 UPDATE address_settlement_kato
 SET kato_id = 101059300
-WHERE address_settlement_id = 7338;
+WHERE address_settlement_id = 7338
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -623,7 +840,8 @@ WHERE id = 7339;
 
 UPDATE address_settlement_kato
 SET kato_id = 101059400
-WHERE address_settlement_id = 7339;
+WHERE address_settlement_id = 7339
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -634,7 +852,8 @@ WHERE id = 7340;
 
 UPDATE address_settlement_kato
 SET kato_id = 101059500
-WHERE address_settlement_id = 7340;
+WHERE address_settlement_id = 7340
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -645,7 +864,8 @@ WHERE id = 7343;
 
 UPDATE address_settlement_kato
 SET kato_id = 101063100
-WHERE address_settlement_id = 7343;
+WHERE address_settlement_id = 7343
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -656,7 +876,8 @@ WHERE id = 7344;
 
 UPDATE address_settlement_kato
 SET kato_id = 101065100
-WHERE address_settlement_id = 7344;
+WHERE address_settlement_id = 7344
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -667,7 +888,8 @@ WHERE id = 1037;
 
 UPDATE address_settlement_kato
 SET kato_id = 101810000
-WHERE address_settlement_id = 1037;
+WHERE address_settlement_id = 1037
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -678,7 +900,8 @@ WHERE id = 7345;
 
 UPDATE address_settlement_kato
 SET kato_id = 103230100
-WHERE address_settlement_id = 7345;
+WHERE address_settlement_id = 7345
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -689,7 +912,8 @@ WHERE id = 7346;
 
 UPDATE address_settlement_kato
 SET kato_id = 103233100
-WHERE address_settlement_id = 7346;
+WHERE address_settlement_id = 7346
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -700,7 +924,8 @@ WHERE id = 7347;
 
 UPDATE address_settlement_kato
 SET kato_id = 103235100
-WHERE address_settlement_id = 7347;
+WHERE address_settlement_id = 7347
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -711,7 +936,8 @@ WHERE id = 7348;
 
 UPDATE address_settlement_kato
 SET kato_id = 103235500
-WHERE address_settlement_id = 7348;
+WHERE address_settlement_id = 7348
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -722,7 +948,8 @@ WHERE id = 7349;
 
 UPDATE address_settlement_kato
 SET kato_id = 103239100
-WHERE address_settlement_id = 7349;
+WHERE address_settlement_id = 7349
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -733,7 +960,8 @@ WHERE id = 7350;
 
 UPDATE address_settlement_kato
 SET kato_id = 103239400
-WHERE address_settlement_id = 7350;
+WHERE address_settlement_id = 7350
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -744,7 +972,8 @@ WHERE id = 7351;
 
 UPDATE address_settlement_kato
 SET kato_id = 103243100
-WHERE address_settlement_id = 7351;
+WHERE address_settlement_id = 7351
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -755,7 +984,8 @@ WHERE id = 7352;
 
 UPDATE address_settlement_kato
 SET kato_id = 103245100
-WHERE address_settlement_id = 7352;
+WHERE address_settlement_id = 7352
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -766,7 +996,8 @@ WHERE id = 7353;
 
 UPDATE address_settlement_kato
 SET kato_id = 103247100
-WHERE address_settlement_id = 7353;
+WHERE address_settlement_id = 7353
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -777,7 +1008,8 @@ WHERE id = 7354;
 
 UPDATE address_settlement_kato
 SET kato_id = 103249100
-WHERE address_settlement_id = 7354;
+WHERE address_settlement_id = 7354
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -788,7 +1020,8 @@ WHERE id = 7355;
 
 UPDATE address_settlement_kato
 SET kato_id = 103253100
-WHERE address_settlement_id = 7355;
+WHERE address_settlement_id = 7355
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -799,7 +1032,8 @@ WHERE id = 7356;
 
 UPDATE address_settlement_kato
 SET kato_id = 103639100
-WHERE address_settlement_id = 7356;
+WHERE address_settlement_id = 7356
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -810,7 +1044,8 @@ WHERE id = 7357;
 
 UPDATE address_settlement_kato
 SET kato_id = 103639126
-WHERE address_settlement_id = 7357;
+WHERE address_settlement_id = 7357
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -821,7 +1056,8 @@ WHERE id = 7358;
 
 UPDATE address_settlement_kato
 SET kato_id = 103639300
-WHERE address_settlement_id = 7358;
+WHERE address_settlement_id = 7358
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -832,7 +1068,8 @@ WHERE id = 7360;
 
 UPDATE address_settlement_kato
 SET kato_id = 103639308
-WHERE address_settlement_id = 7360;
+WHERE address_settlement_id = 7360
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -843,7 +1080,8 @@ WHERE id = 7398;
 
 UPDATE address_settlement_kato
 SET kato_id = 103639319
-WHERE address_settlement_id = 7398;
+WHERE address_settlement_id = 7398
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -854,7 +1092,8 @@ WHERE id = 7359;
 
 UPDATE address_settlement_kato
 SET kato_id = 103641100
-WHERE address_settlement_id = 7359;
+WHERE address_settlement_id = 7359
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -865,7 +1104,8 @@ WHERE id = 7360;
 
 UPDATE address_settlement_kato
 SET kato_id = 103643100
-WHERE address_settlement_id = 7360;
+WHERE address_settlement_id = 7360
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -876,7 +1116,8 @@ WHERE id = 7362;
 
 UPDATE address_settlement_kato
 SET kato_id = 103643107
-WHERE address_settlement_id = 7362;
+WHERE address_settlement_id = 7362
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -887,7 +1128,8 @@ WHERE id = 7361;
 
 UPDATE address_settlement_kato
 SET kato_id = 103643200
-WHERE address_settlement_id = 7361;
+WHERE address_settlement_id = 7361
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -898,7 +1140,8 @@ WHERE id = 7363;
 
 UPDATE address_settlement_kato
 SET kato_id = 103643500
-WHERE address_settlement_id = 7363;
+WHERE address_settlement_id = 7363
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -909,7 +1152,8 @@ WHERE id = 7366;
 
 UPDATE address_settlement_kato
 SET kato_id = 103647100
-WHERE address_settlement_id = 7366;
+WHERE address_settlement_id = 7366
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -920,7 +1164,8 @@ WHERE id = 7367;
 
 UPDATE address_settlement_kato
 SET kato_id = 103647200
-WHERE address_settlement_id = 7367;
+WHERE address_settlement_id = 7367
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -931,7 +1176,8 @@ WHERE id = 7391;
 
 UPDATE address_settlement_kato
 SET kato_id = 103647202
-WHERE address_settlement_id = 7391;
+WHERE address_settlement_id = 7391
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -942,7 +1188,8 @@ WHERE id = 7368;
 
 UPDATE address_settlement_kato
 SET kato_id = 103649100
-WHERE address_settlement_id = 7368;
+WHERE address_settlement_id = 7368
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -953,7 +1200,8 @@ WHERE id = 7369;
 
 UPDATE address_settlement_kato
 SET kato_id = 103651100
-WHERE address_settlement_id = 7369;
+WHERE address_settlement_id = 7369
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -964,7 +1212,8 @@ WHERE id = 7370;
 
 UPDATE address_settlement_kato
 SET kato_id = 103653100
-WHERE address_settlement_id = 7370;
+WHERE address_settlement_id = 7370
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -975,7 +1224,8 @@ WHERE id = 7371;
 
 UPDATE address_settlement_kato
 SET kato_id = 103653104
-WHERE address_settlement_id = 7371;
+WHERE address_settlement_id = 7371
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -986,7 +1236,8 @@ WHERE id = 7372;
 
 UPDATE address_settlement_kato
 SET kato_id = 103653106
-WHERE address_settlement_id = 7372;
+WHERE address_settlement_id = 7372
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -997,7 +1248,8 @@ WHERE id = 7380;
 
 UPDATE address_settlement_kato
 SET kato_id = 103653129
-WHERE address_settlement_id = 7380;
+WHERE address_settlement_id = 7380
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1008,7 +1260,8 @@ WHERE id = 7373;
 
 UPDATE address_settlement_kato
 SET kato_id = 103655100
-WHERE address_settlement_id = 7373;
+WHERE address_settlement_id = 7373
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1019,7 +1272,8 @@ WHERE id = 7375;
 
 UPDATE address_settlement_kato
 SET kato_id = 103659100
-WHERE address_settlement_id = 7375;
+WHERE address_settlement_id = 7375
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1030,7 +1284,8 @@ WHERE id = 7376;
 
 UPDATE address_settlement_kato
 SET kato_id = 103659300
-WHERE address_settlement_id = 7376;
+WHERE address_settlement_id = 7376
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1041,7 +1296,8 @@ WHERE id = 7379;
 
 UPDATE address_settlement_kato
 SET kato_id = 103661102
-WHERE address_settlement_id = 7379;
+WHERE address_settlement_id = 7379
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1052,7 +1308,8 @@ WHERE id = 7378;
 
 UPDATE address_settlement_kato
 SET kato_id = 103661200
-WHERE address_settlement_id = 7378;
+WHERE address_settlement_id = 7378
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1063,7 +1320,8 @@ WHERE id = 7380;
 
 UPDATE address_settlement_kato
 SET kato_id = 103663100
-WHERE address_settlement_id = 7380;
+WHERE address_settlement_id = 7380
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1074,7 +1332,8 @@ WHERE id = 7383;
 
 UPDATE address_settlement_kato
 SET kato_id = 103665100
-WHERE address_settlement_id = 7383;
+WHERE address_settlement_id = 7383
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1085,7 +1344,8 @@ WHERE id = 7384;
 
 UPDATE address_settlement_kato
 SET kato_id = 103665152
-WHERE address_settlement_id = 7384;
+WHERE address_settlement_id = 7384
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1096,7 +1356,8 @@ WHERE id = 7388;
 
 UPDATE address_settlement_kato
 SET kato_id = 103667117
-WHERE address_settlement_id = 7388;
+WHERE address_settlement_id = 7388
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1107,7 +1368,8 @@ WHERE id = 7387;
 
 UPDATE address_settlement_kato
 SET kato_id = 103667300
-WHERE address_settlement_id = 7387;
+WHERE address_settlement_id = 7387
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1118,7 +1380,8 @@ WHERE id = 7389;
 
 UPDATE address_settlement_kato
 SET kato_id = 103669100
-WHERE address_settlement_id = 7389;
+WHERE address_settlement_id = 7389
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1129,7 +1392,8 @@ WHERE id = 7374;
 
 UPDATE address_settlement_kato
 SET kato_id = 103669172
-WHERE address_settlement_id = 7374;
+WHERE address_settlement_id = 7374
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1140,7 +1404,8 @@ WHERE id = 7391;
 
 UPDATE address_settlement_kato
 SET kato_id = 103671200
-WHERE address_settlement_id = 7391;
+WHERE address_settlement_id = 7391
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1151,7 +1416,8 @@ WHERE id = 7392;
 
 UPDATE address_settlement_kato
 SET kato_id = 103671300
-WHERE address_settlement_id = 7392;
+WHERE address_settlement_id = 7392
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1162,7 +1428,8 @@ WHERE id = 7393;
 
 UPDATE address_settlement_kato
 SET kato_id = 103671400
-WHERE address_settlement_id = 7393;
+WHERE address_settlement_id = 7393
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1173,7 +1440,8 @@ WHERE id = 7394;
 
 UPDATE address_settlement_kato
 SET kato_id = 103671500
-WHERE address_settlement_id = 7394;
+WHERE address_settlement_id = 7394
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1184,7 +1452,8 @@ WHERE id = 7395;
 
 UPDATE address_settlement_kato
 SET kato_id = 103673100
-WHERE address_settlement_id = 7395;
+WHERE address_settlement_id = 7395
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1195,7 +1464,8 @@ WHERE id = 7397;
 
 UPDATE address_settlement_kato
 SET kato_id = 103673106
-WHERE address_settlement_id = 7397;
+WHERE address_settlement_id = 7397
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1206,7 +1476,8 @@ WHERE id = 7398;
 
 UPDATE address_settlement_kato
 SET kato_id = 103673108
-WHERE address_settlement_id = 7398;
+WHERE address_settlement_id = 7398
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1217,7 +1488,8 @@ WHERE id = 7399;
 
 UPDATE address_settlement_kato
 SET kato_id = 103675100
-WHERE address_settlement_id = 7399;
+WHERE address_settlement_id = 7399
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1228,7 +1500,8 @@ WHERE id = 7366;
 
 UPDATE address_settlement_kato
 SET kato_id = 103675103
-WHERE address_settlement_id = 7366;
+WHERE address_settlement_id = 7366
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1239,7 +1512,8 @@ WHERE id = 7400;
 
 UPDATE address_settlement_kato
 SET kato_id = 103679100
-WHERE address_settlement_id = 7400;
+WHERE address_settlement_id = 7400
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1250,7 +1524,8 @@ WHERE id = 7402;
 
 UPDATE address_settlement_kato
 SET kato_id = 103679106
-WHERE address_settlement_id = 7402;
+WHERE address_settlement_id = 7402
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1261,7 +1536,8 @@ WHERE id = 7401;
 
 UPDATE address_settlement_kato
 SET kato_id = 103679200
-WHERE address_settlement_id = 7401;
+WHERE address_settlement_id = 7401
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1272,7 +1548,8 @@ WHERE id = 7391;
 
 UPDATE address_settlement_kato
 SET kato_id = 103679203
-WHERE address_settlement_id = 7391;
+WHERE address_settlement_id = 7391
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1283,7 +1560,8 @@ WHERE id = 7403;
 
 UPDATE address_settlement_kato
 SET kato_id = 103681100
-WHERE address_settlement_id = 7403;
+WHERE address_settlement_id = 7403
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1294,7 +1572,8 @@ WHERE id = 7376;
 
 UPDATE address_settlement_kato
 SET kato_id = 103681112
-WHERE address_settlement_id = 7376;
+WHERE address_settlement_id = 7376
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1305,7 +1584,8 @@ WHERE id = 7404;
 
 UPDATE address_settlement_kato
 SET kato_id = 103681200
-WHERE address_settlement_id = 7404;
+WHERE address_settlement_id = 7404
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1316,7 +1596,8 @@ WHERE id = 7405;
 
 UPDATE address_settlement_kato
 SET kato_id = 103681300
-WHERE address_settlement_id = 7405;
+WHERE address_settlement_id = 7405
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1327,7 +1608,8 @@ WHERE id = 7406;
 
 UPDATE address_settlement_kato
 SET kato_id = 103685100
-WHERE address_settlement_id = 7406;
+WHERE address_settlement_id = 7406
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1338,7 +1620,8 @@ WHERE id = 7408;
 
 UPDATE address_settlement_kato
 SET kato_id = 103685102
-WHERE address_settlement_id = 7408;
+WHERE address_settlement_id = 7408
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1349,7 +1632,8 @@ WHERE id = 7407;
 
 UPDATE address_settlement_kato
 SET kato_id = 103685200
-WHERE address_settlement_id = 7407;
+WHERE address_settlement_id = 7407
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1360,7 +1644,8 @@ WHERE id = 7409;
 
 UPDATE address_settlement_kato
 SET kato_id = 103685400
-WHERE address_settlement_id = 7409;
+WHERE address_settlement_id = 7409
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1371,7 +1656,8 @@ WHERE id = 7411;
 
 UPDATE address_settlement_kato
 SET kato_id = 103685700
-WHERE address_settlement_id = 7411;
+WHERE address_settlement_id = 7411
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1382,7 +1668,8 @@ WHERE id = 7412;
 
 UPDATE address_settlement_kato
 SET kato_id = 103687100
-WHERE address_settlement_id = 7412;
+WHERE address_settlement_id = 7412
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1393,7 +1680,8 @@ WHERE id = 7379;
 
 UPDATE address_settlement_kato
 SET kato_id = 103687112
-WHERE address_settlement_id = 7379;
+WHERE address_settlement_id = 7379
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1404,7 +1692,8 @@ WHERE id = 7413;
 
 UPDATE address_settlement_kato
 SET kato_id = 103687131
-WHERE address_settlement_id = 7413;
+WHERE address_settlement_id = 7413
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1415,7 +1704,8 @@ WHERE id = 7414;
 
 UPDATE address_settlement_kato
 SET kato_id = 103687300
-WHERE address_settlement_id = 7414;
+WHERE address_settlement_id = 7414
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1426,7 +1716,8 @@ WHERE id = 7415;
 
 UPDATE address_settlement_kato
 SET kato_id = 103687400
-WHERE address_settlement_id = 7415;
+WHERE address_settlement_id = 7415
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1437,7 +1728,8 @@ WHERE id = 7416;
 
 UPDATE address_settlement_kato
 SET kato_id = 103687500
-WHERE address_settlement_id = 7416;
+WHERE address_settlement_id = 7416
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1448,7 +1740,8 @@ WHERE id = 7417;
 
 UPDATE address_settlement_kato
 SET kato_id = 103830100
-WHERE address_settlement_id = 7417;
+WHERE address_settlement_id = 7417
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1459,7 +1752,8 @@ WHERE id = 7419;
 
 UPDATE address_settlement_kato
 SET kato_id = 103833200
-WHERE address_settlement_id = 7419;
+WHERE address_settlement_id = 7419
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1470,7 +1764,8 @@ WHERE id = 7420;
 
 UPDATE address_settlement_kato
 SET kato_id = 103833300
-WHERE address_settlement_id = 7420;
+WHERE address_settlement_id = 7420
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1481,7 +1776,8 @@ WHERE id = 7421;
 
 UPDATE address_settlement_kato
 SET kato_id = 103835100
-WHERE address_settlement_id = 7421;
+WHERE address_settlement_id = 7421
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1492,7 +1788,8 @@ WHERE id = 7423;
 
 UPDATE address_settlement_kato
 SET kato_id = 103837100
-WHERE address_settlement_id = 7423;
+WHERE address_settlement_id = 7423
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1503,7 +1800,8 @@ WHERE id = 7425;
 
 UPDATE address_settlement_kato
 SET kato_id = 103837300
-WHERE address_settlement_id = 7425;
+WHERE address_settlement_id = 7425
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1514,7 +1812,8 @@ WHERE id = 7426;
 
 UPDATE address_settlement_kato
 SET kato_id = 103837400
-WHERE address_settlement_id = 7426;
+WHERE address_settlement_id = 7426
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1525,7 +1824,8 @@ WHERE id = 7427;
 
 UPDATE address_settlement_kato
 SET kato_id = 103837500
-WHERE address_settlement_id = 7427;
+WHERE address_settlement_id = 7427
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1536,7 +1836,8 @@ WHERE id = 7424;
 
 UPDATE address_settlement_kato
 SET kato_id = 103837502
-WHERE address_settlement_id = 7424;
+WHERE address_settlement_id = 7424
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1547,7 +1848,8 @@ WHERE id = 7428;
 
 UPDATE address_settlement_kato
 SET kato_id = 103837600
-WHERE address_settlement_id = 7428;
+WHERE address_settlement_id = 7428
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1558,7 +1860,8 @@ WHERE id = 7429;
 
 UPDATE address_settlement_kato
 SET kato_id = 103837700
-WHERE address_settlement_id = 7429;
+WHERE address_settlement_id = 7429
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1569,7 +1872,8 @@ WHERE id = 7430;
 
 UPDATE address_settlement_kato
 SET kato_id = 103841100
-WHERE address_settlement_id = 7430;
+WHERE address_settlement_id = 7430
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1580,7 +1884,8 @@ WHERE id = 7431;
 
 UPDATE address_settlement_kato
 SET kato_id = 103841200
-WHERE address_settlement_id = 7431;
+WHERE address_settlement_id = 7431
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1591,7 +1896,8 @@ WHERE id = 7432;
 
 UPDATE address_settlement_kato
 SET kato_id = 103841300
-WHERE address_settlement_id = 7432;
+WHERE address_settlement_id = 7432
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1602,7 +1908,8 @@ WHERE id = 7433;
 
 UPDATE address_settlement_kato
 SET kato_id = 103841400
-WHERE address_settlement_id = 7433;
+WHERE address_settlement_id = 7433
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1613,7 +1920,8 @@ WHERE id = 7434;
 
 UPDATE address_settlement_kato
 SET kato_id = 103843100
-WHERE address_settlement_id = 7434;
+WHERE address_settlement_id = 7434
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1624,7 +1932,8 @@ WHERE id = 7435;
 
 UPDATE address_settlement_kato
 SET kato_id = 103843200
-WHERE address_settlement_id = 7435;
+WHERE address_settlement_id = 7435
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1635,7 +1944,8 @@ WHERE id = 7436;
 
 UPDATE address_settlement_kato
 SET kato_id = 103845100
-WHERE address_settlement_id = 7436;
+WHERE address_settlement_id = 7436
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1646,7 +1956,8 @@ WHERE id = 7437;
 
 UPDATE address_settlement_kato
 SET kato_id = 103845200
-WHERE address_settlement_id = 7437;
+WHERE address_settlement_id = 7437
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1657,7 +1968,8 @@ WHERE id = 7439;
 
 UPDATE address_settlement_kato
 SET kato_id = 103847200
-WHERE address_settlement_id = 7439;
+WHERE address_settlement_id = 7439
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1668,7 +1980,8 @@ WHERE id = 7441;
 
 UPDATE address_settlement_kato
 SET kato_id = 103849200
-WHERE address_settlement_id = 7441;
+WHERE address_settlement_id = 7441
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1679,7 +1992,8 @@ WHERE id = 7442;
 
 UPDATE address_settlement_kato
 SET kato_id = 103849300
-WHERE address_settlement_id = 7442;
+WHERE address_settlement_id = 7442
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1690,7 +2004,8 @@ WHERE id = 7446;
 
 UPDATE address_settlement_kato
 SET kato_id = 103851102
-WHERE address_settlement_id = 7446;
+WHERE address_settlement_id = 7446
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1701,7 +2016,8 @@ WHERE id = 7444;
 
 UPDATE address_settlement_kato
 SET kato_id = 103851200
-WHERE address_settlement_id = 7444;
+WHERE address_settlement_id = 7444
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1712,7 +2028,8 @@ WHERE id = 7447;
 
 UPDATE address_settlement_kato
 SET kato_id = 104030100
-WHERE address_settlement_id = 7447;
+WHERE address_settlement_id = 7447
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1723,7 +2040,8 @@ WHERE id = 7448;
 
 UPDATE address_settlement_kato
 SET kato_id = 104030200
-WHERE address_settlement_id = 7448;
+WHERE address_settlement_id = 7448
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1734,7 +2052,8 @@ WHERE id = 7449;
 
 UPDATE address_settlement_kato
 SET kato_id = 104030300
-WHERE address_settlement_id = 7449;
+WHERE address_settlement_id = 7449
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1745,7 +2064,8 @@ WHERE id = 7450;
 
 UPDATE address_settlement_kato
 SET kato_id = 104030400
-WHERE address_settlement_id = 7450;
+WHERE address_settlement_id = 7450
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1756,7 +2076,8 @@ WHERE id = 7451;
 
 UPDATE address_settlement_kato
 SET kato_id = 104030600
-WHERE address_settlement_id = 7451;
+WHERE address_settlement_id = 7451
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1767,7 +2088,8 @@ WHERE id = 7452;
 
 UPDATE address_settlement_kato
 SET kato_id = 104033100
-WHERE address_settlement_id = 7452;
+WHERE address_settlement_id = 7452
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1778,7 +2100,8 @@ WHERE id = 7453;
 
 UPDATE address_settlement_kato
 SET kato_id = 104033102
-WHERE address_settlement_id = 7453;
+WHERE address_settlement_id = 7453
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1789,7 +2112,8 @@ WHERE id = 7454;
 
 UPDATE address_settlement_kato
 SET kato_id = 104035100
-WHERE address_settlement_id = 7454;
+WHERE address_settlement_id = 7454
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1800,7 +2124,8 @@ WHERE id = 7456;
 
 UPDATE address_settlement_kato
 SET kato_id = 104035400
-WHERE address_settlement_id = 7456;
+WHERE address_settlement_id = 7456
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1811,7 +2136,8 @@ WHERE id = 7457;
 
 UPDATE address_settlement_kato
 SET kato_id = 104035600
-WHERE address_settlement_id = 7457;
+WHERE address_settlement_id = 7457
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1822,7 +2148,8 @@ WHERE id = 7458;
 
 UPDATE address_settlement_kato
 SET kato_id = 104035700
-WHERE address_settlement_id = 7458;
+WHERE address_settlement_id = 7458
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1833,7 +2160,8 @@ WHERE id = 7460;
 
 UPDATE address_settlement_kato
 SET kato_id = 104035702
-WHERE address_settlement_id = 7460;
+WHERE address_settlement_id = 7460
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1844,7 +2172,8 @@ WHERE id = 7459;
 
 UPDATE address_settlement_kato
 SET kato_id = 104035800
-WHERE address_settlement_id = 7459;
+WHERE address_settlement_id = 7459
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1855,7 +2184,8 @@ WHERE id = 7461;
 
 UPDATE address_settlement_kato
 SET kato_id = 104037100
-WHERE address_settlement_id = 7461;
+WHERE address_settlement_id = 7461
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1866,7 +2196,8 @@ WHERE id = 7463;
 
 UPDATE address_settlement_kato
 SET kato_id = 104037104
-WHERE address_settlement_id = 7463;
+WHERE address_settlement_id = 7463
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1877,7 +2208,8 @@ WHERE id = 7462;
 
 UPDATE address_settlement_kato
 SET kato_id = 104037200
-WHERE address_settlement_id = 7462;
+WHERE address_settlement_id = 7462
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1888,7 +2220,8 @@ WHERE id = 7464;
 
 UPDATE address_settlement_kato
 SET kato_id = 104043100
-WHERE address_settlement_id = 7464;
+WHERE address_settlement_id = 7464
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1899,7 +2232,8 @@ WHERE id = 7465;
 
 UPDATE address_settlement_kato
 SET kato_id = 104043200
-WHERE address_settlement_id = 7465;
+WHERE address_settlement_id = 7465
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1910,7 +2244,8 @@ WHERE id = 7466;
 
 UPDATE address_settlement_kato
 SET kato_id = 104045100
-WHERE address_settlement_id = 7466;
+WHERE address_settlement_id = 7466
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1921,7 +2256,8 @@ WHERE id = 7467;
 
 UPDATE address_settlement_kato
 SET kato_id = 104047100
-WHERE address_settlement_id = 7467;
+WHERE address_settlement_id = 7467
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1932,7 +2268,8 @@ WHERE id = 7468;
 
 UPDATE address_settlement_kato
 SET kato_id = 104047300
-WHERE address_settlement_id = 7468;
+WHERE address_settlement_id = 7468
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1943,7 +2280,8 @@ WHERE id = 7469;
 
 UPDATE address_settlement_kato
 SET kato_id = 104047500
-WHERE address_settlement_id = 7469;
+WHERE address_settlement_id = 7469
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1954,7 +2292,8 @@ WHERE id = 7470;
 
 UPDATE address_settlement_kato
 SET kato_id = 104049100
-WHERE address_settlement_id = 7470;
+WHERE address_settlement_id = 7470
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1965,7 +2304,8 @@ WHERE id = 7471;
 
 UPDATE address_settlement_kato
 SET kato_id = 104049200
-WHERE address_settlement_id = 7471;
+WHERE address_settlement_id = 7471
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1976,7 +2316,8 @@ WHERE id = 7472;
 
 UPDATE address_settlement_kato
 SET kato_id = 104049300
-WHERE address_settlement_id = 7472;
+WHERE address_settlement_id = 7472
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1987,7 +2328,8 @@ WHERE id = 7473;
 
 UPDATE address_settlement_kato
 SET kato_id = 104051100
-WHERE address_settlement_id = 7473;
+WHERE address_settlement_id = 7473
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -1998,7 +2340,8 @@ WHERE id = 7474;
 
 UPDATE address_settlement_kato
 SET kato_id = 104051200
-WHERE address_settlement_id = 7474;
+WHERE address_settlement_id = 7474
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2009,7 +2352,8 @@ WHERE id = 7511;
 
 UPDATE address_settlement_kato
 SET kato_id = 104051300
-WHERE address_settlement_id = 7511;
+WHERE address_settlement_id = 7511
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2020,7 +2364,8 @@ WHERE id = 7512;
 
 UPDATE address_settlement_kato
 SET kato_id = 104051302
-WHERE address_settlement_id = 7512;
+WHERE address_settlement_id = 7512
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2031,7 +2376,8 @@ WHERE id = 7475;
 
 UPDATE address_settlement_kato
 SET kato_id = 104055100
-WHERE address_settlement_id = 7475;
+WHERE address_settlement_id = 7475
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2042,7 +2388,8 @@ WHERE id = 7479;
 
 UPDATE address_settlement_kato
 SET kato_id = 104055102
-WHERE address_settlement_id = 7479;
+WHERE address_settlement_id = 7479
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2053,7 +2400,8 @@ WHERE id = 7476;
 
 UPDATE address_settlement_kato
 SET kato_id = 104055401
-WHERE address_settlement_id = 7476;
+WHERE address_settlement_id = 7476
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2064,7 +2412,8 @@ WHERE id = 7480;
 
 UPDATE address_settlement_kato
 SET kato_id = 104057100
-WHERE address_settlement_id = 7480;
+WHERE address_settlement_id = 7480
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2075,7 +2424,8 @@ WHERE id = 7483;
 
 UPDATE address_settlement_kato
 SET kato_id = 104057500
-WHERE address_settlement_id = 7483;
+WHERE address_settlement_id = 7483
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2086,7 +2436,8 @@ WHERE id = 7486;
 
 UPDATE address_settlement_kato
 SET kato_id = 104059300
-WHERE address_settlement_id = 7486;
+WHERE address_settlement_id = 7486
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2097,7 +2448,8 @@ WHERE id = 7489;
 
 UPDATE address_settlement_kato
 SET kato_id = 104061102
-WHERE address_settlement_id = 7489;
+WHERE address_settlement_id = 7489
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2108,7 +2460,8 @@ WHERE id = 7491;
 
 UPDATE address_settlement_kato
 SET kato_id = 104061600
-WHERE address_settlement_id = 7491;
+WHERE address_settlement_id = 7491
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2119,7 +2472,8 @@ WHERE id = 7488;
 
 UPDATE address_settlement_kato
 SET kato_id = 104061602
-WHERE address_settlement_id = 7488;
+WHERE address_settlement_id = 7488
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2130,7 +2484,8 @@ WHERE id = 7492;
 
 UPDATE address_settlement_kato
 SET kato_id = 104063100
-WHERE address_settlement_id = 7492;
+WHERE address_settlement_id = 7492
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2141,7 +2496,8 @@ WHERE id = 7493;
 
 UPDATE address_settlement_kato
 SET kato_id = 104063200
-WHERE address_settlement_id = 7493;
+WHERE address_settlement_id = 7493
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2152,7 +2508,8 @@ WHERE id = 7495;
 
 UPDATE address_settlement_kato
 SET kato_id = 104063400
-WHERE address_settlement_id = 7495;
+WHERE address_settlement_id = 7495
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2163,7 +2520,8 @@ WHERE id = 7496;
 
 UPDATE address_settlement_kato
 SET kato_id = 104065100
-WHERE address_settlement_id = 7496;
+WHERE address_settlement_id = 7496
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2174,7 +2532,8 @@ WHERE id = 7497;
 
 UPDATE address_settlement_kato
 SET kato_id = 104065102
-WHERE address_settlement_id = 7497;
+WHERE address_settlement_id = 7497
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2185,7 +2544,8 @@ WHERE id = 7498;
 
 UPDATE address_settlement_kato
 SET kato_id = 104065300
-WHERE address_settlement_id = 7498;
+WHERE address_settlement_id = 7498
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2196,7 +2556,8 @@ WHERE id = 7499;
 
 UPDATE address_settlement_kato
 SET kato_id = 104065303
-WHERE address_settlement_id = 7499;
+WHERE address_settlement_id = 7499
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2207,7 +2568,8 @@ WHERE id = 7500;
 
 UPDATE address_settlement_kato
 SET kato_id = 104067100
-WHERE address_settlement_id = 7500;
+WHERE address_settlement_id = 7500
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2218,7 +2580,8 @@ WHERE id = 7501;
 
 UPDATE address_settlement_kato
 SET kato_id = 104067200
-WHERE address_settlement_id = 7501;
+WHERE address_settlement_id = 7501
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2229,7 +2592,8 @@ WHERE id = 7503;
 
 UPDATE address_settlement_kato
 SET kato_id = 104069100
-WHERE address_settlement_id = 7503;
+WHERE address_settlement_id = 7503
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2240,7 +2604,8 @@ WHERE id = 7506;
 
 UPDATE address_settlement_kato
 SET kato_id = 104069102
-WHERE address_settlement_id = 7506;
+WHERE address_settlement_id = 7506
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2251,7 +2616,8 @@ WHERE id = 7507;
 
 UPDATE address_settlement_kato
 SET kato_id = 104071100
-WHERE address_settlement_id = 7507;
+WHERE address_settlement_id = 7507
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2262,7 +2628,8 @@ WHERE id = 7508;
 
 UPDATE address_settlement_kato
 SET kato_id = 104071102
-WHERE address_settlement_id = 7508;
+WHERE address_settlement_id = 7508
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2273,7 +2640,8 @@ WHERE id = 7509;
 
 UPDATE address_settlement_kato
 SET kato_id = 104071104
-WHERE address_settlement_id = 7509;
+WHERE address_settlement_id = 7509
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2284,7 +2652,8 @@ WHERE id = 7510;
 
 UPDATE address_settlement_kato
 SET kato_id = 104071400
-WHERE address_settlement_id = 7510;
+WHERE address_settlement_id = 7510
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2295,7 +2664,8 @@ WHERE id = 7556;
 
 UPDATE address_settlement_kato
 SET kato_id = 104221100
-WHERE address_settlement_id = 7556;
+WHERE address_settlement_id = 7556
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2306,7 +2676,8 @@ WHERE id = 7558;
 
 UPDATE address_settlement_kato
 SET kato_id = 104221300
-WHERE address_settlement_id = 7558;
+WHERE address_settlement_id = 7558
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2317,7 +2688,8 @@ WHERE id = 7557;
 
 UPDATE address_settlement_kato
 SET kato_id = 104221314
-WHERE address_settlement_id = 7557;
+WHERE address_settlement_id = 7557
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2328,7 +2700,8 @@ WHERE id = 7561;
 
 UPDATE address_settlement_kato
 SET kato_id = 104221315
-WHERE address_settlement_id = 7561;
+WHERE address_settlement_id = 7561
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2339,7 +2712,8 @@ WHERE id = 7559;
 
 UPDATE address_settlement_kato
 SET kato_id = 104221400
-WHERE address_settlement_id = 7559;
+WHERE address_settlement_id = 7559
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2350,7 +2724,8 @@ WHERE id = 7560;
 
 UPDATE address_settlement_kato
 SET kato_id = 104221700
-WHERE address_settlement_id = 7560;
+WHERE address_settlement_id = 7560
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2361,7 +2736,8 @@ WHERE id = 7562;
 
 UPDATE address_settlement_kato
 SET kato_id = 104221900
-WHERE address_settlement_id = 7562;
+WHERE address_settlement_id = 7562
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2372,7 +2748,8 @@ WHERE id = 7563;
 
 UPDATE address_settlement_kato
 SET kato_id = 104230100
-WHERE address_settlement_id = 7563;
+WHERE address_settlement_id = 7563
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2383,7 +2760,8 @@ WHERE id = 7564;
 
 UPDATE address_settlement_kato
 SET kato_id = 104230116
-WHERE address_settlement_id = 7564;
+WHERE address_settlement_id = 7564
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2394,7 +2772,8 @@ WHERE id = 7565;
 
 UPDATE address_settlement_kato
 SET kato_id = 104230400
-WHERE address_settlement_id = 7565;
+WHERE address_settlement_id = 7565
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2405,7 +2784,8 @@ WHERE id = 7568;
 
 UPDATE address_settlement_kato
 SET kato_id = 104230800
-WHERE address_settlement_id = 7568;
+WHERE address_settlement_id = 7568
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2416,7 +2796,8 @@ WHERE id = 7567;
 
 UPDATE address_settlement_kato
 SET kato_id = 104233100
-WHERE address_settlement_id = 7567;
+WHERE address_settlement_id = 7567
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2427,7 +2808,8 @@ WHERE id = 7566;
 
 UPDATE address_settlement_kato
 SET kato_id = 104233106
-WHERE address_settlement_id = 7566;
+WHERE address_settlement_id = 7566
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2438,7 +2820,8 @@ WHERE id = 7569;
 
 UPDATE address_settlement_kato
 SET kato_id = 104233300
-WHERE address_settlement_id = 7569;
+WHERE address_settlement_id = 7569
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2449,7 +2832,8 @@ WHERE id = 7570;
 
 UPDATE address_settlement_kato
 SET kato_id = 104233302
-WHERE address_settlement_id = 7570;
+WHERE address_settlement_id = 7570
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2460,7 +2844,8 @@ WHERE id = 7571;
 
 UPDATE address_settlement_kato
 SET kato_id = 104235100
-WHERE address_settlement_id = 7571;
+WHERE address_settlement_id = 7571
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2471,7 +2856,8 @@ WHERE id = 7573;
 
 UPDATE address_settlement_kato
 SET kato_id = 104237100
-WHERE address_settlement_id = 7573;
+WHERE address_settlement_id = 7573
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2482,7 +2868,8 @@ WHERE id = 7575;
 
 UPDATE address_settlement_kato
 SET kato_id = 104237112
-WHERE address_settlement_id = 7575;
+WHERE address_settlement_id = 7575
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2493,7 +2880,8 @@ WHERE id = 7576;
 
 UPDATE address_settlement_kato
 SET kato_id = 104237400
-WHERE address_settlement_id = 7576;
+WHERE address_settlement_id = 7576
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2504,7 +2892,8 @@ WHERE id = 7577;
 
 UPDATE address_settlement_kato
 SET kato_id = 104239100
-WHERE address_settlement_id = 7577;
+WHERE address_settlement_id = 7577
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2515,7 +2904,8 @@ WHERE id = 7578;
 
 UPDATE address_settlement_kato
 SET kato_id = 104239200
-WHERE address_settlement_id = 7578;
+WHERE address_settlement_id = 7578
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2526,7 +2916,8 @@ WHERE id = 7579;
 
 UPDATE address_settlement_kato
 SET kato_id = 104239300
-WHERE address_settlement_id = 7579;
+WHERE address_settlement_id = 7579
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2537,7 +2928,8 @@ WHERE id = 7580;
 
 UPDATE address_settlement_kato
 SET kato_id = 104245100
-WHERE address_settlement_id = 7580;
+WHERE address_settlement_id = 7580
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2548,7 +2940,8 @@ WHERE id = 7582;
 
 UPDATE address_settlement_kato
 SET kato_id = 104245107
-WHERE address_settlement_id = 7582;
+WHERE address_settlement_id = 7582
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2559,7 +2952,8 @@ WHERE id = 7583;
 
 UPDATE address_settlement_kato
 SET kato_id = 104247100
-WHERE address_settlement_id = 7583;
+WHERE address_settlement_id = 7583
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2570,7 +2964,8 @@ WHERE id = 7584;
 
 UPDATE address_settlement_kato
 SET kato_id = 104247107
-WHERE address_settlement_id = 7584;
+WHERE address_settlement_id = 7584
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2581,7 +2976,8 @@ WHERE id = 7585;
 
 UPDATE address_settlement_kato
 SET kato_id = 104247108
-WHERE address_settlement_id = 7585;
+WHERE address_settlement_id = 7585
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2592,7 +2988,8 @@ WHERE id = 7586;
 
 UPDATE address_settlement_kato
 SET kato_id = 104247500
-WHERE address_settlement_id = 7586;
+WHERE address_settlement_id = 7586
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2603,7 +3000,8 @@ WHERE id = 7589;
 
 UPDATE address_settlement_kato
 SET kato_id = 104257100
-WHERE address_settlement_id = 7589;
+WHERE address_settlement_id = 7589
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2614,7 +3012,8 @@ WHERE id = 7590;
 
 UPDATE address_settlement_kato
 SET kato_id = 104257300
-WHERE address_settlement_id = 7590;
+WHERE address_settlement_id = 7590
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2625,7 +3024,8 @@ WHERE id = 7593;
 
 UPDATE address_settlement_kato
 SET kato_id = 104263100
-WHERE address_settlement_id = 7593;
+WHERE address_settlement_id = 7593
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2636,7 +3036,8 @@ WHERE id = 7595;
 
 UPDATE address_settlement_kato
 SET kato_id = 104263104
-WHERE address_settlement_id = 7595;
+WHERE address_settlement_id = 7595
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2647,7 +3048,8 @@ WHERE id = 7594;
 
 UPDATE address_settlement_kato
 SET kato_id = 104263200
-WHERE address_settlement_id = 7594;
+WHERE address_settlement_id = 7594
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2658,7 +3060,8 @@ WHERE id = 7596;
 
 UPDATE address_settlement_kato
 SET kato_id = 104265100
-WHERE address_settlement_id = 7596;
+WHERE address_settlement_id = 7596
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2669,7 +3072,8 @@ WHERE id = 7597;
 
 UPDATE address_settlement_kato
 SET kato_id = 104265114
-WHERE address_settlement_id = 7597;
+WHERE address_settlement_id = 7597
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2680,7 +3084,8 @@ WHERE id = 7598;
 
 UPDATE address_settlement_kato
 SET kato_id = 104265300
-WHERE address_settlement_id = 7598;
+WHERE address_settlement_id = 7598
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2691,7 +3096,8 @@ WHERE id = 7599;
 
 UPDATE address_settlement_kato
 SET kato_id = 104273100
-WHERE address_settlement_id = 7599;
+WHERE address_settlement_id = 7599
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2702,7 +3108,8 @@ WHERE id = 7600;
 
 UPDATE address_settlement_kato
 SET kato_id = 104273200
-WHERE address_settlement_id = 7600;
+WHERE address_settlement_id = 7600
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2713,7 +3120,8 @@ WHERE id = 7575;
 
 UPDATE address_settlement_kato
 SET kato_id = 104273206
-WHERE address_settlement_id = 7575;
+WHERE address_settlement_id = 7575
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2724,7 +3132,8 @@ WHERE id = 7603;
 
 UPDATE address_settlement_kato
 SET kato_id = 104275300
-WHERE address_settlement_id = 7603;
+WHERE address_settlement_id = 7603
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2735,7 +3144,8 @@ WHERE id = 7606;
 
 UPDATE address_settlement_kato
 SET kato_id = 104277100
-WHERE address_settlement_id = 7606;
+WHERE address_settlement_id = 7606
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2746,7 +3156,8 @@ WHERE id = 7607;
 
 UPDATE address_settlement_kato
 SET kato_id = 104277200
-WHERE address_settlement_id = 7607;
+WHERE address_settlement_id = 7607
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2757,7 +3168,8 @@ WHERE id = 7587;
 
 UPDATE address_settlement_kato
 SET kato_id = 104277300
-WHERE address_settlement_id = 7587;
+WHERE address_settlement_id = 7587
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2768,7 +3180,8 @@ WHERE id = 7608;
 
 UPDATE address_settlement_kato
 SET kato_id = 104279100
-WHERE address_settlement_id = 7608;
+WHERE address_settlement_id = 7608
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2779,7 +3192,8 @@ WHERE id = 7610;
 
 UPDATE address_settlement_kato
 SET kato_id = 104279300
-WHERE address_settlement_id = 7610;
+WHERE address_settlement_id = 7610
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2790,7 +3204,8 @@ WHERE id = 7611;
 
 UPDATE address_settlement_kato
 SET kato_id = 104281100
-WHERE address_settlement_id = 7611;
+WHERE address_settlement_id = 7611
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2801,7 +3216,8 @@ WHERE id = 7613;
 
 UPDATE address_settlement_kato
 SET kato_id = 104281112
-WHERE address_settlement_id = 7613;
+WHERE address_settlement_id = 7613
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2812,7 +3228,8 @@ WHERE id = 7612;
 
 UPDATE address_settlement_kato
 SET kato_id = 104281300
-WHERE address_settlement_id = 7612;
+WHERE address_settlement_id = 7612
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2823,7 +3240,8 @@ WHERE id = 7614;
 
 UPDATE address_settlement_kato
 SET kato_id = 104283100
-WHERE address_settlement_id = 7614;
+WHERE address_settlement_id = 7614
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2834,7 +3252,8 @@ WHERE id = 7615;
 
 UPDATE address_settlement_kato
 SET kato_id = 104283118
-WHERE address_settlement_id = 7615;
+WHERE address_settlement_id = 7615
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2845,7 +3264,8 @@ WHERE id = 7618;
 
 UPDATE address_settlement_kato
 SET kato_id = 104285200
-WHERE address_settlement_id = 7618;
+WHERE address_settlement_id = 7618
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2856,7 +3276,8 @@ WHERE id = 7592;
 
 UPDATE address_settlement_kato
 SET kato_id = 104285300
-WHERE address_settlement_id = 7592;
+WHERE address_settlement_id = 7592
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2867,7 +3288,8 @@ WHERE id = 7575;
 
 UPDATE address_settlement_kato
 SET kato_id = 104285307
-WHERE address_settlement_id = 7575;
+WHERE address_settlement_id = 7575
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2878,7 +3300,8 @@ WHERE id = 7619;
 
 UPDATE address_settlement_kato
 SET kato_id = 104285400
-WHERE address_settlement_id = 7619;
+WHERE address_settlement_id = 7619
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2889,7 +3312,8 @@ WHERE id = 7620;
 
 UPDATE address_settlement_kato
 SET kato_id = 104285500
-WHERE address_settlement_id = 7620;
+WHERE address_settlement_id = 7620
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2900,7 +3324,8 @@ WHERE id = 7621;
 
 UPDATE address_settlement_kato
 SET kato_id = 104289100
-WHERE address_settlement_id = 7621;
+WHERE address_settlement_id = 7621
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2911,7 +3336,8 @@ WHERE id = 7622;
 
 UPDATE address_settlement_kato
 SET kato_id = 104289109
-WHERE address_settlement_id = 7622;
+WHERE address_settlement_id = 7622
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2922,7 +3348,8 @@ WHERE id = 7708;
 
 UPDATE address_settlement_kato
 SET kato_id = 104430100
-WHERE address_settlement_id = 7708;
+WHERE address_settlement_id = 7708
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2933,7 +3360,8 @@ WHERE id = 7709;
 
 UPDATE address_settlement_kato
 SET kato_id = 104430300
-WHERE address_settlement_id = 7709;
+WHERE address_settlement_id = 7709
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2944,7 +3372,8 @@ WHERE id = 7710;
 
 UPDATE address_settlement_kato
 SET kato_id = 104430400
-WHERE address_settlement_id = 7710;
+WHERE address_settlement_id = 7710
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2955,7 +3384,8 @@ WHERE id = 7711;
 
 UPDATE address_settlement_kato
 SET kato_id = 104430500
-WHERE address_settlement_id = 7711;
+WHERE address_settlement_id = 7711
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2966,7 +3396,8 @@ WHERE id = 7712;
 
 UPDATE address_settlement_kato
 SET kato_id = 104430600
-WHERE address_settlement_id = 7712;
+WHERE address_settlement_id = 7712
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2977,7 +3408,8 @@ WHERE id = 7715;
 
 UPDATE address_settlement_kato
 SET kato_id = 104435100
-WHERE address_settlement_id = 7715;
+WHERE address_settlement_id = 7715
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2988,7 +3420,8 @@ WHERE id = 7716;
 
 UPDATE address_settlement_kato
 SET kato_id = 104435200
-WHERE address_settlement_id = 7716;
+WHERE address_settlement_id = 7716
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -2999,7 +3432,8 @@ WHERE id = 7717;
 
 UPDATE address_settlement_kato
 SET kato_id = 104435300
-WHERE address_settlement_id = 7717;
+WHERE address_settlement_id = 7717
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3010,7 +3444,8 @@ WHERE id = 7720;
 
 UPDATE address_settlement_kato
 SET kato_id = 104439100
-WHERE address_settlement_id = 7720;
+WHERE address_settlement_id = 7720
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3021,7 +3456,8 @@ WHERE id = 7721;
 
 UPDATE address_settlement_kato
 SET kato_id = 104439300
-WHERE address_settlement_id = 7721;
+WHERE address_settlement_id = 7721
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3032,7 +3468,8 @@ WHERE id = 7722;
 
 UPDATE address_settlement_kato
 SET kato_id = 104439500
-WHERE address_settlement_id = 7722;
+WHERE address_settlement_id = 7722
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3043,7 +3480,8 @@ WHERE id = 7727;
 
 UPDATE address_settlement_kato
 SET kato_id = 104439600
-WHERE address_settlement_id = 7727;
+WHERE address_settlement_id = 7727
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3054,7 +3492,8 @@ WHERE id = 7723;
 
 UPDATE address_settlement_kato
 SET kato_id = 104445100
-WHERE address_settlement_id = 7723;
+WHERE address_settlement_id = 7723
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3065,7 +3504,8 @@ WHERE id = 7724;
 
 UPDATE address_settlement_kato
 SET kato_id = 104445200
-WHERE address_settlement_id = 7724;
+WHERE address_settlement_id = 7724
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3076,7 +3516,8 @@ WHERE id = 7725;
 
 UPDATE address_settlement_kato
 SET kato_id = 104445203
-WHERE address_settlement_id = 7725;
+WHERE address_settlement_id = 7725
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3087,7 +3528,8 @@ WHERE id = 7726;
 
 UPDATE address_settlement_kato
 SET kato_id = 104445400
-WHERE address_settlement_id = 7726;
+WHERE address_settlement_id = 7726
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3098,7 +3540,8 @@ WHERE id = 7740;
 
 UPDATE address_settlement_kato
 SET kato_id = 104459100
-WHERE address_settlement_id = 7740;
+WHERE address_settlement_id = 7740
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3109,7 +3552,8 @@ WHERE id = 7741;
 
 UPDATE address_settlement_kato
 SET kato_id = 104459200
-WHERE address_settlement_id = 7741;
+WHERE address_settlement_id = 7741
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3120,7 +3564,8 @@ WHERE id = 7742;
 
 UPDATE address_settlement_kato
 SET kato_id = 104459204
-WHERE address_settlement_id = 7742;
+WHERE address_settlement_id = 7742
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3131,7 +3576,8 @@ WHERE id = 7743;
 
 UPDATE address_settlement_kato
 SET kato_id = 104459205
-WHERE address_settlement_id = 7743;
+WHERE address_settlement_id = 7743
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3142,7 +3588,8 @@ WHERE id = 7747;
 
 UPDATE address_settlement_kato
 SET kato_id = 104465100
-WHERE address_settlement_id = 7747;
+WHERE address_settlement_id = 7747
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3153,7 +3600,8 @@ WHERE id = 7748;
 
 UPDATE address_settlement_kato
 SET kato_id = 104465200
-WHERE address_settlement_id = 7748;
+WHERE address_settlement_id = 7748
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3164,7 +3612,8 @@ WHERE id = 7749;
 
 UPDATE address_settlement_kato
 SET kato_id = 104465300
-WHERE address_settlement_id = 7749;
+WHERE address_settlement_id = 7749
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3175,7 +3624,8 @@ WHERE id = 7750;
 
 UPDATE address_settlement_kato
 SET kato_id = 104465500
-WHERE address_settlement_id = 7750;
+WHERE address_settlement_id = 7750
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3186,7 +3636,8 @@ WHERE id = 7751;
 
 UPDATE address_settlement_kato
 SET kato_id = 104467100
-WHERE address_settlement_id = 7751;
+WHERE address_settlement_id = 7751
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3197,7 +3648,8 @@ WHERE id = 7752;
 
 UPDATE address_settlement_kato
 SET kato_id = 104467102
-WHERE address_settlement_id = 7752;
+WHERE address_settlement_id = 7752
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3208,7 +3660,8 @@ WHERE id = 7754;
 
 UPDATE address_settlement_kato
 SET kato_id = 104467104
-WHERE address_settlement_id = 7754;
+WHERE address_settlement_id = 7754
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3219,7 +3672,8 @@ WHERE id = 7755;
 
 UPDATE address_settlement_kato
 SET kato_id = 104469100
-WHERE address_settlement_id = 7755;
+WHERE address_settlement_id = 7755
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3230,7 +3684,8 @@ WHERE id = 7757;
 
 UPDATE address_settlement_kato
 SET kato_id = 104469500
-WHERE address_settlement_id = 7757;
+WHERE address_settlement_id = 7757
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3241,7 +3696,8 @@ WHERE id = 7728;
 
 UPDATE address_settlement_kato
 SET kato_id = 104469600
-WHERE address_settlement_id = 7728;
+WHERE address_settlement_id = 7728
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3252,7 +3708,8 @@ WHERE id = 7762;
 
 UPDATE address_settlement_kato
 SET kato_id = 104477100
-WHERE address_settlement_id = 7762;
+WHERE address_settlement_id = 7762
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3263,7 +3720,8 @@ WHERE id = 7763;
 
 UPDATE address_settlement_kato
 SET kato_id = 104477300
-WHERE address_settlement_id = 7763;
+WHERE address_settlement_id = 7763
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3274,7 +3732,8 @@ WHERE id = 7983;
 
 UPDATE address_settlement_kato
 SET kato_id = 104630100
-WHERE address_settlement_id = 7983;
+WHERE address_settlement_id = 7983
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3285,7 +3744,8 @@ WHERE id = 7984;
 
 UPDATE address_settlement_kato
 SET kato_id = 104630200
-WHERE address_settlement_id = 7984;
+WHERE address_settlement_id = 7984
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3296,7 +3756,8 @@ WHERE id = 7985;
 
 UPDATE address_settlement_kato
 SET kato_id = 104630300
-WHERE address_settlement_id = 7985;
+WHERE address_settlement_id = 7985
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3307,7 +3768,8 @@ WHERE id = 7986;
 
 UPDATE address_settlement_kato
 SET kato_id = 104633100
-WHERE address_settlement_id = 7986;
+WHERE address_settlement_id = 7986
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3318,7 +3780,8 @@ WHERE id = 7987;
 
 UPDATE address_settlement_kato
 SET kato_id = 104633200
-WHERE address_settlement_id = 7987;
+WHERE address_settlement_id = 7987
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3329,7 +3792,8 @@ WHERE id = 7988;
 
 UPDATE address_settlement_kato
 SET kato_id = 104633300
-WHERE address_settlement_id = 7988;
+WHERE address_settlement_id = 7988
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3340,7 +3804,8 @@ WHERE id = 7989;
 
 UPDATE address_settlement_kato
 SET kato_id = 104635100
-WHERE address_settlement_id = 7989;
+WHERE address_settlement_id = 7989
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3351,7 +3816,8 @@ WHERE id = 7990;
 
 UPDATE address_settlement_kato
 SET kato_id = 104637100
-WHERE address_settlement_id = 7990;
+WHERE address_settlement_id = 7990
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3362,7 +3828,8 @@ WHERE id = 7991;
 
 UPDATE address_settlement_kato
 SET kato_id = 104637300
-WHERE address_settlement_id = 7991;
+WHERE address_settlement_id = 7991
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3373,7 +3840,8 @@ WHERE id = 7992;
 
 UPDATE address_settlement_kato
 SET kato_id = 104639100
-WHERE address_settlement_id = 7992;
+WHERE address_settlement_id = 7992
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3384,7 +3852,8 @@ WHERE id = 7993;
 
 UPDATE address_settlement_kato
 SET kato_id = 104639200
-WHERE address_settlement_id = 7993;
+WHERE address_settlement_id = 7993
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3395,7 +3864,8 @@ WHERE id = 7994;
 
 UPDATE address_settlement_kato
 SET kato_id = 104639300
-WHERE address_settlement_id = 7994;
+WHERE address_settlement_id = 7994
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3406,7 +3876,8 @@ WHERE id = 7995;
 
 UPDATE address_settlement_kato
 SET kato_id = 104639400
-WHERE address_settlement_id = 7995;
+WHERE address_settlement_id = 7995
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3417,7 +3888,8 @@ WHERE id = 7996;
 
 UPDATE address_settlement_kato
 SET kato_id = 104641100
-WHERE address_settlement_id = 7996;
+WHERE address_settlement_id = 7996
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3428,7 +3900,8 @@ WHERE id = 7997;
 
 UPDATE address_settlement_kato
 SET kato_id = 104643100
-WHERE address_settlement_id = 7997;
+WHERE address_settlement_id = 7997
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3439,7 +3912,8 @@ WHERE id = 7998;
 
 UPDATE address_settlement_kato
 SET kato_id = 104643200
-WHERE address_settlement_id = 7998;
+WHERE address_settlement_id = 7998
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3450,7 +3924,8 @@ WHERE id = 8001;
 
 UPDATE address_settlement_kato
 SET kato_id = 104645200
-WHERE address_settlement_id = 8001;
+WHERE address_settlement_id = 8001
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3461,7 +3936,8 @@ WHERE id = 8002;
 
 UPDATE address_settlement_kato
 SET kato_id = 104647100
-WHERE address_settlement_id = 8002;
+WHERE address_settlement_id = 8002
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3472,7 +3948,8 @@ WHERE id = 8003;
 
 UPDATE address_settlement_kato
 SET kato_id = 104647200
-WHERE address_settlement_id = 8003;
+WHERE address_settlement_id = 8003
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3483,7 +3960,8 @@ WHERE id = 8004;
 
 UPDATE address_settlement_kato
 SET kato_id = 104649100
-WHERE address_settlement_id = 8004;
+WHERE address_settlement_id = 8004
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3494,7 +3972,8 @@ WHERE id = 8005;
 
 UPDATE address_settlement_kato
 SET kato_id = 104649200
-WHERE address_settlement_id = 8005;
+WHERE address_settlement_id = 8005
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3505,7 +3984,8 @@ WHERE id = 8006;
 
 UPDATE address_settlement_kato
 SET kato_id = 104651100
-WHERE address_settlement_id = 8006;
+WHERE address_settlement_id = 8006
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3516,7 +3996,8 @@ WHERE id = 8008;
 
 UPDATE address_settlement_kato
 SET kato_id = 104655100
-WHERE address_settlement_id = 8008;
+WHERE address_settlement_id = 8008
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3527,7 +4008,8 @@ WHERE id = 8009;
 
 UPDATE address_settlement_kato
 SET kato_id = 104657100
-WHERE address_settlement_id = 8009;
+WHERE address_settlement_id = 8009
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3538,7 +4020,8 @@ WHERE id = 8010;
 
 UPDATE address_settlement_kato
 SET kato_id = 104659100
-WHERE address_settlement_id = 8010;
+WHERE address_settlement_id = 8010
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3549,7 +4032,8 @@ WHERE id = 8011;
 
 UPDATE address_settlement_kato
 SET kato_id = 104661100
-WHERE address_settlement_id = 8011;
+WHERE address_settlement_id = 8011
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3560,7 +4044,8 @@ WHERE id = 8012;
 
 UPDATE address_settlement_kato
 SET kato_id = 104661200
-WHERE address_settlement_id = 8012;
+WHERE address_settlement_id = 8012
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3571,7 +4056,8 @@ WHERE id = 8013;
 
 UPDATE address_settlement_kato
 SET kato_id = 104661300
-WHERE address_settlement_id = 8013;
+WHERE address_settlement_id = 8013
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3582,7 +4068,8 @@ WHERE id = 8014;
 
 UPDATE address_settlement_kato
 SET kato_id = 104663100
-WHERE address_settlement_id = 8014;
+WHERE address_settlement_id = 8014
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3593,7 +4080,8 @@ WHERE id = 8015;
 
 UPDATE address_settlement_kato
 SET kato_id = 104665100
-WHERE address_settlement_id = 8015;
+WHERE address_settlement_id = 8015
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3604,7 +4092,8 @@ WHERE id = 8016;
 
 UPDATE address_settlement_kato
 SET kato_id = 104665200
-WHERE address_settlement_id = 8016;
+WHERE address_settlement_id = 8016
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3615,7 +4104,8 @@ WHERE id = 8017;
 
 UPDATE address_settlement_kato
 SET kato_id = 104667100
-WHERE address_settlement_id = 8017;
+WHERE address_settlement_id = 8017
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3626,7 +4116,8 @@ WHERE id = 8020;
 
 UPDATE address_settlement_kato
 SET kato_id = 104667103
-WHERE address_settlement_id = 8020;
+WHERE address_settlement_id = 8020
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3637,7 +4128,8 @@ WHERE id = 8019;
 
 UPDATE address_settlement_kato
 SET kato_id = 104667400
-WHERE address_settlement_id = 8019;
+WHERE address_settlement_id = 8019
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3648,7 +4140,8 @@ WHERE id = 8022;
 
 UPDATE address_settlement_kato
 SET kato_id = 104669100
-WHERE address_settlement_id = 8022;
+WHERE address_settlement_id = 8022
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3659,7 +4152,8 @@ WHERE id = 8023;
 
 UPDATE address_settlement_kato
 SET kato_id = 104669300
-WHERE address_settlement_id = 8023;
+WHERE address_settlement_id = 8023
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3670,7 +4164,8 @@ WHERE id = 8024;
 
 UPDATE address_settlement_kato
 SET kato_id = 104669400
-WHERE address_settlement_id = 8024;
+WHERE address_settlement_id = 8024
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3681,7 +4176,8 @@ WHERE id = 8025;
 
 UPDATE address_settlement_kato
 SET kato_id = 104671100
-WHERE address_settlement_id = 8025;
+WHERE address_settlement_id = 8025
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3692,7 +4188,8 @@ WHERE id = 8026;
 
 UPDATE address_settlement_kato
 SET kato_id = 104671200
-WHERE address_settlement_id = 8026;
+WHERE address_settlement_id = 8026
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3703,7 +4200,8 @@ WHERE id = 8027;
 
 UPDATE address_settlement_kato
 SET kato_id = 104673100
-WHERE address_settlement_id = 8027;
+WHERE address_settlement_id = 8027
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3714,7 +4212,8 @@ WHERE id = 8029;
 
 UPDATE address_settlement_kato
 SET kato_id = 104675200
-WHERE address_settlement_id = 8029;
+WHERE address_settlement_id = 8029
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3725,7 +4224,8 @@ WHERE id = 8030;
 
 UPDATE address_settlement_kato
 SET kato_id = 104677100
-WHERE address_settlement_id = 8030;
+WHERE address_settlement_id = 8030
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3736,7 +4236,8 @@ WHERE id = 8032;
 
 UPDATE address_settlement_kato
 SET kato_id = 104679300
-WHERE address_settlement_id = 8032;
+WHERE address_settlement_id = 8032
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3747,7 +4248,8 @@ WHERE id = 8034;
 
 UPDATE address_settlement_kato
 SET kato_id = 104679500
-WHERE address_settlement_id = 8034;
+WHERE address_settlement_id = 8034
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3758,7 +4260,8 @@ WHERE id = 8035;
 
 UPDATE address_settlement_kato
 SET kato_id = 104681100
-WHERE address_settlement_id = 8035;
+WHERE address_settlement_id = 8035
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3769,7 +4272,8 @@ WHERE id = 8036;
 
 UPDATE address_settlement_kato
 SET kato_id = 104681300
-WHERE address_settlement_id = 8036;
+WHERE address_settlement_id = 8036
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ABAI,
@@ -3780,14 +4284,20 @@ WHERE id = 8037;
 
 UPDATE address_settlement_kato
 SET kato_id = 104683100
-WHERE address_settlement_id = 8037;
+WHERE address_settlement_id = 8037
+  and kato_version = 1;
 
 
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    район АКСУАТ
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+    //Аксуат
+
 
 
 
@@ -3798,12 +4308,22 @@ SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
     parent_name                = 'Екпинский с.о.'
 WHERE id = 7875;
 
+UPDATE address_settlement_kato
+SET kato_id = 103433100
+WHERE address_settlement_id = 7875
+  and kato_version = 1;
+
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
     address_settlement_type_id = 41,
     kato_id                    = 103433200,
     parent_name                = 'Екпинский с.о.'
 WHERE id = 7876;
+
+UPDATE address_settlement_kato
+SET kato_id = 103433200
+WHERE address_settlement_id = 7876
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
@@ -3812,12 +4332,22 @@ SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
     parent_name                = 'Екпинский с.о.'
 WHERE id = 7877;
 
+UPDATE address_settlement_kato
+SET kato_id = 103433300
+WHERE address_settlement_id = 7877
+  and kato_version = 1;
+
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
     address_settlement_type_id = 41,
     kato_id                    = 103435200,
     parent_name                = 'Кокжиринский с.о.'
 WHERE id = 7892;
+
+UPDATE address_settlement_kato
+SET kato_id = 103435200
+WHERE address_settlement_id = 7892
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
@@ -3826,12 +4356,22 @@ SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
     parent_name                = 'Кокжиринский с.о.'
 WHERE id = 7893;
 
+UPDATE address_settlement_kato
+SET kato_id = 103435300
+WHERE address_settlement_id = 7893
+  and kato_version = 1;
+
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
     address_settlement_type_id = 41,
     kato_id                    = 103435500,
     parent_name                = 'Кокжиринский с.о.'
 WHERE id = 7894;
+
+UPDATE address_settlement_kato
+SET kato_id = 103435500
+WHERE address_settlement_id = 7894
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
@@ -3840,12 +4380,22 @@ SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
     parent_name                = 'Кокжиринский с.о.'
 WHERE id = 7895;
 
+UPDATE address_settlement_kato
+SET kato_id = 103435600
+WHERE address_settlement_id = 7895
+  and kato_version = 1;
+
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
     address_settlement_type_id = 41,
     kato_id                    = 103437100,
     parent_name                = 'Киндиктинский с.о.'
 WHERE id = 7902;
+
+UPDATE address_settlement_kato
+SET kato_id = 103437100
+WHERE address_settlement_id = 7902
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
@@ -3854,12 +4404,22 @@ SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
     parent_name                = null
 WHERE id = 7904;
 
+UPDATE address_settlement_kato
+SET kato_id = 103437104
+WHERE address_settlement_id = 7904
+  and kato_version = 1;
+
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
     address_settlement_type_id = 41,
     kato_id                    = 103439100,
     parent_name                = 'Кумгольский с.о.'
 WHERE id = 7910;
+
+UPDATE address_settlement_kato
+SET kato_id = 103439100
+WHERE address_settlement_id = 7910
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
@@ -3868,12 +4428,22 @@ SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
     parent_name                = 'Кумгольский с.о.'
 WHERE id = 7911;
 
+UPDATE address_settlement_kato
+SET kato_id = 103439200
+WHERE address_settlement_id = 7911
+  and kato_version = 1;
+
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
     address_settlement_type_id = 41,
     kato_id                    = 103439300,
     parent_name                = 'Кумгольский с.о.'
 WHERE id = 7912;
+
+UPDATE address_settlement_kato
+SET kato_id = 103439300
+WHERE address_settlement_id = 7912
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
@@ -3882,12 +4452,22 @@ SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
     parent_name                = 'Кызылкесекский с.о.'
 WHERE id = 7914;
 
+UPDATE address_settlement_kato
+SET kato_id = 103441100
+WHERE address_settlement_id = 7914
+  and kato_version = 1;
+
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
     address_settlement_type_id = 41,
     kato_id                    = 103441200,
     parent_name                = 'Кызылкесекский с.о.'
 WHERE id = 7915;
+
+UPDATE address_settlement_kato
+SET kato_id = 103441200
+WHERE address_settlement_id = 7915
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
@@ -3896,12 +4476,22 @@ SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
     parent_name                = null
 WHERE id = 7954;
 
+UPDATE address_settlement_kato
+SET kato_id = 103441204
+WHERE address_settlement_id = 7954
+  and kato_version = 1;
+
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
     address_settlement_type_id = 41,
     kato_id                    = 103441222,
     parent_name                = null
 WHERE id = 7917;
+
+UPDATE address_settlement_kato
+SET kato_id = 103441222
+WHERE address_settlement_id = 7917
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
@@ -3910,12 +4500,22 @@ SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
     parent_name                = 'Ойшиликский с.о.'
 WHERE id = 7921;
 
+UPDATE address_settlement_kato
+SET kato_id = 103443100
+WHERE address_settlement_id = 7921
+  and kato_version = 1;
+
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
     address_settlement_type_id = 41,
     kato_id                    = 103443111,
     parent_name                = null
 WHERE id = 7659;
+
+UPDATE address_settlement_kato
+SET kato_id = 103443111
+WHERE address_settlement_id = 7659
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
@@ -3924,12 +4524,22 @@ SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
     parent_name                = 'Ойшиликский с.о.'
 WHERE id = 7922;
 
+UPDATE address_settlement_kato
+SET kato_id = 103443200
+WHERE address_settlement_id = 7922
+  and kato_version = 1;
+
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
     address_settlement_type_id = 41,
     kato_id                    = 103443203,
     parent_name                = null
 WHERE id = 7658;
+
+UPDATE address_settlement_kato
+SET kato_id = 103443203
+WHERE address_settlement_id = 7658
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
@@ -3938,12 +4548,22 @@ SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
     parent_name                = null
 WHERE id = 7817;
 
+UPDATE address_settlement_kato
+SET kato_id = 103443207
+WHERE address_settlement_id = 7817
+  and kato_version = 1;
+
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
     address_settlement_type_id = 41,
     kato_id                    = 103443300,
     parent_name                = 'Ойшиликский с.о.'
 WHERE id = 7923;
+
+UPDATE address_settlement_kato
+SET kato_id = 103443300
+WHERE address_settlement_id = 7923
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
@@ -3952,12 +4572,22 @@ SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
     parent_name                = 'Ойшиликский с.о.'
 WHERE id = 7924;
 
+UPDATE address_settlement_kato
+SET kato_id = 103443400
+WHERE address_settlement_id = 7924
+  and kato_version = 1;
+
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
     address_settlement_type_id = 41,
     kato_id                    = 103443500,
     parent_name                = 'Ойшиликский с.о.'
 WHERE id = 7925;
+
+UPDATE address_settlement_kato
+SET kato_id = 103443500
+WHERE address_settlement_id = 7925
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
@@ -3966,12 +4596,22 @@ SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
     parent_name                = 'Ойшиликский с.о.'
 WHERE id = 7926;
 
+UPDATE address_settlement_kato
+SET kato_id = 103443600
+WHERE address_settlement_id = 7926
+  and kato_version = 1;
+
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
     address_settlement_type_id = 41,
     kato_id                    = 103445100,
     parent_name                = 'Сатпаевский с.о.'
 WHERE id = 7927;
+
+UPDATE address_settlement_kato
+SET kato_id = 103445100
+WHERE address_settlement_id = 7927
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
@@ -3980,12 +4620,22 @@ SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
     parent_name                = 'Сатпаевский с.о.'
 WHERE id = 7928;
 
+UPDATE address_settlement_kato
+SET kato_id = 103445200
+WHERE address_settlement_id = 7928
+  and kato_version = 1;
+
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
     address_settlement_type_id = 41,
     kato_id                    = 103445300,
     parent_name                = 'Сатпаевский с.о.'
 WHERE id = 7929;
+
+UPDATE address_settlement_kato
+SET kato_id = 103445300
+WHERE address_settlement_id = 7929
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
@@ -3994,12 +4644,22 @@ SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
     parent_name                = 'Ыргызбайский с.о.'
 WHERE id = 7932;
 
+UPDATE address_settlement_kato
+SET kato_id = 103447100
+WHERE address_settlement_id = 7932
+  and kato_version = 1;
+
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
     address_settlement_type_id = 41,
     kato_id                    = 103447103,
     parent_name                = null
 WHERE id = 7973;
+
+UPDATE address_settlement_kato
+SET kato_id = 103447103
+WHERE address_settlement_id = 7973
+  and kato_version = 1;
 
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
@@ -4008,6 +4668,11 @@ SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
     parent_name                = null
 WHERE id = 7934;
 
+UPDATE address_settlement_kato
+SET kato_id = 103447113
+WHERE address_settlement_id = 7934
+  and kato_version = 1;
+
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
     address_settlement_type_id = 41,
@@ -4015,9 +4680,23 @@ SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
     parent_name                = 'Ыргызбайский с.о.'
 WHERE id = 7933;
 
+UPDATE address_settlement_kato
+SET kato_id = 103447300
+WHERE address_settlement_id = 7933
+  and kato_version = 1;
 
 
-// добавили руками
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+    // добавили руками
 
 
 
