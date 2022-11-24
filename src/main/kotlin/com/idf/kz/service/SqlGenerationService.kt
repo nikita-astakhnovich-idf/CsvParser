@@ -9,7 +9,7 @@ class SqlGenerationService {
     updateList.forEach {
       updateSQLScript.append(
         "UPDATE address_settlement \n" +
-            "SET region_id = REGION_ID, " +
+            "SET region_id = REGION_ID_ULYTAU, " +
             "address_settlement_type_id = ${it.addressSettlementTypeId}, " +
             "kato_id = ${it.katoId}, " +
             "parent_name = ${getParentName(it.parentName)} \n" +
@@ -19,7 +19,7 @@ class SqlGenerationService {
       updateSQLScript.append(
         "UPDATE address_settlement_kato \n" +
             "SET kato_id = ${it.katoId} \n" +
-            "WHERE address_settlement_id = ${it.id};\n\n"
+            "WHERE address_settlement_id = ${it.id}  and kato_version = 1;\n\n"
       )
     }
     return updateSQLScript.toString()
