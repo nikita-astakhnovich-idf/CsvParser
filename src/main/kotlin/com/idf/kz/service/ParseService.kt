@@ -131,6 +131,26 @@ class ParseService {
     val manualListMoreOne = mutableListOf<Settlement>()
     val repeatableUpdateSettlements = mutableListOf<Settlement>()
     val updateSettlements = mutableListOf<UpdateSettlement>()
+    val checkedList = mutableListOf<Settlement>()
+  }
+
+  fun findUncheckedModel(): List<Settlement> {
+    checkedList.addAll(manualList)
+    manualList.forEach { city ->    var prodModelId = ""
+      for (prodModel in settlementsFromProd) {
+        if (city.name == prodModel.settlementName) {
+          prodModelId = prodModel.id
+          break
+        }
+      }
+      for (updateModel in updateSettlements) {
+        if (updateModel.id == prodModelId) {
+          checkedList.remove(city)
+          break
+        }
+      }
+    }
+    return checkedList
   }
 }
 
