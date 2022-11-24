@@ -41,8 +41,10 @@ class ParseService {
             if (repeatedWithDistrict == 1) {
               updateSettlements.add(
                 UpdateSettlement(
-                  prodSettlement.id, settlement.typeId, settlement.katoId,
-                  settlement.parentName
+                  prodSettlement.id,
+                  settlement.typeId,
+                  settlement.katoId,
+                  ifNull(settlement)
                 )
               )
               isAdded = true
@@ -76,6 +78,36 @@ class ParseService {
     return updateSettlements
   }
 
+  private fun ifNull(settlement: Settlement): String {
+    if(settlement.parentName==""){
+      var parentName = ""
+      var parentId1 = ""
+      for (it in settlementsKato){
+        if (settlement.katoId == it.katoId) {
+          parentId1 = it.parentId
+          parentName = it.name
+          break
+        }
+      }
+      if (parentName.contains(settlementTypeRegex)){
+        for (it in settlementsKato){
+          if (parentId1 == it.id) {
+            parentId1 = it.parentId
+            break
+          }
+        }
+        for (it in settlementsKato){
+          if (parentId1 == it.id) {
+            parentName = it.name
+            break
+          }
+        }
+      }
+      return parentName
+    }
+    else return settlement.parentName
+  }
+
   private fun setDistricts() {
     var tempDistrict = District()
     var districtName = ""
@@ -88,7 +120,7 @@ class ParseService {
       if (it.name.contains(settlementParentTypeRegex) || it.name.contains(districtRegex)) continue
       if (it.name.contains(settlementTypeRegex) && isContains(it.name)) {
         tempDistrict.settlements.add(convertSettlementKatoToSettlement(it, settlementTypeRegex))
-      } else if (it.name.contains(settlementTypeRegex)) {
+      } else if (it.name.contains(settlementTypeRegex) && isRegion(it.name)) {
         listForInsertSettlement.add(convertSettlementKatoToSettlement(it, districtName, settlementTypeRegex))
       }
     }
@@ -101,6 +133,10 @@ class ParseService {
       }
     }
     return false
+  }
+
+  private fun isRegion(name: String): Boolean{
+    return !name.contains(settlementParentTypeRegex)
   }
 
   private fun convertSettlementKatoToSettlement(settlementKATO: SettlementKATO, regex: Regex): Settlement {
@@ -121,7 +157,7 @@ class ParseService {
       getName(settlementKATO.name, regex),
       getType(settlementKATO.name),
       settlementKATO.katoId,
-      getParentName(settlementKATO.parentId),
+      getInsertParentName(settlementKATO.parentId),
       districtName
     )
   }
@@ -141,6 +177,27 @@ class ParseService {
     settlementsKato.forEach {
       if (parentId == it.id && it.name.contains(settlementParentTypeRegex)) {
         parentName = it.name
+      }
+    }
+    return parentName
+  }
+
+  private fun getInsertParentName(parentId: String): String {
+    var parentName = ""
+    var parentId1 = ""
+    for (it in settlementsKato){
+      if (parentId == it.id) {
+        parentId1 = it.parentId
+        parentName = it.name
+        break
+      }
+    }
+    if (parentName.contains(settlementTypeRegex)){
+      for (it in settlementsKato){
+        if (parentId1 == it.id) {
+          parentName = it.name
+          break
+        }
       }
     }
     return parentName
@@ -169,6 +226,8 @@ class ParseService {
       .convert(PROD_PATH, ProductionSettlementKATO::class.java)
 
     val settlementTypeRegex = Regex(SettlementType.values()
+      .joinToString(separator = "|") { it.typeRegex })
+    val settlementInputTypeRegex = Regex(SettlementType.values()
       .joinToString(separator = "|") { it.typeRegex })
     private val settlementParentTypeRegex = Regex(SettlementParentType.values()
       .joinToString(separator = "|") { it.typeRegex })
