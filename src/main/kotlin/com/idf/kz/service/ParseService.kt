@@ -3,6 +3,7 @@ package com.idf.kz.service
 import com.idf.kz.converter.DefaultCsvConverter
 import com.idf.kz.model.District
 import com.idf.kz.model.DistrictType
+import com.idf.kz.model.InsertSettlement
 import com.idf.kz.model.ProductionSettlementKATO
 import com.idf.kz.model.Settlement
 import com.idf.kz.model.SettlementKATO
@@ -12,8 +13,24 @@ import com.idf.kz.model.UpdateSettlement
 
 class ParseService {
 
-  fun getUpdateSettlement(): List<UpdateSettlement> {
+  init {
     setDistricts()
+  }
+
+  fun getInsertSettlement(): List<InsertSettlement> {
+    var districtId = ""
+    listForInsertSettlement.forEach {settlement ->
+      for (prodSettlement in settlementsFromProd) {
+        if (settlement.district == prodSettlement.districtName){
+          districtId = prodSettlement.districtId
+        }
+      }
+      insertSettlements.add(convertSettlementToInsertSettlement(settlement, districtId))
+    }
+    return insertSettlements
+  }
+
+  fun getUpdateSettlement(): List<UpdateSettlement> {
     districts.forEach { district ->
       district.settlements.forEach { settlement ->
         var repeatedWithDistrict = 0
@@ -61,14 +78,18 @@ class ParseService {
 
   private fun setDistricts() {
     var tempDistrict = District()
+    var districtName = ""
     for (it in settlementsKato) {
       if (it.name.contains(districtRegex)) {
-        tempDistrict = District(getName(it.name, districtRegex))
+        districtName = getName(it.name, districtRegex)
+        tempDistrict = District(districtName)
         districts.add(tempDistrict)
       }
       if (it.name.contains(settlementParentTypeRegex) || it.name.contains(districtRegex)) continue
       if (it.name.contains(settlementTypeRegex) && isContains(it.name)) {
         tempDistrict.settlements.add(convertSettlementKatoToSettlement(it, settlementTypeRegex))
+      } else if (it.name.contains(settlementTypeRegex)) {
+        listForInsertSettlement.add(convertSettlementKatoToSettlement(it, districtName, settlementTypeRegex))
       }
     }
   }
@@ -88,6 +109,30 @@ class ParseService {
       getType(settlementKATO.name),
       settlementKATO.katoId,
       getParentName(settlementKATO.parentId)
+    )
+  }
+
+  private fun convertSettlementKatoToSettlement(
+    settlementKATO: SettlementKATO,
+    districtName: String,
+    regex: Regex
+  ): Settlement {
+    return Settlement(
+      getName(settlementKATO.name, regex),
+      getType(settlementKATO.name),
+      settlementKATO.katoId,
+      getParentName(settlementKATO.parentId),
+      districtName
+    )
+  }
+
+  private fun convertSettlementToInsertSettlement(settlement: Settlement, districtId: String): InsertSettlement {
+    return InsertSettlement(
+      districtId.toLong(),
+      settlement.typeId.toLong(),
+      settlement.name,
+      settlement.katoId.toLong(),
+      settlement.parentName
     )
   }
 
@@ -118,12 +163,12 @@ class ParseService {
     private const val DIRECTORY_PATH = "src/main/resources/KATO_17.10.2022_ru.csv"
     private const val PROD_PATH = "src/main/resources/KATO SOLVA PROD.csv"
 
-     val settlementsKato: List<SettlementKATO> = DefaultCsvConverter()
+    val settlementsKato: List<SettlementKATO> = DefaultCsvConverter()
       .convert(DIRECTORY_PATH, SettlementKATO::class.java)
     val settlementsFromProd: List<ProductionSettlementKATO> = DefaultCsvConverter()
       .convert(PROD_PATH, ProductionSettlementKATO::class.java)
 
-    private val settlementTypeRegex = Regex(SettlementType.values()
+    val settlementTypeRegex = Regex(SettlementType.values()
       .joinToString(separator = "|") { it.typeRegex })
     private val settlementParentTypeRegex = Regex(SettlementParentType.values()
       .joinToString(separator = "|") { it.typeRegex })
@@ -131,10 +176,12 @@ class ParseService {
       .joinToString(separator = "|") { it.typeRegex })
 
     val districts = mutableListOf<District>()
+    val listForInsertSettlement = mutableListOf<Settlement>()
     val manualList = mutableListOf<Settlement>()
     val manualListMoreOne = mutableListOf<Settlement>()
     val repeatableUpdateSettlements = mutableListOf<Settlement>()
     val updateSettlements = mutableListOf<UpdateSettlement>()
+    val insertSettlements = mutableListOf<InsertSettlement>()
   }
 }
 
