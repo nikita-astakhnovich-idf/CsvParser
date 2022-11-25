@@ -5,29 +5,23 @@ import com.idf.kz.service.SqlGenerationService
 import com.idf.kz.service.VerificationManualModelService
 
 fun main() {
-  println(SqlGenerationService().generateUpdateSql(ParseService().getUpdateSettlement()))
-//  val parseService = ParseService()
-//  parseService.getUpdateSettlement()
-  //  println(SqlGenerationService().generateUpdateSql(ParseService().getUpdateSettlement()))
-//  val a = ParseService().getUpdateSettlement()
-//  ParseService.updateSettlements.forEach { println(it) }
   val s = VerificationManualModelService(
     ParseService.manualList,
     ParseService.updateSettlements,
     ParseService.settlementsFromProd
   )
-//  s.findUncheckedModel().forEach { println(it) }
-  println("/////////////")
-  println("all in districts  ${ParseService.districts.flatMap { it.settlements }.count()}")
-  println("manual ${VerificationManualModelService.checkedList.size}")
-  println("manualMoreOne ${ParseService.manualListMoreOne.size}")
-  println("update ${ParseService.updateSettlements.size}")
-  println("repeatable ${ParseService.repeatableUpdateSettlements.size}")
-
-//  ParseService.updateSettlements.forEach { println(it) }
-  println("/////////////")
-//  VerificationManualModelService.checkedList.forEach { println(it) }
+//  println(SqlGenerationService().generateUpdateSql(ParseService().getUpdateSettlement()))
 
 
+//  ParseService().getUpdateSettlement()
+//  println(SqlGenerationService().generateAksuatSql(s.fillAksuatList()))
+  println(SqlGenerationService().generateFullInsertSql(ParseService().getInsertSettlement()))
 
+//  ParseService.manualList.forEach { println(it) }
+//
+//  println("all in districts  ${ParseService.districts.flatMap { it.settlements }.count()}")
+//  println("manual ${ParseService.manualList.size}")
+//  println("manualMoreOne ${ParseService.manualListMoreOne.size}")
+//  println("update ${ParseService.updateSettlements.size}")
+//  println("repeatable ${ParseService.repeatableUpdateSettlements.size}")
 }

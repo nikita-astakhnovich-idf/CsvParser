@@ -30,7 +30,20 @@ class VerificationManualModelService(
     return checkedList
   }
 
-  fun findNewDistrictModel(): List<Settlement> {
+  fun fillAksuatList(): List<UpdateSettlement> {
+    findUncheckedModel()
+    findNewDistrictModel()
+    newDistrictList.forEach {
+      for (prod in prodList) {
+        if (prod.name == it.name) {
+          aksuatList.add(UpdateSettlement(prod.id, it.typeId, it.katoId, it.parentName))
+        }
+      }
+    }
+    return aksuatList
+  }
+
+  private fun findNewDistrictModel(): List<Settlement> {
     checkedList.forEach {
       if (it.district == "Аксуат") {
         newDistrictList.add(it)
@@ -38,17 +51,6 @@ class VerificationManualModelService(
     }
     checkedList.removeAll(newDistrictList)
     return newDistrictList
-  }
-
-  fun fillAksuatList(): List<UpdateSettlement>{
-    newDistrictList.forEach {
-      for ( prod in prodList){
-        if (prod.name == it.name){
-          aksuatList.add(UpdateSettlement(prod.id, it.typeId, it.katoId, it.parentName))
-        }
-      }
-    }
-    return aksuatList
   }
 
   companion object {
