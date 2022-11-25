@@ -44,7 +44,7 @@ class ParseService {
                   prodSettlement.id,
                   settlement.typeId,
                   settlement.katoId,
-                  ifNull(settlement)
+                  settlement.parentName
                 )
               )
               isAdded = true
@@ -144,7 +144,7 @@ class ParseService {
       getName(settlementKATO.name, regex),
       getType(settlementKATO.name),
       settlementKATO.katoId,
-      getParentName(settlementKATO.parentId)
+      getParentName(settlementKATO)
     )
   }
 
@@ -172,12 +172,20 @@ class ParseService {
     )
   }
 
-  private fun getParentName(parentId: String): String {
+  private fun getParentName(kato: SettlementKATO?): String {
     var parentName = ""
-    settlementsKato.forEach {
-      if (parentId == it.id && it.name.contains(settlementParentTypeRegex)) {
+    var parentSettlement: SettlementKATO? = null
+    for (it in settlementsKato) {
+      if (kato!!.parentId == it.id) {
         parentName = it.name
+        parentSettlement = it
+        break
       }
+    }
+    if (parentName.contains(settlementParentTypeRegex)) {
+      return parentName
+    } else {
+        parentName = getParentName(parentSettlement)
     }
     return parentName
   }

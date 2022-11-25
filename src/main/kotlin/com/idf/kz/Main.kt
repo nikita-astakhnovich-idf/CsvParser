@@ -5,7 +5,7 @@ import com.idf.kz.service.SqlGenerationService
 
 fun main() {
   println(SqlGenerationService().generateUpdateSql(ParseService().getUpdateSettlement()))
-//  ParseService().getUpdateSettlement()
+//  ParseService().getUpdateSettlement().
   println("all in districts  ${ParseService.districts.flatMap { it.settlements }.count()}")
   println("manual ${ParseService.manualList.size}")
   println("manualMoreOne ${ParseService.manualListMoreOne.size}")
