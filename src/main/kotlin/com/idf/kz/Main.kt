@@ -2,19 +2,17 @@ package com.idf.kz
 
 import com.idf.kz.service.ParseService
 import com.idf.kz.service.SqlGenerationService
-import com.idf.kz.service.VerificationManualModelService
 
 fun main() {
-  println(SqlGenerationService().generateUpdateSql(ParseService().getUpdateSettlement()))
-  println("////////////////////////////////////////////////////////////////////////////////")
-  println("////////////////////////////////////////////////////////////////////////////////")
-  println("////////////////////////////////////////////////////////////////////////////////")
-  println("////////////////////////////////////////////////////////////////////////////////")
-  val v = VerificationManualModelService(ParseService.manualList,
-    ParseService.updateSettlements,
-    ParseService.settlementsFromProd)
-  v.findUncheckedModel()
-  println(SqlGenerationService().generateAksuatSql(v.fillAksuatList()))
+//  println(SqlGenerationService().generateUpdateSql(ParseService().getUpdateSettlement()))
+  ParseService().getUpdateSettlement()
+
+//  ParseService.listForInsertSettlement.forEach { println(it) }
+  println(SqlGenerationService().generateFullInsertSql(ParseService().getInsertSettlement()))
+//  println(ParseService.listForInsertSettlement.size)
+//  println(ParseService.settlementsKato.filter { it.name.contains(ParseService.settlementTypeRegex) }.size)
+//  ParseService.manualList.forEach { println(it) }
+
   println("all in districts  ${ParseService.districts.flatMap { it.settlements }.count()}")
   println("manual ${ParseService.manualList.size}")
   println("manualMoreOne ${ParseService.manualListMoreOne.size}")
