@@ -6,7 +6,7 @@ import com.idf.kz.service.VerificationManualModelService
 
 fun main() {
   println(SqlGenerationService().generateUpdateSql(ParseService().getUpdateSettlement()))
-  val parseService = ParseService()
+//  val parseService = ParseService()
 //  parseService.getUpdateSettlement()
   //  println(SqlGenerationService().generateUpdateSql(ParseService().getUpdateSettlement()))
 //  val a = ParseService().getUpdateSettlement()
