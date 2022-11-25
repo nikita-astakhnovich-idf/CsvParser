@@ -18,7 +18,7 @@ class SqlGenerationService {
             "'${it.name}', " +
             "${it.katoId}, " +
             "'${it.parentName}', " +
-            "${it.resource})" +
+            "${it.resource});" +
             "\n\n"
       )
 
@@ -27,7 +27,7 @@ class SqlGenerationService {
             "\nVALUES (" +
             "'1', " +
             "(SELECT LAST_INSERT_ID()), " +
-            "${it.katoId})" +
+            "${it.katoId});" +
             "\n\n\n"
       )
     }
