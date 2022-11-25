@@ -15,8 +15,9 @@ class SqlGenerationService {
             "REGION_ID_ZHETYSU, " +
             "${it.addressDistrictId}, " +
             "${it.addressSettlementTypeId}, " +
-            "${it.name}, ${it.katoId}, " +
-            "${it.parentName}, " +
+            "'${it.name}', " +
+            "${it.katoId}, " +
+            "'${it.parentName}', " +
             "${it.resource})" +
             "\n\n"
       )
@@ -24,7 +25,7 @@ class SqlGenerationService {
       fullSqlScript.append(
         "INSERT INTO address_settlement_kato (kato_version, address_settlement_id, kato_id)" +
             "\nVALUES (" +
-            "1, " +
+            "'1', " +
             "(SELECT LAST_INSERT_ID()), " +
             "${it.katoId})" +
             "\n\n\n"
@@ -56,11 +57,11 @@ class SqlGenerationService {
   }
 
   private fun getParentName(parentName: String?): String? {
-    return if(parentName=="") null
-           else "'$parentName'"
+    return if (parentName == "") null
+    else "'$parentName'"
   }
 
-  fun generateAksuatSql(aksuatList: List<UpdateSettlement>): String{
+  fun generateAksuatSql(aksuatList: List<UpdateSettlement>): String {
     val updateSQLScript = StringBuilder()
     aksuatList.forEach {
       updateSQLScript.append(
@@ -70,6 +71,12 @@ class SqlGenerationService {
             "kato_id = ${it.katoId}, " +
             "parent_name = ${getParentName(it.parentName)} \n" +
             "WHERE id = ${it.id};\n\n"
+      )
+
+      updateSQLScript.append(
+        "UPDATE address_settlement_kato \n" +
+            "SET kato_id = ${it.katoId} \n" +
+            "WHERE address_settlement_id = ${it.id} AND kato_version = '1';\n\n"
       )
     }
     return updateSQLScript.toString()

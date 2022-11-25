@@ -19,9 +19,9 @@ class ParseService {
 
   fun getInsertSettlement(): List<InsertSettlement> {
     var districtId = ""
-    listForInsertSettlement.forEach {settlement ->
+    listForInsertSettlement.forEach { settlement ->
       for (prodSettlement in settlementsFromProd) {
-        if (settlement.district == prodSettlement.districtName){
+        if (settlement.district == prodSettlement.districtName) {
           districtId = prodSettlement.districtId
         }
       }
@@ -105,7 +105,7 @@ class ParseService {
     return false
   }
 
-  private fun isRegion(name: String): Boolean{
+  private fun isRegion(name: String): Boolean {
     return !name.contains(settlementParentTypeRegex)
   }
 
@@ -155,7 +155,7 @@ class ParseService {
     if (parentName.contains(settlementParentTypeRegex)) {
       return parentName
     } else {
-        parentName = getParentName(parentSettlement)
+      parentName = getParentName(parentSettlement)
     }
     return parentName
   }
@@ -183,8 +183,6 @@ class ParseService {
       .convert(PROD_PATH, ProductionSettlementKATO::class.java)
 
     val settlementTypeRegex = Regex(SettlementType.values()
-      .joinToString(separator = "|") { it.typeRegex })
-    val settlementInputTypeRegex = Regex(SettlementType.values()
       .joinToString(separator = "|") { it.typeRegex })
     private val settlementParentTypeRegex = Regex(SettlementParentType.values()
       .joinToString(separator = "|") { it.typeRegex })
