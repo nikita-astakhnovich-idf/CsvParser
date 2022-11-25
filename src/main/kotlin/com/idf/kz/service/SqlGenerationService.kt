@@ -56,11 +56,11 @@ class SqlGenerationService {
   }
 
   private fun getParentName(parentName: String?): String? {
-    return if(parentName=="") null
-           else "'$parentName'"
+    return if (parentName == "") null
+    else "'$parentName'"
   }
 
-  fun generateAksuatSql(aksuatList: List<UpdateSettlement>): String{
+  fun generateAksuatSql(aksuatList: List<UpdateSettlement>): String {
     val updateSQLScript = StringBuilder()
     aksuatList.forEach {
       updateSQLScript.append(

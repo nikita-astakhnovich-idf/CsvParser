@@ -30,12 +30,12 @@ class VerificationManualModelService(
     return checkedList
   }
 
-  fun fillAksuatList(): List<UpdateSettlement>{
+  fun fillAksuatList(): List<UpdateSettlement> {
     findUncheckedModel()
     findNewDistrictModel()
     newDistrictList.forEach {
-      for ( prod in prodList){
-        if (prod.name == it.name){
+      for (prod in prodList) {
+        if (prod.name == it.name) {
           aksuatList.add(UpdateSettlement(prod.id, it.typeId, it.katoId, it.parentName))
         }
       }
