@@ -30,17 +30,8 @@ class VerificationManualModelService(
     return checkedList
   }
 
-  private fun findNewDistrictModel(): List<Settlement> {
-    checkedList.forEach {
-      if (it.district == "Аксуат") {
-        newDistrictList.add(it)
-      }
-    }
-    checkedList.removeAll(newDistrictList)
-    return newDistrictList
-  }
-
   fun fillAksuatList(): List<UpdateSettlement>{
+    findUncheckedModel()
     findNewDistrictModel()
     newDistrictList.forEach {
       for ( prod in prodList){
@@ -50,6 +41,16 @@ class VerificationManualModelService(
       }
     }
     return aksuatList
+  }
+
+  private fun findNewDistrictModel(): List<Settlement> {
+    checkedList.forEach {
+      if (it.district == "Аксуат") {
+        newDistrictList.add(it)
+      }
+    }
+    checkedList.removeAll(newDistrictList)
+    return newDistrictList
   }
 
   companion object {

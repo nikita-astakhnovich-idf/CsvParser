@@ -184,8 +184,6 @@ class ParseService {
 
     val settlementTypeRegex = Regex(SettlementType.values()
       .joinToString(separator = "|") { it.typeRegex })
-    val settlementInputTypeRegex = Regex(SettlementType.values()
-      .joinToString(separator = "|") { it.typeRegex })
     private val settlementParentTypeRegex = Regex(SettlementParentType.values()
       .joinToString(separator = "|") { it.typeRegex })
     private val districtRegex = Regex(DistrictType.values()
