@@ -78,36 +78,6 @@ class ParseService {
     return updateSettlements
   }
 
-  private fun ifNull(settlement: Settlement): String {
-    if(settlement.parentName==""){
-      var parentName = ""
-      var parentId1 = ""
-      for (it in settlementsKato){
-        if (settlement.katoId == it.katoId) {
-          parentId1 = it.parentId
-          parentName = it.name
-          break
-        }
-      }
-      if (parentName.contains(settlementTypeRegex)){
-        for (it in settlementsKato){
-          if (parentId1 == it.id) {
-            parentId1 = it.parentId
-            break
-          }
-        }
-        for (it in settlementsKato){
-          if (parentId1 == it.id) {
-            parentName = it.name
-            break
-          }
-        }
-      }
-      return parentName
-    }
-    else return settlement.parentName
-  }
-
   private fun setDistricts() {
     var tempDistrict = District()
     var districtName = ""
@@ -157,7 +127,7 @@ class ParseService {
       getName(settlementKATO.name, regex),
       getType(settlementKATO.name),
       settlementKATO.katoId,
-      getInsertParentName(settlementKATO.parentId),
+      getParentName(settlementKATO),
       districtName
     )
   }
@@ -172,11 +142,11 @@ class ParseService {
     )
   }
 
-  private fun getParentName(kato: SettlementKATO?): String {
+  private fun getParentName(kato: SettlementKATO): String {
     var parentName = ""
-    var parentSettlement: SettlementKATO? = null
+    var parentSettlement: SettlementKATO = kato
     for (it in settlementsKato) {
-      if (kato!!.parentId == it.id) {
+      if (kato.parentId == it.id) {
         parentName = it.name
         parentSettlement = it
         break
@@ -186,27 +156,6 @@ class ParseService {
       return parentName
     } else {
         parentName = getParentName(parentSettlement)
-    }
-    return parentName
-  }
-
-  private fun getInsertParentName(parentId: String): String {
-    var parentName = ""
-    var parentId1 = ""
-    for (it in settlementsKato){
-      if (parentId == it.id) {
-        parentId1 = it.parentId
-        parentName = it.name
-        break
-      }
-    }
-    if (parentName.contains(settlementTypeRegex)){
-      for (it in settlementsKato){
-        if (parentId1 == it.id) {
-          parentName = it.name
-          break
-        }
-      }
     }
     return parentName
   }

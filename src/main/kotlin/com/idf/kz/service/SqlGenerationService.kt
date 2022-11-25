@@ -12,7 +12,7 @@ class SqlGenerationService {
         "INSERT INTO address_settlement (region_id, address_district_id, address_settlement_type_id," +
             " name, kato_id, parent_name, resource)" +
             "\nVALUES (" +
-            "99999999, " +                        /// Забить руками
+            "REGION_ID_ABAI, " +
             "${it.addressDistrictId}, " +
             "${it.addressSettlementTypeId}, " +
             "${it.name}, ${it.katoId}, " +
@@ -27,7 +27,7 @@ class SqlGenerationService {
             "0, " +
             "(SELECT LAST_INSERT_ID()), " +
             "${it.katoId})" +
-            "\n\n"
+            "\n\n\n"
       )
     }
     fullSqlScript.delete(fullSqlScript.length - 2, fullSqlScript.length - 1)
@@ -39,7 +39,7 @@ class SqlGenerationService {
     updateList.forEach {
       updateSQLScript.append(
         "UPDATE address_settlement \n" +
-            "SET region_id = REGION_ID, " +
+            "SET region_id = REGION_ID_ABAI, " +
             "address_settlement_type_id = ${it.addressSettlementTypeId}, " +
             "kato_id = ${it.katoId}, " +
             "parent_name = ${getParentName(it.parentName)} \n" +
