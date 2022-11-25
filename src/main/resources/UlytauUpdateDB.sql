@@ -1,5 +1,5 @@
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 1,
     kato_id                    = 621010000,
     parent_name                = 'Жезказган Г.А.'
@@ -11,7 +11,7 @@ WHERE address_settlement_id = 1011
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
     kato_id                    = 621039100,
     parent_name                = 'Кенгирский с.о.'
@@ -23,7 +23,7 @@ WHERE address_settlement_id = 3888
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
     kato_id                    = 621039200,
     parent_name                = 'Кенгирский с.о.'
@@ -35,7 +35,7 @@ WHERE address_settlement_id = 3889
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 39,
     kato_id                    = 621039300,
     parent_name                = 'Кенгирский с.о.'
@@ -47,7 +47,7 @@ WHERE address_settlement_id = 3890
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 39,
     kato_id                    = 621039580,
     parent_name                = 'Кенгирский с.о.'
@@ -59,7 +59,7 @@ WHERE address_settlement_id = 3891
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 44,
     kato_id                    = 621039800,
     parent_name                = 'Кенгирский с.о.'
@@ -71,7 +71,7 @@ WHERE address_settlement_id = 3892
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 44,
     kato_id                    = 621039900,
     parent_name                = 'Кенгирский с.о.'
@@ -83,7 +83,7 @@ WHERE address_settlement_id = 3893
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
     kato_id                    = 621045100,
     parent_name                = 'Сарыкенгирский с.о.'
@@ -95,7 +95,7 @@ WHERE address_settlement_id = 3894
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
     kato_id                    = 621049100,
     parent_name                = 'Талапский с.о.'
@@ -107,7 +107,7 @@ WHERE address_settlement_id = 3895
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 1,
     kato_id                    = 621810000,
     parent_name                = 'Каражал Г.А.'
@@ -119,7 +119,7 @@ WHERE address_settlement_id = 1012
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 31,
     kato_id                    = 621835100,
     parent_name                = 'Жайремская п.а.'
@@ -131,7 +131,7 @@ WHERE address_settlement_id = 3896
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 31,
     kato_id                    = 622037100,
     parent_name                = 'Жезказганская п.а.'
@@ -143,7 +143,7 @@ WHERE address_settlement_id = 3898
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
     kato_id                    = 623633100,
     parent_name                = 'Айнабулакский с.о.'
@@ -155,7 +155,7 @@ WHERE address_settlement_id = 4045
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
     kato_id                    = 623637100,
     parent_name                = 'Актауский с.о.'
@@ -167,7 +167,7 @@ WHERE address_settlement_id = 4047
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
     kato_id                    = 623637200,
     parent_name                = 'Актауский с.о.'
@@ -179,7 +179,7 @@ WHERE address_settlement_id = 4048
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
     kato_id                    = 623637400,
     parent_name                = 'Актауский с.о.'
@@ -191,7 +191,7 @@ WHERE address_settlement_id = 4049
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 44,
     kato_id                    = 623639300,
     parent_name                = 'Актубекский с.о.'
@@ -203,7 +203,7 @@ WHERE address_settlement_id = 4052
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
     kato_id                    = 623639400,
     parent_name                = 'Актубекский с.о.'
@@ -215,7 +215,7 @@ WHERE address_settlement_id = 4053
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
     kato_id                    = 623641100,
     parent_name                = 'с.о.им.Мукажана Жумажанова'
@@ -227,7 +227,7 @@ WHERE address_settlement_id = 4054
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
     kato_id                    = 623641200,
     parent_name                = 'с.о.им.Мукажана Жумажанова'
@@ -239,7 +239,7 @@ WHERE address_settlement_id = 4055
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
     kato_id                    = 623645200,
     parent_name                = 'Бидайыкский с.о.'
@@ -251,7 +251,7 @@ WHERE address_settlement_id = 4057
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
     kato_id                    = 623645300,
     parent_name                = 'Бидайыкский с.о.'
@@ -263,7 +263,7 @@ WHERE address_settlement_id = 4058
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 39,
     kato_id                    = 623649400,
     parent_name                = 'Байдалы бийский с.о.'
@@ -275,7 +275,7 @@ WHERE address_settlement_id = 4062
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
     kato_id                    = 623653100,
     parent_name                = 'Ералиевский с.о.'
@@ -287,7 +287,7 @@ WHERE address_settlement_id = 4063
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
     kato_id                    = 623653200,
     parent_name                = 'Ералиевский с.о.'
@@ -299,7 +299,7 @@ WHERE address_settlement_id = 4064
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 44,
     kato_id                    = 623653400,
     parent_name                = 'Ералиевский с.о.'
@@ -311,7 +311,7 @@ WHERE address_settlement_id = 4065
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
     kato_id                    = 623653500,
     parent_name                = 'Ералиевский с.о.'
@@ -323,7 +323,7 @@ WHERE address_settlement_id = 4066
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 39,
     kato_id                    = 623653600,
     parent_name                = 'Ералиевский с.о.'
@@ -335,7 +335,7 @@ WHERE address_settlement_id = 4067
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 31,
     kato_id                    = 623657100,
     parent_name                = 'Кызылжарская п.а.'
@@ -347,7 +347,7 @@ WHERE address_settlement_id = 4068
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
     kato_id                    = 623661100,
     parent_name                = 'Караагашский с.о.'
@@ -359,7 +359,7 @@ WHERE address_settlement_id = 4069
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
     kato_id                    = 623663100,
     parent_name                = 'Сейфуллинский с.о.'
@@ -371,7 +371,7 @@ WHERE address_settlement_id = 4071
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
     kato_id                    = 623663400,
     parent_name                = 'Сейфуллинский с.о.'
@@ -383,7 +383,7 @@ WHERE address_settlement_id = 4073
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
     kato_id                    = 623665100,
     parent_name                = 'Тогускенский с.о.'
@@ -395,7 +395,7 @@ WHERE address_settlement_id = 4074
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
     kato_id                    = 623665300,
     parent_name                = 'Тогускенский с.о.'
@@ -407,7 +407,7 @@ WHERE address_settlement_id = 4075
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
     kato_id                    = 623669100,
     parent_name                = 'с.о.Орынбай'
@@ -419,7 +419,7 @@ WHERE address_settlement_id = 4076
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
     kato_id                    = 623830100,
     parent_name                = 'Улытауский с.о'
@@ -431,7 +431,7 @@ WHERE address_settlement_id = 4227
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 31,
     kato_id                    = 623831100,
     parent_name                = 'Актасская п.а.'
@@ -443,7 +443,7 @@ WHERE address_settlement_id = 4228
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
     kato_id                    = 623831200,
     parent_name                = 'Актасская п.а.'
@@ -455,7 +455,7 @@ WHERE address_settlement_id = 4229
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
     kato_id                    = 623833100,
     parent_name                = 'Алгабасский с.о.'
@@ -467,7 +467,7 @@ WHERE address_settlement_id = 4230
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
     kato_id                    = 623835100,
     parent_name                = 'Борсенгирский с.о.'
@@ -479,7 +479,7 @@ WHERE address_settlement_id = 4231
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
     kato_id                    = 623839100,
     parent_name                = 'Егиндинский с.о.'
@@ -491,7 +491,7 @@ WHERE address_settlement_id = 4232
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
     kato_id                    = 623841100,
     parent_name                = 'Жангильдинский с.о.'
@@ -503,7 +503,7 @@ WHERE address_settlement_id = 4233
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
     kato_id                    = 623841300,
     parent_name                = 'Жангильдинский с.о.'
@@ -515,7 +515,7 @@ WHERE address_settlement_id = 4235
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 31,
     kato_id                    = 623843100,
     parent_name                = 'Жездинская п.а.'
@@ -527,7 +527,7 @@ WHERE address_settlement_id = 4236
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
     kato_id                    = 623843200,
     parent_name                = 'Жездинская п.а.'
@@ -539,7 +539,7 @@ WHERE address_settlement_id = 4237
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
     kato_id                    = 623849100,
     parent_name                = 'Амангельдинский с.о.'
@@ -551,7 +551,7 @@ WHERE address_settlement_id = 4238
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
     kato_id                    = 623849200,
     parent_name                = 'Амангельдинский с.о.'
@@ -563,7 +563,7 @@ WHERE address_settlement_id = 4239
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 31,
     kato_id                    = 623851100,
     parent_name                = 'Карсакпайская п.а.'
@@ -575,7 +575,7 @@ WHERE address_settlement_id = 4240
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
     kato_id                    = 623853100,
     parent_name                = 'Коргасынский с.о.'
@@ -587,7 +587,7 @@ WHERE address_settlement_id = 4241
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
     kato_id                    = 623853300,
     parent_name                = 'Коргасынский с.о.'
@@ -599,7 +599,7 @@ WHERE address_settlement_id = 4242
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
     kato_id                    = 623855400,
     parent_name                = 'Коскольский с.о.'
@@ -611,7 +611,7 @@ WHERE address_settlement_id = 4244
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
     kato_id                    = 623863100,
     parent_name                = 'с.о.им.Мукана Иманжанова'
@@ -623,7 +623,7 @@ WHERE address_settlement_id = 4246
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
     kato_id                    = 623863300,
     parent_name                = 'с.о.им.Мукана Иманжанова'
@@ -635,7 +635,7 @@ WHERE address_settlement_id = 4248
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
     kato_id                    = 623865100,
     parent_name                = 'Мыйбулакский с.о.'
@@ -647,7 +647,7 @@ WHERE address_settlement_id = 4249
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
     kato_id                    = 623865200,
     parent_name                = 'Мыйбулакский с.о.'
@@ -659,7 +659,7 @@ WHERE address_settlement_id = 4250
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
     kato_id                    = 623871100,
     parent_name                = 'Каракенгирский с.о.'
@@ -671,7 +671,7 @@ WHERE address_settlement_id = 4251
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
     kato_id                    = 623875100,
     parent_name                = 'Сарысуский с.о.'
@@ -683,7 +683,7 @@ WHERE address_settlement_id = 4252
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
     kato_id                    = 623875500,
     parent_name                = 'Сарысуский с.о.'
@@ -695,7 +695,7 @@ WHERE address_settlement_id = 4253
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 62,
     kato_id                    = 623875511,
     parent_name                = 'Сарысуский с.о.'
@@ -707,7 +707,7 @@ WHERE address_settlement_id = 4253
   AND kato_version = '1';
 
 UPDATE address_settlement
-SET region_id                  = REGION_ID_ABAI,
+SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
     kato_id                    = 623879100,
     parent_name                = 'Терсакканский с.о.'

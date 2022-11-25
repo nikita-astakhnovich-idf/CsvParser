@@ -12,13 +12,13 @@ class SqlGenerationService {
         "INSERT INTO address_settlement (region_id, address_district_id, address_settlement_type_id," +
             " name, kato_id, parent_name, resource)" +
             "\nVALUES (" +
-            "REGION_ID_ABAI, " +
+            "REGION_ID_ULYTAU, " +
             "${it.addressDistrictId}, " +
             "${it.addressSettlementTypeId}, " +
             "'${it.name}', " +
             "${it.katoId}, " +
             "'${it.parentName}', " +
-            "${it.resource})" +
+            "${it.resource});" +
             "\n\n"
       )
 
@@ -27,7 +27,7 @@ class SqlGenerationService {
             "\nVALUES (" +
             "'1', " +
             "(SELECT LAST_INSERT_ID()), " +
-            "${it.katoId})" +
+            "${it.katoId});" +
             "\n\n\n"
       )
     }
@@ -40,7 +40,7 @@ class SqlGenerationService {
     updateList.forEach {
       updateSQLScript.append(
         "UPDATE address_settlement \n" +
-            "SET region_id = REGION_ID_ABAI, " +
+            "SET region_id = REGION_ID_ULYTAU, " +
             "address_settlement_type_id = ${it.addressSettlementTypeId}, " +
             "kato_id = ${it.katoId}, " +
             "parent_name = ${getParentName(it.parentName)} \n" +
