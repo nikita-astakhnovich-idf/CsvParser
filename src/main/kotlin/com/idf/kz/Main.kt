@@ -1,8 +1,8 @@
 package com.idf.kz
 
-import com.idf.kz.service.ParseService
-import com.idf.kz.service.SqlGenerationService
-import com.idf.kz.service.VerificationManualModelService
+import com.idf.kz.service.forKATO.ParseService
+import com.idf.kz.service.forKATO.SqlGenerationService
+import com.idf.kz.service.forKATO.VerificationManualModelService
 
 fun main() {
   val s = VerificationManualModelService(
