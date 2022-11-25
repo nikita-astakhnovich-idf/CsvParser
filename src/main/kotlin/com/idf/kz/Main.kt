@@ -12,15 +12,16 @@ fun main() {
   )
 //  println(SqlGenerationService().generateUpdateSql(ParseService().getUpdateSettlement()))
 
-  ParseService().getUpdateSettlement()
-  println(SqlGenerationService().generateAksuatSql(s.fillAksuatList()))
-//  println(SqlGenerationService().generateFullInsertSql(ParseService().getInsertSettlement()))
+
+//  ParseService().getUpdateSettlement()
+//  println(SqlGenerationService().generateAksuatSql(s.fillAksuatList()))
+  println(SqlGenerationService().generateFullInsertSql(ParseService().getInsertSettlement()))
 
 //  ParseService.manualList.forEach { println(it) }
-
-  println("all in districts  ${ParseService.districts.flatMap { it.settlements }.count()}")
-  println("manual ${ParseService.manualList.size}")
-  println("manualMoreOne ${ParseService.manualListMoreOne.size}")
-  println("update ${ParseService.updateSettlements.size}")
-  println("repeatable ${ParseService.repeatableUpdateSettlements.size}")
+//
+//  println("all in districts  ${ParseService.districts.flatMap { it.settlements }.count()}")
+//  println("manual ${ParseService.manualList.size}")
+//  println("manualMoreOne ${ParseService.manualListMoreOne.size}")
+//  println("update ${ParseService.updateSettlements.size}")
+//  println("repeatable ${ParseService.repeatableUpdateSettlements.size}")
 }

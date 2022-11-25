@@ -15,8 +15,9 @@ class SqlGenerationService {
             "REGION_ID_ABAI, " +
             "${it.addressDistrictId}, " +
             "${it.addressSettlementTypeId}, " +
-            "${it.name}, ${it.katoId}, " +
-            "${it.parentName}, " +
+            "'${it.name}', " +
+            "${it.katoId}, " +
+            "'${it.parentName}', " +
             "${it.resource})" +
             "\n\n"
       )
@@ -24,7 +25,7 @@ class SqlGenerationService {
       fullSqlScript.append(
         "INSERT INTO address_settlement_kato (kato_version, address_settlement_id, kato_id)" +
             "\nVALUES (" +
-            "1, " +
+            "'1', " +
             "(SELECT LAST_INSERT_ID()), " +
             "${it.katoId})" +
             "\n\n\n"
