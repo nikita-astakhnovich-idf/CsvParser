@@ -338,7 +338,7 @@ UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
     address_settlement_type_id = 41,
     kato_id                    = 333249100,
-    parent_name                = null
+    parent_name                = 'Капальский с.о'
 WHERE id = 2145;
 
 UPDATE address_settlement_kato
@@ -2894,7 +2894,7 @@ UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
     address_settlement_type_id = 39,
     kato_id                    = 334447880,
-    parent_name                = null
+    parent_name                = 'Бастобинский с.о.'
 WHERE id = 2522;
 
 UPDATE address_settlement_kato
@@ -3849,3 +3849,10 @@ UPDATE address_settlement_kato
 SET kato_id = 334859100
 WHERE address_settlement_id = 2728
   AND kato_version = '1';
+
+
+all in districts  341
+manual 2
+manualMoreOne 2
+update 321
+repeatable 16
