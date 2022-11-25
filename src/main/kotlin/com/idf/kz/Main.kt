@@ -10,12 +10,12 @@ fun main() {
     ParseService.updateSettlements,
     ParseService.settlementsFromProd
   )
-//  println(SqlGenerationService().generateUpdateSql(ParseService().getUpdateSettlement()))
+  println(SqlGenerationService().generateUpdateSql(ParseService().getUpdateSettlement()))
 
 
 //  ParseService().getUpdateSettlement()
 //  println(SqlGenerationService().generateAksuatSql(s.fillAksuatList()))
-  println(SqlGenerationService().generateFullInsertSql(ParseService().getInsertSettlement()))
+//  println(SqlGenerationService().generateFullInsertSql(ParseService().getInsertSettlement()))
 
 //  ParseService.manualList.forEach { println(it) }
 //
