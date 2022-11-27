@@ -1,6 +1,6 @@
 package com.idf.kz.service.forKATO
 
-import com.idf.kz.converter.DefaultCsvConverter
+import com.idf.kz.converter.CsvWithSemicolonConverter
 import com.idf.kz.model.forKATO.District
 import com.idf.kz.model.forKATO.DistrictType
 import com.idf.kz.model.forKATO.InsertSettlement
@@ -177,9 +177,9 @@ class ParseService {
     private const val DIRECTORY_PATH = "src/main/resources/KATO_17.10.2022_ru.csv"
     private const val PROD_PATH = "src/main/resources/KATO SOLVA PROD.csv"
 
-    val settlementsKato: List<SettlementKATO> = DefaultCsvConverter()
+    val settlementsKato: List<SettlementKATO> = CsvWithSemicolonConverter()
       .convert(DIRECTORY_PATH, SettlementKATO::class.java)
-    val settlementsFromProd: List<ProductionSettlementKATO> = DefaultCsvConverter()
+    val settlementsFromProd: List<ProductionSettlementKATO> = CsvWithSemicolonConverter()
       .convert(PROD_PATH, ProductionSettlementKATO::class.java)
 
     val settlementTypeRegex = Regex(
