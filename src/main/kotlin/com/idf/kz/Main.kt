@@ -5,6 +5,7 @@ import com.idf.kz.service.forKATO.SqlGenerationService
 import com.idf.kz.service.forKATO.VerificationManualModelService
 import com.idf.kz.service.forTable.AddressParseService
 import com.idf.kz.service.forTable.AddressSqlGeneratorService
+import com.idf.kz.service.forTable.FileSaveService
 
 fun main() {
   val s = VerificationManualModelService(
@@ -27,5 +28,9 @@ fun main() {
 //  println("update ${ParseService.updateSettlements.size}")
 //  println("repeatable ${ParseService.repeatableUpdateSettlements.size}")
 
-  println(AddressSqlGeneratorService().generateUpdateSql(AddressParseService().getUpdateAddress()))
+  FileSaveService().save(AddressSqlGeneratorService().generateUpdateSql(AddressParseService().getUpdateAddress()))
+  println("all string: ${AddressParseService.fullAddresses.size}")
+  println("strings without null: ${AddressParseService.addressWithoutNull.size}")
+  println("strings on update: ${AddressParseService.updateAddress.size}")
+  println("the number of lines to get: ${AddressParseService.updateAddress.size * 4}")
 }

@@ -42,11 +42,11 @@ class AddressParseService {
     private const val DIRECTORY_PATH = "src/main/resources/address.csv"
     private const val PROD_PATH = "src/main/resources/address_settlement.csv"
 
-    private val addressWithoutNull: MutableList<Address> = mutableListOf()
-    private val addressSettlementMap: MutableMap<String, AddressSettlement> = mutableMapOf()
-    private var addressSettlements: List<AddressSettlement> = CsvWithCommaConverter()
+    val addressWithoutNull: MutableList<Address> = mutableListOf()
+    val addressSettlementMap: MutableMap<String, AddressSettlement> = mutableMapOf()
+    var addressSettlements: List<AddressSettlement> = CsvWithCommaConverter()
       .convert(PROD_PATH, AddressSettlement::class.java)
-    private var fullAddresses: List<Address> = CsvWithCommaConverter()
+    var fullAddresses: List<Address> = CsvWithCommaConverter()
       .convert(DIRECTORY_PATH, Address::class.java)
     val updateAddress: MutableList<Address> = mutableListOf()
   }
