@@ -10,6 +10,11 @@ SET kato_id = 621010000
 WHERE address_settlement_id = 1011
   AND kato_version = '1';
 
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Жезказган')
+WHERE settlement_id = 1011;
+
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
@@ -21,6 +26,11 @@ UPDATE address_settlement_kato
 SET kato_id = 621039100
 WHERE address_settlement_id = 3888
   AND kato_version = '1';
+
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Жезказган')
+WHERE settlement_id = 3888;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
@@ -34,6 +44,11 @@ SET kato_id = 621039200
 WHERE address_settlement_id = 3889
   AND kato_version = '1';
 
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Жезказган')
+WHERE settlement_id = 3889;
+
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 39,
@@ -45,6 +60,11 @@ UPDATE address_settlement_kato
 SET kato_id = 621039300
 WHERE address_settlement_id = 3890
   AND kato_version = '1';
+
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Жезказган')
+WHERE settlement_id = 3890;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
@@ -58,6 +78,11 @@ SET kato_id = 621039580
 WHERE address_settlement_id = 3891
   AND kato_version = '1';
 
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Жезказган')
+WHERE settlement_id = 3891;
+
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 44,
@@ -69,6 +94,11 @@ UPDATE address_settlement_kato
 SET kato_id = 621039800
 WHERE address_settlement_id = 3892
   AND kato_version = '1';
+
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Жезказган')
+WHERE settlement_id = 3892;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
@@ -82,6 +112,11 @@ SET kato_id = 621039900
 WHERE address_settlement_id = 3893
   AND kato_version = '1';
 
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Жезказган')
+WHERE settlement_id = 3893;
+
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
@@ -93,6 +128,11 @@ UPDATE address_settlement_kato
 SET kato_id = 621045100
 WHERE address_settlement_id = 3894
   AND kato_version = '1';
+
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Жезказган')
+WHERE settlement_id = 3894;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
@@ -106,6 +146,11 @@ SET kato_id = 621049100
 WHERE address_settlement_id = 3895
   AND kato_version = '1';
 
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Жезказган')
+WHERE settlement_id = 3895;
+
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 1,
@@ -117,6 +162,11 @@ UPDATE address_settlement_kato
 SET kato_id = 621810000
 WHERE address_settlement_id = 1012
   AND kato_version = '1';
+
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Каражал')
+WHERE settlement_id = 1012;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
@@ -130,6 +180,11 @@ SET kato_id = 621835100
 WHERE address_settlement_id = 3896
   AND kato_version = '1';
 
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Каражал')
+WHERE settlement_id = 3896;
+
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 31,
@@ -141,6 +196,11 @@ UPDATE address_settlement_kato
 SET kato_id = 622037100
 WHERE address_settlement_id = 3898
   AND kato_version = '1';
+
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Сатпаев')
+WHERE settlement_id = 3898;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
@@ -154,6 +214,11 @@ SET kato_id = 623633100
 WHERE address_settlement_id = 4045
   AND kato_version = '1';
 
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Жанааркинский')
+WHERE settlement_id = 4045;
+
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
@@ -165,6 +230,11 @@ UPDATE address_settlement_kato
 SET kato_id = 623637100
 WHERE address_settlement_id = 4047
   AND kato_version = '1';
+
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Жанааркинский')
+WHERE settlement_id = 4047;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
@@ -178,6 +248,11 @@ SET kato_id = 623637200
 WHERE address_settlement_id = 4048
   AND kato_version = '1';
 
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Жанааркинский')
+WHERE settlement_id = 4048;
+
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
@@ -189,6 +264,11 @@ UPDATE address_settlement_kato
 SET kato_id = 623637400
 WHERE address_settlement_id = 4049
   AND kato_version = '1';
+
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Жанааркинский')
+WHERE settlement_id = 4049;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
@@ -202,6 +282,11 @@ SET kato_id = 623639300
 WHERE address_settlement_id = 4052
   AND kato_version = '1';
 
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Жанааркинский')
+WHERE settlement_id = 4052;
+
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
@@ -213,6 +298,11 @@ UPDATE address_settlement_kato
 SET kato_id = 623639400
 WHERE address_settlement_id = 4053
   AND kato_version = '1';
+
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Жанааркинский')
+WHERE settlement_id = 4053;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
@@ -226,6 +316,11 @@ SET kato_id = 623641100
 WHERE address_settlement_id = 4054
   AND kato_version = '1';
 
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Жанааркинский')
+WHERE settlement_id = 4054;
+
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
@@ -237,6 +332,11 @@ UPDATE address_settlement_kato
 SET kato_id = 623641200
 WHERE address_settlement_id = 4055
   AND kato_version = '1';
+
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Жанааркинский')
+WHERE settlement_id = 4055;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
@@ -250,6 +350,11 @@ SET kato_id = 623645200
 WHERE address_settlement_id = 4057
   AND kato_version = '1';
 
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Жанааркинский')
+WHERE settlement_id = 4057;
+
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
@@ -261,6 +366,11 @@ UPDATE address_settlement_kato
 SET kato_id = 623645300
 WHERE address_settlement_id = 4058
   AND kato_version = '1';
+
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Жанааркинский')
+WHERE settlement_id = 4058;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
@@ -274,6 +384,11 @@ SET kato_id = 623649400
 WHERE address_settlement_id = 4062
   AND kato_version = '1';
 
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Жанааркинский')
+WHERE settlement_id = 4062;
+
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
@@ -285,6 +400,11 @@ UPDATE address_settlement_kato
 SET kato_id = 623653100
 WHERE address_settlement_id = 4063
   AND kato_version = '1';
+
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Жанааркинский')
+WHERE settlement_id = 4063;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
@@ -298,6 +418,11 @@ SET kato_id = 623653200
 WHERE address_settlement_id = 4064
   AND kato_version = '1';
 
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Жанааркинский')
+WHERE settlement_id = 4064;
+
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 44,
@@ -309,6 +434,11 @@ UPDATE address_settlement_kato
 SET kato_id = 623653400
 WHERE address_settlement_id = 4065
   AND kato_version = '1';
+
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Жанааркинский')
+WHERE settlement_id = 4065;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
@@ -322,6 +452,11 @@ SET kato_id = 623653500
 WHERE address_settlement_id = 4066
   AND kato_version = '1';
 
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Жанааркинский')
+WHERE settlement_id = 4066;
+
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 39,
@@ -333,6 +468,11 @@ UPDATE address_settlement_kato
 SET kato_id = 623653600
 WHERE address_settlement_id = 4067
   AND kato_version = '1';
+
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Жанааркинский')
+WHERE settlement_id = 4067;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
@@ -346,6 +486,11 @@ SET kato_id = 623657100
 WHERE address_settlement_id = 4068
   AND kato_version = '1';
 
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Жанааркинский')
+WHERE settlement_id = 4068;
+
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
@@ -357,6 +502,11 @@ UPDATE address_settlement_kato
 SET kato_id = 623661100
 WHERE address_settlement_id = 4069
   AND kato_version = '1';
+
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Жанааркинский')
+WHERE settlement_id = 4069;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
@@ -370,6 +520,11 @@ SET kato_id = 623663100
 WHERE address_settlement_id = 4071
   AND kato_version = '1';
 
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Жанааркинский')
+WHERE settlement_id = 4071;
+
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
@@ -381,6 +536,11 @@ UPDATE address_settlement_kato
 SET kato_id = 623663400
 WHERE address_settlement_id = 4073
   AND kato_version = '1';
+
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Жанааркинский')
+WHERE settlement_id = 4073;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
@@ -394,6 +554,11 @@ SET kato_id = 623665100
 WHERE address_settlement_id = 4074
   AND kato_version = '1';
 
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Жанааркинский')
+WHERE settlement_id = 4074;
+
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
@@ -405,6 +570,11 @@ UPDATE address_settlement_kato
 SET kato_id = 623665300
 WHERE address_settlement_id = 4075
   AND kato_version = '1';
+
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Жанааркинский')
+WHERE settlement_id = 4075;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
@@ -418,6 +588,11 @@ SET kato_id = 623669100
 WHERE address_settlement_id = 4076
   AND kato_version = '1';
 
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Жанааркинский')
+WHERE settlement_id = 4076;
+
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
@@ -429,6 +604,11 @@ UPDATE address_settlement_kato
 SET kato_id = 623830100
 WHERE address_settlement_id = 4227
   AND kato_version = '1';
+
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Улытауский')
+WHERE settlement_id = 4227;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
@@ -442,6 +622,11 @@ SET kato_id = 623831100
 WHERE address_settlement_id = 4228
   AND kato_version = '1';
 
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Улытауский')
+WHERE settlement_id = 4228;
+
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
@@ -453,6 +638,11 @@ UPDATE address_settlement_kato
 SET kato_id = 623831200
 WHERE address_settlement_id = 4229
   AND kato_version = '1';
+
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Улытауский')
+WHERE settlement_id = 4229;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
@@ -466,6 +656,11 @@ SET kato_id = 623833100
 WHERE address_settlement_id = 4230
   AND kato_version = '1';
 
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Улытауский')
+WHERE settlement_id = 4230;
+
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
@@ -477,6 +672,11 @@ UPDATE address_settlement_kato
 SET kato_id = 623835100
 WHERE address_settlement_id = 4231
   AND kato_version = '1';
+
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Улытауский')
+WHERE settlement_id = 4231;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
@@ -490,6 +690,11 @@ SET kato_id = 623839100
 WHERE address_settlement_id = 4232
   AND kato_version = '1';
 
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Улытауский')
+WHERE settlement_id = 4232;
+
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
@@ -501,6 +706,11 @@ UPDATE address_settlement_kato
 SET kato_id = 623841100
 WHERE address_settlement_id = 4233
   AND kato_version = '1';
+
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Улытауский')
+WHERE settlement_id = 4233;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
@@ -514,6 +724,11 @@ SET kato_id = 623841300
 WHERE address_settlement_id = 4235
   AND kato_version = '1';
 
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Улытауский')
+WHERE settlement_id = 4235;
+
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 31,
@@ -525,6 +740,11 @@ UPDATE address_settlement_kato
 SET kato_id = 623843100
 WHERE address_settlement_id = 4236
   AND kato_version = '1';
+
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Улытауский')
+WHERE settlement_id = 4236;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
@@ -538,6 +758,11 @@ SET kato_id = 623843200
 WHERE address_settlement_id = 4237
   AND kato_version = '1';
 
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Улытауский')
+WHERE settlement_id = 4237;
+
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
@@ -549,6 +774,11 @@ UPDATE address_settlement_kato
 SET kato_id = 623849100
 WHERE address_settlement_id = 4238
   AND kato_version = '1';
+
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Улытауский')
+WHERE settlement_id = 4238;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
@@ -562,6 +792,11 @@ SET kato_id = 623849200
 WHERE address_settlement_id = 4239
   AND kato_version = '1';
 
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Улытауский')
+WHERE settlement_id = 4239;
+
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 31,
@@ -573,6 +808,11 @@ UPDATE address_settlement_kato
 SET kato_id = 623851100
 WHERE address_settlement_id = 4240
   AND kato_version = '1';
+
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Улытауский')
+WHERE settlement_id = 4240;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
@@ -586,6 +826,11 @@ SET kato_id = 623853100
 WHERE address_settlement_id = 4241
   AND kato_version = '1';
 
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Улытауский')
+WHERE settlement_id = 4241;
+
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
@@ -597,6 +842,11 @@ UPDATE address_settlement_kato
 SET kato_id = 623853300
 WHERE address_settlement_id = 4242
   AND kato_version = '1';
+
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Улытауский')
+WHERE settlement_id = 4242;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
@@ -610,6 +860,11 @@ SET kato_id = 623855400
 WHERE address_settlement_id = 4244
   AND kato_version = '1';
 
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Улытауский')
+WHERE settlement_id = 4244;
+
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
@@ -621,6 +876,11 @@ UPDATE address_settlement_kato
 SET kato_id = 623863100
 WHERE address_settlement_id = 4246
   AND kato_version = '1';
+
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Улытауский')
+WHERE settlement_id = 4246;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
@@ -634,6 +894,11 @@ SET kato_id = 623863300
 WHERE address_settlement_id = 4248
   AND kato_version = '1';
 
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Улытауский')
+WHERE settlement_id = 4248;
+
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
@@ -645,6 +910,11 @@ UPDATE address_settlement_kato
 SET kato_id = 623865100
 WHERE address_settlement_id = 4249
   AND kato_version = '1';
+
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Улытауский')
+WHERE settlement_id = 4249;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
@@ -658,6 +928,11 @@ SET kato_id = 623865200
 WHERE address_settlement_id = 4250
   AND kato_version = '1';
 
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Улытауский')
+WHERE settlement_id = 4250;
+
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
@@ -669,6 +944,11 @@ UPDATE address_settlement_kato
 SET kato_id = 623871100
 WHERE address_settlement_id = 4251
   AND kato_version = '1';
+
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Улытауский')
+WHERE settlement_id = 4251;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
@@ -682,6 +962,11 @@ SET kato_id = 623875100
 WHERE address_settlement_id = 4252
   AND kato_version = '1';
 
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Улытауский')
+WHERE settlement_id = 4252;
+
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
@@ -693,6 +978,11 @@ UPDATE address_settlement_kato
 SET kato_id = 623875500
 WHERE address_settlement_id = 4253
   AND kato_version = '1';
+
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Улытауский')
+WHERE settlement_id = 4253;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
@@ -706,6 +996,11 @@ SET kato_id = 623875511
 WHERE address_settlement_id = 4253
   AND kato_version = '1';
 
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Улытауский')
+WHERE settlement_id = 4253;
+
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ULYTAU,
     address_settlement_type_id = 41,
@@ -717,3 +1012,9 @@ UPDATE address_settlement_kato
 SET kato_id = 623879100
 WHERE address_settlement_id = 4254
   AND kato_version = '1';
+
+UPDATE address
+SET region_id   = REGION_ID_ULYTAU,
+    district_id = (SELECT id FROM address_district WHERE name = 'Улытауский')
+WHERE settlement_id = 4254;
+
