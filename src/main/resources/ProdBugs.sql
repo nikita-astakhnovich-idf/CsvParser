@@ -30,11 +30,17 @@ WHERE id = 1378;
 
 --4. Для село Красносельское (kato_id = 114047400) две записи в БД с kato_version = 1
 
-нету доступа к прод бд для определения оригинала
+DELETE
+address_settlement
+WHERE id = 1226;
+
+DELETE
+address_settlement_kato
+WHERE address_settlement_id = 1226;
 
 --5. Для село Карабулак (kato_id = 153243100) две записи в БД с kato_version = 1
 
-нету доступа к прод бд для определения оригинала
+обе записи в address_settlement имеют связь с address, с address_settlement_kato связи валидны.
 
 --6. Для Шубарши (kato_id = 155642100) две записи в БД с kato_version = 1 с разными типами: село и посёлок.
 --Сейчас это Село, нужно удалить запись с type_id = 41.
@@ -64,9 +70,14 @@ WHERE id = 4458;
 
 --10. Для село Отемис (kato_id = 116630300) две одинаковые записи на проде с kato_version = 1
 
-нету доступа к прод бд для определения оригинала
+обе записи в address_settlement имеют связь с address, с address_settlement_kato связи валидны.
 
 --11. Для село Амангельды (kato_id = 616061200) две одинаковые записи на проде с kato_version = 1, при этом для одной из
 --них в таблице address_settlement_kato стоит неправильный kato_id (634445102)
 
-нету доступа к прод бд для определения оригинала
+обе записи в address_settlement имеют связь с address
+
+UPDATE address_settlement_kato
+SET kato_id = 616061200
+WHERE id = 7581
+  AND kato_version = '1';
