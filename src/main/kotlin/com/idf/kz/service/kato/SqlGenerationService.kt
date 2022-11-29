@@ -92,6 +92,12 @@ class SqlGenerationService {
     aksuatList.forEach {
       updateSQLScript.append(getUpdateAddressSettlementAksuat(it))
       updateSQLScript.append(getUpdateAddressSettlementKatoAksuat(it))
+
+      val addresses = AddressParseService().getUpdateAddress(it)
+      if (addresses.isNotEmpty()){
+        val addressSql = AddressSqlGeneratorService().generateUpdateSql(addresses)
+        updateSQLScript.append(addressSql)
+      }
     }
     return updateSQLScript.toString()
   }

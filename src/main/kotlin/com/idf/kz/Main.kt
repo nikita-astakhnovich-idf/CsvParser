@@ -16,9 +16,10 @@ fun main() {
 //  ParseService().getUpdateSettlement()
 //  AddressParseService().fillAddressList()
   val sqlUpdateScript = SqlGenerationService().generateUpdateSqlWithAddress(ParseService().getUpdateSettlement())
+  val sqlUpdateAksuatScript = SqlGenerationService().generateAksuatSql(ParseService().getUpdateSettlement())
   ParseService.updateSettlements.forEach { println(it) }
   FileSaveService().saveUpdate(sqlUpdateScript, "AbaiUpdateDb1")
-  println(AddressParseService.addressWithoutNull.count { it.districtName == "Семей" })
+  println(AddressParseService.addressWithoutNull.count { it.districtName == "Аягоз" })
 
 //  println("all in districts  ${ParseService.districts.flatMap { it.settlements }.count()}")
 //  println("manual ${ParseService.manualList.size}")
