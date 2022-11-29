@@ -16,9 +16,8 @@ fun main() {
   val aksuatUpdateList = verificationManual.fillAksuatList()
 
   val sqlUpdateScript = SqlGenerationService().generateUpdateSqlWithAddress(updateList)
-  val sqlUpdateAksuatScript = SqlGenerationService().generateAksuatSql(aksuatUpdateList)
 //  ParseService.manualList.forEach { println(it) }
-  FileSaveService().saveUpdate(sqlUpdateScript + sqlUpdateAksuatScript, "AbaiUpdateDb2")
+  FileSaveService().saveUpdate(sqlUpdateScript, "JetisyUpdateDB")
 //  println(AddressParseService.addressWithoutNull.count { it.districtName == "Аягоз" })
 
 //  println("all in districts  ${ParseService.districts.flatMap { it.settlements }.count()}")
