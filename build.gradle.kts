@@ -13,7 +13,6 @@ repositories {
 
 dependencies {
     implementation ("com.opencsv:opencsv:5.7.1")
-    implementation ("ru.homyakin:iuliia-java:1.8")
     testImplementation(kotlin("test"))
 }
 
