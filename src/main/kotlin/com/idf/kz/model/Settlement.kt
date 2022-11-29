@@ -5,5 +5,5 @@ data class Settlement(
   val typeId: String,
   val katoId: String,
   val parentName: String,
-  var district: String? = null
+  var district: String = ""
 )

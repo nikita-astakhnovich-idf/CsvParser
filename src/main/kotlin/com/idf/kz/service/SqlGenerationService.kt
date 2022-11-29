@@ -38,47 +38,87 @@ class SqlGenerationService {
   fun generateUpdateSql(updateList: List<UpdateSettlement>): String {
     val updateSQLScript = StringBuilder()
     updateList.forEach {
-      updateSQLScript.append(
-        "UPDATE address_settlement \n" +
-            "SET region_id = REGION_ID_ULYTAU, " +
-            "address_settlement_type_id = ${it.addressSettlementTypeId}, " +
-            "kato_id = ${it.katoId}, " +
-            "parent_name = ${getParentName(it.parentName)} \n" +
-            "WHERE id = ${it.id};\n\n"
-      )
-
-      updateSQLScript.append(
-        "UPDATE address_settlement_kato \n" +
-            "SET kato_id = ${it.katoId} \n" +
-            "WHERE address_settlement_id = ${it.id} AND kato_version = '1';\n\n"
-      )
+      updateSQLScript.append(getUpdateAddressSettlement(it))
+      updateSQLScript.append(getUpdateAddressSettlementKato(it))
     }
     return updateSQLScript.toString()
+  }
+
+  fun generateUpdateSqlWithAddress(updateList: List<UpdateSettlement>): String {
+    val updateSQLScript = StringBuilder()
+    updateList.forEach {
+      updateSQLScript.append(getUpdateAddressSettlement(it))
+      updateSQLScript.append(getUpdateAddressSettlementKato(it))
+      updateSQLScript.append(getUpdateAddress(it))
+    }
+    return updateSQLScript.toString()
+  }
+
+  fun generateAksuatSql(aksuatList: List<UpdateSettlement>): String {
+    val updateSQLScript = StringBuilder()
+    updateSQLScript.append(getDelimiter())
+    aksuatList.forEach {
+      updateSQLScript.append(getUpdateAddressSettlementAksuat(it))
+      updateSQLScript.append(getUpdateAddressSettlementKatoAksuat(it))
+      updateSQLScript.append(getUpdateAddress(it))
+    }
+    return updateSQLScript.toString()
+  }
+
+  private fun getUpdateAddressSettlement(updateSettlement: UpdateSettlement): String{
+    return "UPDATE address_settlement \n" +
+        "SET region_id = REGION_ID_ABAI, " +
+        "address_settlement_type_id = ${updateSettlement.addressSettlementTypeId}, " +
+        "kato_id = ${updateSettlement.katoId}, " +
+        "parent_name = ${getParentName(updateSettlement.parentName)} \n" +
+        "WHERE id = ${updateSettlement.id};\n\n"
+  }
+
+  private fun getUpdateAddressSettlementKato(updateSettlement: UpdateSettlement): String{
+    return "UPDATE address_settlement_kato \n" +
+        "SET kato_id = ${updateSettlement.katoId} \n" +
+        "WHERE address_settlement_id = ${updateSettlement.id} AND kato_version = '1';\n\n"
+  }
+
+  private fun getUpdateAddress(updateSettlement: UpdateSettlement): String{
+    return "UPDATE address \n" +
+        "SET region_id = REGION_ID_ABAI, \n" +
+        "district_id = (SELECT id FROM address_district WHERE name = '${updateSettlement.districtName}')\n" +
+        "WHERE settlement_id = ${updateSettlement.id};\n\n"
+  }
+
+  private fun getUpdateAddressSettlementAksuat(updateSettlement: UpdateSettlement): String{
+    return "UPDATE address_settlement \n" +
+        "SET address_district_id = ADDRESS_DISTRICT_ID_AKSUAT, " +
+        "address_settlement_type_id = ${updateSettlement.addressSettlementTypeId}, " +
+        "kato_id = ${updateSettlement.katoId}, " +
+        "parent_name = ${getParentName(updateSettlement.parentName)} \n" +
+        "WHERE id = ${updateSettlement.id};\n\n"
+  }
+
+  private fun getUpdateAddressSettlementKatoAksuat(updateSettlement: UpdateSettlement): String{
+    return "UPDATE address_settlement_kato \n" +
+        "SET kato_id = ${updateSettlement.katoId} \n" +
+        "WHERE address_settlement_id = ${updateSettlement.id} AND kato_version = '1';\n\n"
+  }
+
+  private fun getDelimiter():String{
+    return "\n" +
+        "\n" +
+        "\n" +
+        "////////////////////////////////////////////////////////////////////////////////\n" +
+        "////////////////////////////////////////////////////////////////////////////////\n" +
+        "////////////////////////////////////////////////////////////////////////////////\n" +
+        "////////////////////////////////////////////////////////////////////////////////\n" +
+        "\n" +
+        "    //Аксуат\n" +
+        "\n" +
+        "\n" +
+        "\n"
   }
 
   private fun getParentName(parentName: String?): String? {
     return if (parentName == "") null
     else "'$parentName'"
-  }
-
-  fun generateAksuatSql(aksuatList: List<UpdateSettlement>): String {
-    val updateSQLScript = StringBuilder()
-    aksuatList.forEach {
-      updateSQLScript.append(
-        "UPDATE address_settlement \n" +
-            "SET address_district_id = ADDRESS_DISTRICT_ID_AKSUAT, " +
-            "address_settlement_type_id = ${it.addressSettlementTypeId}, " +
-            "kato_id = ${it.katoId}, " +
-            "parent_name = ${getParentName(it.parentName)} \n" +
-            "WHERE id = ${it.id};\n\n"
-      )
-
-      updateSQLScript.append(
-        "UPDATE address_settlement_kato \n" +
-            "SET kato_id = ${it.katoId} \n" +
-            "WHERE address_settlement_id = ${it.id} AND kato_version = '1';\n\n"
-      )
-    }
-    return updateSQLScript.toString()
   }
 }
