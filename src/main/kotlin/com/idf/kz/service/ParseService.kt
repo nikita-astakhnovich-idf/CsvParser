@@ -1,6 +1,6 @@
 package com.idf.kz.service
 
-import com.idf.kz.converter.DefaultCsvConverter
+import com.idf.kz.converter.CsvWithSemicolonConverter
 import com.idf.kz.model.District
 import com.idf.kz.model.DistrictType
 import com.idf.kz.model.InsertSettlement
@@ -32,6 +32,7 @@ class ParseService {
 
   fun getUpdateSettlement(): List<UpdateSettlement> {
     districts.forEach { district ->
+//      val districtName = district.name
       district.settlements.forEach { settlement ->
         var repeatedWithDistrict = 0
         var isAdded = false
@@ -44,7 +45,8 @@ class ParseService {
                   prodSettlement.id,
                   settlement.typeId,
                   settlement.katoId,
-                  settlement.parentName
+                  settlement.parentName,
+                  settlement.district
                 )
               )
               isAdded = true
@@ -89,7 +91,7 @@ class ParseService {
       }
       if (it.name.contains(settlementParentTypeRegex) || it.name.contains(districtRegex)) continue
       if (it.name.contains(settlementTypeRegex) && isContains(it.name)) {
-        tempDistrict.settlements.add(convertSettlementKatoToSettlement(it, settlementTypeRegex))
+        tempDistrict.settlements.add(convertSettlementKatoToSettlement(it, districtName, settlementTypeRegex))
       } else if (it.name.contains(settlementTypeRegex) && isRegion(it.name)) {
         listForInsertSettlement.add(convertSettlementKatoToSettlement(it, districtName, settlementTypeRegex))
       }
@@ -107,15 +109,6 @@ class ParseService {
 
   private fun isRegion(name: String): Boolean {
     return !name.contains(settlementParentTypeRegex)
-  }
-
-  private fun convertSettlementKatoToSettlement(settlementKATO: SettlementKATO, regex: Regex): Settlement {
-    return Settlement(
-      getName(settlementKATO.name, regex),
-      getType(settlementKATO.name),
-      settlementKATO.katoId,
-      getParentName(settlementKATO)
-    )
   }
 
   private fun convertSettlementKatoToSettlement(
@@ -177,16 +170,19 @@ class ParseService {
     private const val DIRECTORY_PATH = "src/main/resources/KATO_17.10.2022_ru.csv"
     private const val PROD_PATH = "src/main/resources/KATO SOLVA PROD.csv"
 
-    val settlementsKato: List<SettlementKATO> = DefaultCsvConverter()
+    val settlementsKato: List<SettlementKATO> = CsvWithSemicolonConverter()
       .convert(DIRECTORY_PATH, SettlementKATO::class.java)
-    val settlementsFromProd: List<ProductionSettlementKATO> = DefaultCsvConverter()
+    val settlementsFromProd: List<ProductionSettlementKATO> = CsvWithSemicolonConverter()
       .convert(PROD_PATH, ProductionSettlementKATO::class.java)
 
-    val settlementTypeRegex = Regex(SettlementType.values()
+    val settlementTypeRegex = Regex(
+      SettlementType.values()
       .joinToString(separator = "|") { it.typeRegex })
-    private val settlementParentTypeRegex = Regex(SettlementParentType.values()
+    private val settlementParentTypeRegex = Regex(
+      SettlementParentType.values()
       .joinToString(separator = "|") { it.typeRegex })
-    private val districtRegex = Regex(DistrictType.values()
+    private val districtRegex = Regex(
+      DistrictType.values()
       .joinToString(separator = "|") { it.typeRegex })
 
     val districts = mutableListOf<District>()

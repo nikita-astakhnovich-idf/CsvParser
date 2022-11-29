@@ -36,7 +36,7 @@ class VerificationManualModelService(
     newDistrictList.forEach {
       for (prod in prodList) {
         if (prod.name == it.name) {
-          aksuatList.add(UpdateSettlement(prod.id, it.typeId, it.katoId, it.parentName))
+          aksuatList.add(UpdateSettlement(prod.id, it.typeId, it.katoId, it.parentName, it.district))
         }
       }
     }
