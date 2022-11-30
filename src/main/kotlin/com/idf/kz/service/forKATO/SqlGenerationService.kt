@@ -66,7 +66,7 @@ class SqlGenerationService {
     aksuatList.forEach {
       updateSQLScript.append(
         "UPDATE address_settlement \n" +
-            "SET address_district_id = ADDRESS_DISTRICT_ID_AKSUAT, " +
+            "SET address_district_id = ADDRESS_DISTRICT_ID_SAURAN, " +
             "address_settlement_type_id = ${it.addressSettlementTypeId}, " +
             "kato_id = ${it.katoId}, " +
             "parent_name = ${getParentName(it.parentName)} \n" +

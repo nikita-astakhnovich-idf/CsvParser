@@ -30,6 +30,15 @@ class ParseService {
     return insertSettlements
   }
 
+  fun getDistrictUpdate() {
+    val s = VerificationManualModelService(
+        manualList,
+        updateSettlements,
+        settlementsFromProd
+    )
+    s.findUncheckedModel()
+  }
+
   fun getUpdateSettlement(): List<UpdateSettlement> {
     districts.forEach { district ->
       district.settlements.forEach { settlement ->
@@ -144,7 +153,7 @@ class ParseService {
 
   private fun getParentName(kato: SettlementKATO): String {
     var parentName = ""
-    var parentSettlement: SettlementKATO = kato
+    var parentSettlement: SettlementKATO? = null
     for (it in settlementsKato) {
       if (kato.parentId == it.id) {
         parentName = it.name
@@ -155,7 +164,12 @@ class ParseService {
     if (parentName.contains(settlementParentTypeRegex)) {
       return parentName
     } else {
-      parentName = getParentName(parentSettlement)
+      if (parentSettlement == null) {
+        println("123123213")
+        println(kato)
+      } else { parentName = getParentName(parentSettlement!!)
+
+      }
     }
     return parentName
   }
