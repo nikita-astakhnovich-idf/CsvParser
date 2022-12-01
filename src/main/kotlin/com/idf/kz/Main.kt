@@ -18,7 +18,7 @@ fun main() {
   val sqlUpdateScript = SqlGenerationService().generateUpdateSqlWithAddress(updateList)
   val sqlUpdateAksuatScript = SqlGenerationService().generateAksuatSql(aksuatUpdateList)
 //  println(parseService.getInsertSettlement().size)
-//  FileSaveService().saveInsert(SqlGenerationService().generateFullInsertSql(parseService.getInsertSettlement()),
+//  FileSaveService().save(SqlGenerationService().generateFullInsertSql(parseService.getInsertSettlement()),
 //      "abaiInsert2")
 //  ParseService.manualList.forEach { println(it) }
   FileSaveService().save(sqlUpdateScript + sqlUpdateAksuatScript, "AbaiUpdateDb2")
