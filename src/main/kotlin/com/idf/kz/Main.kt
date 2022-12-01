@@ -13,21 +13,11 @@ fun main() {
     ParseService.settlementsFromProd
   )
 
-  val updateList = parseService.getUpdateSettlement()
-  val aksuatUpdateList = verificationManual.fillAksuatList()
-  val insertList = parseService.getInsertSettlement()
+  val updateSettlements = parseService.getUpdateSettlement()
+  val districtUpdateList = verificationManual.fillDistrictList("Косшы")
 
-  val sqlUpdateScript = SqlGenerationService().generateUpdateSqlWithAddress(updateList)
-  val sqlInsertScript = SqlGenerationService().generateFullInsertSql(insertList)
-  val sqlUpdateAksuatScript = SqlGenerationService().generateAksuatSql(aksuatUpdateList)
-
-  FileSaveService().save(sqlUpdateScript + sqlUpdateAksuatScript, "AbaiUpdateDb2")
-  FileSaveService().save(sqlInsertScript, "AbaiInsertDb")
-
-  println("all in districts  ${ParseService.districts.flatMap { it.settlements }.count()}")
-  println("manual ${ParseService.manualList.size}")
-  println("manualMoreOne ${ParseService.manualListMoreOne.size}")
-  println("update ${ParseService.updateSettlements.size}")
-  println("repeatable ${ParseService.repeatableUpdateSettlements.size}")
-  println("insert ${ParseService.insertSettlements.size}")
+  val sqlUpdateDistrictScript =
+      SqlGenerationService().generateDistrictSql(districtUpdateList, "ADDRESS_DISTRICT_ID_KOSSHY")
+  println(districtUpdateList.size)
+  FileSaveService().save( sqlUpdateDistrictScript, "district")
 }

@@ -35,11 +35,10 @@ class SqlGenerationService {
     return updateSQLScript.toString()
   }
 
-  fun generateAksuatSql(aksuatList: List<UpdateSettlement>): String {
+  fun generateDistrictSql(districtList: List<UpdateSettlement>, districtCode: String): String {
     val updateSQLScript = StringBuilder()
-    updateSQLScript.append(getDelimiter())
-    aksuatList.forEach {
-      updateSQLScript.append(getUpdateAddressSettlementAksuat(it))
+    districtList.forEach {
+      updateSQLScript.append(getUpdateAddressSettlementAksuat(it, districtCode))
       updateSQLScript.append(getUpdateAddressSettlementKatoAksuat(it))
       if (ParseService.settlementsIdFromAddress.contains(it.id)) {
         updateSQLScript.append(getUpdateAddress(it))
@@ -93,10 +92,9 @@ class SqlGenerationService {
         "WHERE settlement_id = ${updateSettlement.id};\n\n"
   }
 
-  private fun getUpdateAddressSettlementAksuat(updateSettlement: UpdateSettlement): String {
+  private fun getUpdateAddressSettlementAksuat(updateSettlement: UpdateSettlement, districtCode: String): String {
     return "UPDATE address_settlement \n" +
-        "SET address_district_id = ADDRESS_DISTRICT_ID_AKSUAT, " +
-        "region_id = REGION_ID_ABAI, " +
+        "SET address_district_id = ${districtCode}, " +
         "address_settlement_type_id = ${updateSettlement.addressSettlementTypeId}, " +
         "kato_id = ${updateSettlement.katoId}, " +
         "parent_name = ${getParentName(updateSettlement.parentName)} \n" +
