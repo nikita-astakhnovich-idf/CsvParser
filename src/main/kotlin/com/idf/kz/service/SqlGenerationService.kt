@@ -41,7 +41,9 @@ class SqlGenerationService {
     aksuatList.forEach {
       updateSQLScript.append(getUpdateAddressSettlementAksuat(it))
       updateSQLScript.append(getUpdateAddressSettlementKatoAksuat(it))
-      updateSQLScript.append(getUpdateAddress(it))
+      if (ParseService.setSettlementsId.contains(it.id)) {
+        updateSQLScript.append(getUpdateAddress(it))
+      }
     }
     return updateSQLScript.toString()
   }

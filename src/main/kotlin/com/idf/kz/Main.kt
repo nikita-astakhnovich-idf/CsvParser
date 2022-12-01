@@ -21,10 +21,8 @@ fun main() {
   val sqlInsertScript = SqlGenerationService().generateFullInsertSql(insertList)
   val sqlUpdateAksuatScript = SqlGenerationService().generateAksuatSql(aksuatUpdateList)
 
-  ParseService.setSettlementsId.forEach { println(it)}
-
-//  FileSaveService().save(sqlUpdateScript + sqlUpdateAksuatScript, "AbaiUpdateDb2")
-//  FileSaveService().save(sqlInsertScript, "AbaiInsertDb")
+  FileSaveService().save(sqlUpdateScript + sqlUpdateAksuatScript, "AbaiUpdateDb2")
+  FileSaveService().save(sqlInsertScript, "AbaiInsertDb")
 
   println("all in districts  ${ParseService.districts.flatMap { it.settlements }.count()}")
   println("manual ${ParseService.manualList.size}")

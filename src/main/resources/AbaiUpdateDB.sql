@@ -5176,11 +5176,6 @@ SET kato_id = 103433300
 WHERE address_settlement_id = 7877
   AND kato_version = '1';
 
-UPDATE address
-SET region_id   = REGION_ID_ABAI,
-    district_id = (SELECT id FROM address_district WHERE name = 'Аксуат')
-WHERE settlement_id = 7877;
-
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
     region_id                  = REGION_ID_ABAI,
@@ -5212,11 +5207,6 @@ SET kato_id = 103433324
 WHERE address_settlement_id = 7893
   AND kato_version = '1';
 
-UPDATE address
-SET region_id   = REGION_ID_ABAI,
-    district_id = (SELECT id FROM address_district WHERE name = 'Аксуат')
-WHERE settlement_id = 7893;
-
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
     region_id                  = REGION_ID_ABAI,
@@ -5229,11 +5219,6 @@ UPDATE address_settlement_kato
 SET kato_id = 103435200
 WHERE address_settlement_id = 7892
   AND kato_version = '1';
-
-UPDATE address
-SET region_id   = REGION_ID_ABAI,
-    district_id = (SELECT id FROM address_district WHERE name = 'Аксуат')
-WHERE settlement_id = 7892;
 
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
@@ -5248,11 +5233,6 @@ SET kato_id = 103435300
 WHERE address_settlement_id = 7893
   AND kato_version = '1';
 
-UPDATE address
-SET region_id   = REGION_ID_ABAI,
-    district_id = (SELECT id FROM address_district WHERE name = 'Аксуат')
-WHERE settlement_id = 7893;
-
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
     region_id                  = REGION_ID_ABAI,
@@ -5266,11 +5246,6 @@ SET kato_id = 103435500
 WHERE address_settlement_id = 7894
   AND kato_version = '1';
 
-UPDATE address
-SET region_id   = REGION_ID_ABAI,
-    district_id = (SELECT id FROM address_district WHERE name = 'Аксуат')
-WHERE settlement_id = 7894;
-
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
     region_id                  = REGION_ID_ABAI,
@@ -5283,11 +5258,6 @@ UPDATE address_settlement_kato
 SET kato_id = 103435600
 WHERE address_settlement_id = 7895
   AND kato_version = '1';
-
-UPDATE address
-SET region_id   = REGION_ID_ABAI,
-    district_id = (SELECT id FROM address_district WHERE name = 'Аксуат')
-WHERE settlement_id = 7895;
 
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
@@ -5320,11 +5290,6 @@ SET kato_id = 103437104
 WHERE address_settlement_id = 7904
   AND kato_version = '1';
 
-UPDATE address
-SET region_id   = REGION_ID_ABAI,
-    district_id = (SELECT id FROM address_district WHERE name = 'Аксуат')
-WHERE settlement_id = 7904;
-
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
     region_id                  = REGION_ID_ABAI,
@@ -5356,11 +5321,6 @@ SET kato_id = 103439200
 WHERE address_settlement_id = 7911
   AND kato_version = '1';
 
-UPDATE address
-SET region_id   = REGION_ID_ABAI,
-    district_id = (SELECT id FROM address_district WHERE name = 'Аксуат')
-WHERE settlement_id = 7911;
-
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
     region_id                  = REGION_ID_ABAI,
@@ -5373,11 +5333,6 @@ UPDATE address_settlement_kato
 SET kato_id = 103439223
 WHERE address_settlement_id = 7659
   AND kato_version = '1';
-
-UPDATE address
-SET region_id   = REGION_ID_ABAI,
-    district_id = (SELECT id FROM address_district WHERE name = 'Аксуат')
-WHERE settlement_id = 7659;
 
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
@@ -5410,11 +5365,6 @@ SET kato_id = 103439309
 WHERE address_settlement_id = 7926
   AND kato_version = '1';
 
-UPDATE address
-SET region_id   = REGION_ID_ABAI,
-    district_id = (SELECT id FROM address_district WHERE name = 'Аксуат')
-WHERE settlement_id = 7926;
-
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
     region_id                  = REGION_ID_ABAI,
@@ -5445,11 +5395,6 @@ UPDATE address_settlement_kato
 SET kato_id = 103441200
 WHERE address_settlement_id = 7915
   AND kato_version = '1';
-
-UPDATE address
-SET region_id   = REGION_ID_ABAI,
-    district_id = (SELECT id FROM address_district WHERE name = 'Аксуат')
-WHERE settlement_id = 7915;
 
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
@@ -5482,11 +5427,6 @@ SET kato_id = 103441222
 WHERE address_settlement_id = 7917
   AND kato_version = '1';
 
-UPDATE address
-SET region_id   = REGION_ID_ABAI,
-    district_id = (SELECT id FROM address_district WHERE name = 'Аксуат')
-WHERE settlement_id = 7917;
-
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
     region_id                  = REGION_ID_ABAI,
@@ -5500,11 +5440,6 @@ SET kato_id = 103441231
 WHERE address_settlement_id = 7915
   AND kato_version = '1';
 
-UPDATE address
-SET region_id   = REGION_ID_ABAI,
-    district_id = (SELECT id FROM address_district WHERE name = 'Аксуат')
-WHERE settlement_id = 7915;
-
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
     region_id                  = REGION_ID_ABAI,
@@ -5517,11 +5452,6 @@ UPDATE address_settlement_kato
 SET kato_id = 103441455
 WHERE address_settlement_id = 7926
   AND kato_version = '1';
-
-UPDATE address
-SET region_id   = REGION_ID_ABAI,
-    district_id = (SELECT id FROM address_district WHERE name = 'Аксуат')
-WHERE settlement_id = 7926;
 
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
@@ -5554,11 +5484,6 @@ SET kato_id = 103443111
 WHERE address_settlement_id = 7659
   AND kato_version = '1';
 
-UPDATE address
-SET region_id   = REGION_ID_ABAI,
-    district_id = (SELECT id FROM address_district WHERE name = 'Аксуат')
-WHERE settlement_id = 7659;
-
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
     region_id                  = REGION_ID_ABAI,
@@ -5571,11 +5496,6 @@ UPDATE address_settlement_kato
 SET kato_id = 103443200
 WHERE address_settlement_id = 7922
   AND kato_version = '1';
-
-UPDATE address
-SET region_id   = REGION_ID_ABAI,
-    district_id = (SELECT id FROM address_district WHERE name = 'Аксуат')
-WHERE settlement_id = 7922;
 
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
@@ -5590,11 +5510,6 @@ SET kato_id = 103443203
 WHERE address_settlement_id = 7658
   AND kato_version = '1';
 
-UPDATE address
-SET region_id   = REGION_ID_ABAI,
-    district_id = (SELECT id FROM address_district WHERE name = 'Аксуат')
-WHERE settlement_id = 7658;
-
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
     region_id                  = REGION_ID_ABAI,
@@ -5607,11 +5522,6 @@ UPDATE address_settlement_kato
 SET kato_id = 103443207
 WHERE address_settlement_id = 7817
   AND kato_version = '1';
-
-UPDATE address
-SET region_id   = REGION_ID_ABAI,
-    district_id = (SELECT id FROM address_district WHERE name = 'Аксуат')
-WHERE settlement_id = 7817;
 
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
@@ -5626,11 +5536,6 @@ SET kato_id = 103443300
 WHERE address_settlement_id = 7923
   AND kato_version = '1';
 
-UPDATE address
-SET region_id   = REGION_ID_ABAI,
-    district_id = (SELECT id FROM address_district WHERE name = 'Аксуат')
-WHERE settlement_id = 7923;
-
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
     region_id                  = REGION_ID_ABAI,
@@ -5643,11 +5548,6 @@ UPDATE address_settlement_kato
 SET kato_id = 103443400
 WHERE address_settlement_id = 7924
   AND kato_version = '1';
-
-UPDATE address
-SET region_id   = REGION_ID_ABAI,
-    district_id = (SELECT id FROM address_district WHERE name = 'Аксуат')
-WHERE settlement_id = 7924;
 
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
@@ -5679,11 +5579,6 @@ UPDATE address_settlement_kato
 SET kato_id = 103443600
 WHERE address_settlement_id = 7926
   AND kato_version = '1';
-
-UPDATE address
-SET region_id   = REGION_ID_ABAI,
-    district_id = (SELECT id FROM address_district WHERE name = 'Аксуат')
-WHERE settlement_id = 7926;
 
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
@@ -5734,11 +5629,6 @@ SET kato_id = 103445300
 WHERE address_settlement_id = 7929
   AND kato_version = '1';
 
-UPDATE address
-SET region_id   = REGION_ID_ABAI,
-    district_id = (SELECT id FROM address_district WHERE name = 'Аксуат')
-WHERE settlement_id = 7929;
-
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
     region_id                  = REGION_ID_ABAI,
@@ -5770,11 +5660,6 @@ SET kato_id = 103447103
 WHERE address_settlement_id = 7973
   AND kato_version = '1';
 
-UPDATE address
-SET region_id   = REGION_ID_ABAI,
-    district_id = (SELECT id FROM address_district WHERE name = 'Аксуат')
-WHERE settlement_id = 7973;
-
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
     region_id                  = REGION_ID_ABAI,
@@ -5788,11 +5673,6 @@ SET kato_id = 103447113
 WHERE address_settlement_id = 7934
   AND kato_version = '1';
 
-UPDATE address
-SET region_id   = REGION_ID_ABAI,
-    district_id = (SELECT id FROM address_district WHERE name = 'Аксуат')
-WHERE settlement_id = 7934;
-
 UPDATE address_settlement
 SET address_district_id        = ADDRESS_DISTRICT_ID_AKSUAT,
     region_id                  = REGION_ID_ABAI,
@@ -5805,11 +5685,6 @@ UPDATE address_settlement_kato
 SET kato_id = 103447300
 WHERE address_settlement_id = 7933
   AND kato_version = '1';
-
-UPDATE address
-SET region_id   = REGION_ID_ABAI,
-    district_id = (SELECT id FROM address_district WHERE name = 'Аксуат')
-WHERE settlement_id = 7933;
 
 
 
