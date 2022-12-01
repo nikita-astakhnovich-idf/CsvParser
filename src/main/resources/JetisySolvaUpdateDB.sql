@@ -214,11 +214,6 @@ SET kato_id = 333233200
 WHERE address_settlement_id = 2129
   AND kato_version = '1';
 
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Аксуский')
-WHERE settlement_id = 2129;
-
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
     address_settlement_type_id = 41,
@@ -248,11 +243,6 @@ SET kato_id = 333233400
 WHERE address_settlement_id = 2131
   AND kato_version = '1';
 
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Аксуский')
-WHERE settlement_id = 2131;
-
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
     address_settlement_type_id = 41,
@@ -265,11 +255,6 @@ SET kato_id = 333233500
 WHERE address_settlement_id = 2132
   AND kato_version = '1';
 
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Аксуский')
-WHERE settlement_id = 2132;
-
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
     address_settlement_type_id = 41,
@@ -281,11 +266,6 @@ UPDATE address_settlement_kato
 SET kato_id = 333233600
 WHERE address_settlement_id = 2133
   AND kato_version = '1';
-
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Аксуский')
-WHERE settlement_id = 2133;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
@@ -333,11 +313,6 @@ SET kato_id = 333235300
 WHERE address_settlement_id = 2136
   AND kato_version = '1';
 
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Аксуский')
-WHERE settlement_id = 2136;
-
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
     address_settlement_type_id = 41,
@@ -366,11 +341,6 @@ UPDATE address_settlement_kato
 SET kato_id = 333237200
 WHERE address_settlement_id = 2138
   AND kato_version = '1';
-
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Аксуский')
-WHERE settlement_id = 2138;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
@@ -418,11 +388,6 @@ SET kato_id = 333239300
 WHERE address_settlement_id = 2141
   AND kato_version = '1';
 
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Аксуский')
-WHERE settlement_id = 2141;
-
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
     address_settlement_type_id = 41,
@@ -468,11 +433,6 @@ UPDATE address_settlement_kato
 SET kato_id = 333247200
 WHERE address_settlement_id = 2144
   AND kato_version = '1';
-
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Аксуский')
-WHERE settlement_id = 2144;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
@@ -656,11 +616,6 @@ SET kato_id = 333265200
 WHERE address_settlement_id = 2156
   AND kato_version = '1';
 
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Аксуский')
-WHERE settlement_id = 2156;
-
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
     address_settlement_type_id = 41,
@@ -758,11 +713,6 @@ SET kato_id = 333269300
 WHERE address_settlement_id = 2162
   AND kato_version = '1';
 
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Аксуский')
-WHERE settlement_id = 2162;
-
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
     address_settlement_type_id = 39,
@@ -774,11 +724,6 @@ UPDATE address_settlement_kato
 SET kato_id = 333269400
 WHERE address_settlement_id = 2163
   AND kato_version = '1';
-
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Аксуский')
-WHERE settlement_id = 2163;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
@@ -843,11 +788,6 @@ SET kato_id = 333273400
 WHERE address_settlement_id = 2166
   AND kato_version = '1';
 
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Аксуский')
-WHERE settlement_id = 2166;
-
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
     address_settlement_type_id = 39,
@@ -859,11 +799,6 @@ UPDATE address_settlement_kato
 SET kato_id = 333273500
 WHERE address_settlement_id = 2167
   AND kato_version = '1';
-
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Аксуский')
-WHERE settlement_id = 2167;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
@@ -893,11 +828,6 @@ UPDATE address_settlement_kato
 SET kato_id = 333275300
 WHERE address_settlement_id = 2169
   AND kato_version = '1';
-
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Аксуский')
-WHERE settlement_id = 2169;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
@@ -961,11 +891,6 @@ UPDATE address_settlement_kato
 SET kato_id = 333277400
 WHERE address_settlement_id = 2173
   AND kato_version = '1';
-
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Аксуский')
-WHERE settlement_id = 2173;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
@@ -1115,11 +1040,6 @@ SET kato_id = 333439300
 WHERE address_settlement_id = 2183
   AND kato_version = '1';
 
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Алакольский')
-WHERE settlement_id = 2183;
-
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
     address_settlement_type_id = 41,
@@ -1131,11 +1051,6 @@ UPDATE address_settlement_kato
 SET kato_id = 333439400
 WHERE address_settlement_id = 2184
   AND kato_version = '1';
-
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Алакольский')
-WHERE settlement_id = 2184;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
@@ -1149,11 +1064,6 @@ SET kato_id = 333439500
 WHERE address_settlement_id = 2185
   AND kato_version = '1';
 
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Алакольский')
-WHERE settlement_id = 2185;
-
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
     address_settlement_type_id = 39,
@@ -1165,11 +1075,6 @@ UPDATE address_settlement_kato
 SET kato_id = 333439600
 WHERE address_settlement_id = 2186
   AND kato_version = '1';
-
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Алакольский')
-WHERE settlement_id = 2186;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
@@ -1233,11 +1138,6 @@ UPDATE address_settlement_kato
 SET kato_id = 333443200
 WHERE address_settlement_id = 2190
   AND kato_version = '1';
-
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Алакольский')
-WHERE settlement_id = 2190;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
@@ -1369,11 +1269,6 @@ UPDATE address_settlement_kato
 SET kato_id = 333451200
 WHERE address_settlement_id = 2199
   AND kato_version = '1';
-
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Алакольский')
-WHERE settlement_id = 2199;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
@@ -1540,11 +1435,6 @@ SET kato_id = 333457300
 WHERE address_settlement_id = 2209
   AND kato_version = '1';
 
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Алакольский')
-WHERE settlement_id = 2209;
-
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
     address_settlement_type_id = 41,
@@ -1642,11 +1532,6 @@ SET kato_id = 333463200
 WHERE address_settlement_id = 2215
   AND kato_version = '1';
 
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Алакольский')
-WHERE settlement_id = 2215;
-
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
     address_settlement_type_id = 41,
@@ -1726,11 +1611,6 @@ UPDATE address_settlement_kato
 SET kato_id = 333467400
 WHERE address_settlement_id = 2220
   AND kato_version = '1';
-
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Алакольский')
-WHERE settlement_id = 2220;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
@@ -1828,11 +1708,6 @@ UPDATE address_settlement_kato
 SET kato_id = 333473300
 WHERE address_settlement_id = 2226
   AND kato_version = '1';
-
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Алакольский')
-WHERE settlement_id = 2226;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
@@ -2271,11 +2146,6 @@ SET kato_id = 333649200
 WHERE address_settlement_id = 2806
   AND kato_version = '1';
 
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Ескельдинский')
-WHERE settlement_id = 2806;
-
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
     address_settlement_type_id = 41,
@@ -2407,11 +2277,6 @@ SET kato_id = 333657300
 WHERE address_settlement_id = 2814
   AND kato_version = '1';
 
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Ескельдинский')
-WHERE settlement_id = 2814;
-
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
     address_settlement_type_id = 41,
@@ -2423,11 +2288,6 @@ UPDATE address_settlement_kato
 SET kato_id = 333657400
 WHERE address_settlement_id = 2815
   AND kato_version = '1';
-
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Ескельдинский')
-WHERE settlement_id = 2815;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
@@ -2458,11 +2318,6 @@ SET kato_id = 334030200
 WHERE address_settlement_id = 2399
   AND kato_version = '1';
 
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Кербулакский')
-WHERE settlement_id = 2399;
-
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
     address_settlement_type_id = 44,
@@ -2474,11 +2329,6 @@ UPDATE address_settlement_kato
 SET kato_id = 334030300
 WHERE address_settlement_id = 2400
   AND kato_version = '1';
-
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Кербулакский')
-WHERE settlement_id = 2400;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
@@ -2696,11 +2546,6 @@ SET kato_id = 334039400
 WHERE address_settlement_id = 2418
   AND kato_version = '1';
 
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Кербулакский')
-WHERE settlement_id = 2418;
-
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
     address_settlement_type_id = 44,
@@ -2713,11 +2558,6 @@ SET kato_id = 334039600
 WHERE address_settlement_id = 2420
   AND kato_version = '1';
 
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Кербулакский')
-WHERE settlement_id = 2420;
-
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
     address_settlement_type_id = 41,
@@ -2729,11 +2569,6 @@ UPDATE address_settlement_kato
 SET kato_id = 334039700
 WHERE address_settlement_id = 2421
   AND kato_version = '1';
-
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Кербулакский')
-WHERE settlement_id = 2421;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
@@ -2780,11 +2615,6 @@ UPDATE address_settlement_kato
 SET kato_id = 334041300
 WHERE address_settlement_id = 2424
   AND kato_version = '1';
-
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Кербулакский')
-WHERE settlement_id = 2424;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
@@ -2900,11 +2730,6 @@ SET kato_id = 334047400
 WHERE address_settlement_id = 2434
   AND kato_version = '1';
 
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Кербулакский')
-WHERE settlement_id = 2434;
-
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
     address_settlement_type_id = 41,
@@ -2934,11 +2759,6 @@ SET kato_id = 334049200
 WHERE address_settlement_id = 2437
   AND kato_version = '1';
 
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Кербулакский')
-WHERE settlement_id = 2437;
-
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
     address_settlement_type_id = 41,
@@ -2950,11 +2770,6 @@ UPDATE address_settlement_kato
 SET kato_id = 334049300
 WHERE address_settlement_id = 2438
   AND kato_version = '1';
-
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Кербулакский')
-WHERE settlement_id = 2438;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
@@ -3002,11 +2817,6 @@ SET kato_id = 334053300
 WHERE address_settlement_id = 2443
   AND kato_version = '1';
 
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Кербулакский')
-WHERE settlement_id = 2443;
-
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
     address_settlement_type_id = 41,
@@ -3036,11 +2846,6 @@ SET kato_id = 334055300
 WHERE address_settlement_id = 2447
   AND kato_version = '1';
 
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Кербулакский')
-WHERE settlement_id = 2447;
-
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
     address_settlement_type_id = 44,
@@ -3052,11 +2857,6 @@ UPDATE address_settlement_kato
 SET kato_id = 334055600
 WHERE address_settlement_id = 2450
   AND kato_version = '1';
-
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Кербулакский')
-WHERE settlement_id = 2450;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
@@ -3240,11 +3040,6 @@ SET kato_id = 334233400
 WHERE address_settlement_id = 2467
   AND kato_version = '1';
 
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Коксуский')
-WHERE settlement_id = 2467;
-
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
     address_settlement_type_id = 41,
@@ -3359,11 +3154,6 @@ SET kato_id = 334243200
 WHERE address_settlement_id = 2475
   AND kato_version = '1';
 
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Коксуский')
-WHERE settlement_id = 2475;
-
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
     address_settlement_type_id = 44,
@@ -3443,11 +3233,6 @@ UPDATE address_settlement_kato
 SET kato_id = 334245200
 WHERE address_settlement_id = 2480
   AND kato_version = '1';
-
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Коксуский')
-WHERE settlement_id = 2480;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
@@ -3869,11 +3654,6 @@ SET kato_id = 334439100
 WHERE address_settlement_id = 2508
   AND kato_version = '1';
 
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Каратальский')
-WHERE settlement_id = 2508;
-
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
     address_settlement_type_id = 41,
@@ -3902,11 +3682,6 @@ UPDATE address_settlement_kato
 SET kato_id = 334439400
 WHERE address_settlement_id = 2510
   AND kato_version = '1';
-
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Каратальский')
-WHERE settlement_id = 2510;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
@@ -4209,11 +3984,6 @@ SET kato_id = 334453200
 WHERE address_settlement_id = 2528
   AND kato_version = '1';
 
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Каратальский')
-WHERE settlement_id = 2528;
-
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
     address_settlement_type_id = 41,
@@ -4225,11 +3995,6 @@ UPDATE address_settlement_kato
 SET kato_id = 334453300
 WHERE address_settlement_id = 2529
   AND kato_version = '1';
-
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Каратальский')
-WHERE settlement_id = 2529;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
@@ -4957,11 +4722,6 @@ SET kato_id = 334833200
 WHERE address_settlement_id = 2696
   AND kato_version = '1';
 
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Саркандский')
-WHERE settlement_id = 2696;
-
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
     address_settlement_type_id = 41,
@@ -5042,11 +4802,6 @@ SET kato_id = 334837200
 WHERE address_settlement_id = 2701
   AND kato_version = '1';
 
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Саркандский')
-WHERE settlement_id = 2701;
-
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
     address_settlement_type_id = 41,
@@ -5058,11 +4813,6 @@ UPDATE address_settlement_kato
 SET kato_id = 334837300
 WHERE address_settlement_id = 2702
   AND kato_version = '1';
-
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Саркандский')
-WHERE settlement_id = 2702;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
@@ -5212,11 +4962,6 @@ SET kato_id = 334851200
 WHERE address_settlement_id = 2712
   AND kato_version = '1';
 
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Саркандский')
-WHERE settlement_id = 2712;
-
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
     address_settlement_type_id = 41,
@@ -5314,11 +5059,6 @@ SET kato_id = 334855400
 WHERE address_settlement_id = 2718
   AND kato_version = '1';
 
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Саркандский')
-WHERE settlement_id = 2718;
-
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
     address_settlement_type_id = 39,
@@ -5330,11 +5070,6 @@ UPDATE address_settlement_kato
 SET kato_id = 334855500
 WHERE address_settlement_id = 2719
   AND kato_version = '1';
-
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Саркандский')
-WHERE settlement_id = 2719;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
@@ -5348,11 +5083,6 @@ SET kato_id = 334855600
 WHERE address_settlement_id = 2720
   AND kato_version = '1';
 
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Саркандский')
-WHERE settlement_id = 2720;
-
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
     address_settlement_type_id = 39,
@@ -5364,11 +5094,6 @@ UPDATE address_settlement_kato
 SET kato_id = 334855700
 WHERE address_settlement_id = 2721
   AND kato_version = '1';
-
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Саркандский')
-WHERE settlement_id = 2721;
 
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
@@ -5433,11 +5158,6 @@ SET kato_id = 334857300
 WHERE address_settlement_id = 2724
   AND kato_version = '1';
 
-UPDATE address
-SET region_id   = REGION_ID_ZHETYSU,
-    district_id = (SELECT id FROM address_district WHERE name = 'Саркандский')
-WHERE settlement_id = 2724;
-
 UPDATE address_settlement
 SET region_id                  = REGION_ID_ZHETYSU,
     address_settlement_type_id = 41,
@@ -5454,3 +5174,4 @@ UPDATE address
 SET region_id   = REGION_ID_ZHETYSU,
     district_id = (SELECT id FROM address_district WHERE name = 'Саркандский')
 WHERE settlement_id = 2728;
+
