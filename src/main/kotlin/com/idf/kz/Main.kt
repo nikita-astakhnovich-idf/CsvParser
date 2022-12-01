@@ -13,23 +13,24 @@ fun main() {
   )
   val parseService = ParseService()
   val updateList = parseService.getUpdateSettlement()
-  val aksuatUpdateList = verificationManual.fillAksuatList()
+//  val aksuatUpdateList = verificationManual.fillAksuatList()
 //
   val sqlUpdateScript = SqlGenerationService().generateUpdateSqlWithAddress(updateList)
-  val sqlUpdateAksuatScript = SqlGenerationService().generateAksuatSql(aksuatUpdateList)
+//  val sqlUpdateAksuatScript = SqlGenerationService().generateAksuatSql(aksuatUpdateList)
 //  println(parseService.getInsertSettlement().size)
 //  FileSaveService().save(SqlGenerationService().generateFullInsertSql(parseService.getInsertSettlement()),
 //      "abaiInsert2")
+  SqlGenerationService().generateFullInsertSql(parseService.getInsertSettlement())
 //  ParseService.manualList.forEach { println(it) }
-  FileSaveService().save(sqlUpdateScript + sqlUpdateAksuatScript, "AbaiUpdateDb2")
+//  FileSaveService().save(sqlUpdateScript, "AbaiUpdateDb2")
 //  println(AddressParseService.addressWithoutNull.count { it.districtName == "Аягоз" })
 
+  println(ParseService.insertSettlements.size)
 
-
-//  println("all in districts  ${ParseService.districts.flatMap { it.settlements }.count()}")
+  println("all in districts  ${ParseService.districts.flatMap { it.settlements }.count()}")
 //  ParseService.manualList.forEach { println(it) }
-//  println("manualMoreOne ${ParseService.manualListMoreOne.size}")
-//  println("update ${ParseService.updateSettlements.size}")
-//  println("repeatable ${ParseService.repeatableUpdateSettlements.size}")
+  println("manualMoreOne ${ParseService.manualListMoreOne.size}")
+  println("update ${ParseService.updateSettlements.size}")
+  println("repeatable ${ParseService.repeatableUpdateSettlements.size}")
 //  println(SqlGenerationService().generateUpdateSql(ParseService().getUpdateSettlement()))
 }
