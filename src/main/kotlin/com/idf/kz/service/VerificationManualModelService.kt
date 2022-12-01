@@ -36,11 +36,11 @@ class VerificationManualModelService(
     newDistrictList.forEach {
       for (prod in prodList) {
         if (prod.name == it.name) {
-          aksuatList.add(UpdateSettlement(prod.id, it.typeId, it.katoId, it.parentName, it.district))
+          districtList.add(UpdateSettlement(prod.id, it.typeId, it.katoId, it.parentName, it.district))
         }
       }
     }
-    return aksuatList
+    return districtList
   }
 
   private fun findNewDistrictModel(name:String): List<Settlement> {
@@ -56,6 +56,6 @@ class VerificationManualModelService(
   companion object {
     var checkedList: MutableList<Settlement> = mutableListOf()
     var newDistrictList: MutableList<Settlement> = mutableListOf()
-    var aksuatList: MutableList<UpdateSettlement> = mutableListOf()
+    var districtList: MutableList<UpdateSettlement> = mutableListOf()
   }
 }

@@ -139,7 +139,7 @@ class ParseService {
 
   private fun getParentName(kato: SettlementKATO): String {
     var parentName = ""
-    var parentSettlement: SettlementKATO = kato
+    var parentSettlement: SettlementKATO? = null
     for (it in settlementsKato) {
       if (kato.parentId == it.id) {
         parentName = it.name
@@ -150,7 +150,9 @@ class ParseService {
     if (parentName.contains(settlementParentTypeRegex)) {
       return parentName
     } else {
-      parentName = getParentName(parentSettlement)
+      if (parentSettlement == null) {
+//        println(kato)
+      } else parentName = getParentName(parentSettlement!!)
     }
     return parentName
   }
@@ -170,7 +172,7 @@ class ParseService {
 
   companion object {
     private const val DIRECTORY_PATH = "src/main/resources/DirectoryKato.csv"
-    private const val PROD_PATH = "src/main/resources/SettlementProdSolva.csv"
+    private const val PROD_PATH = "src/main/resources/SettlementProdMM.csv"
     private const val DIRECTORY_PATH_ADDRESS = "src/main/resources/AddressProdSolva.csv"
 
     val settlementsKato: List<SettlementKATO> = CsvWithSemicolonConverter()

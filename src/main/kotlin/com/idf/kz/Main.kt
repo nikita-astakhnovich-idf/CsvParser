@@ -13,8 +13,10 @@ fun main() {
     ParseService.settlementsFromProd
   )
 
-  val updateSettlements = parseService.getUpdateSettlement()
+  println(parseService.getUpdateSettlement().size)
   val districtUpdateList = verificationManual.fillDistrictList("Косшы")
+  println(districtUpdateList.size)
+
 
   val sqlUpdateDistrictScript =
       SqlGenerationService().generateDistrictSql(districtUpdateList, "ADDRESS_DISTRICT_ID_KOSSHY")
