@@ -26,11 +26,11 @@ fun main() {
 
 
 
-//  println("all in districts  ${ParseService.districts.flatMap { it.settlements }.count()}")
+  println("all in districts  ${ParseService.districts.flatMap { it.settlements }.count()}")
 //  ParseService.manualList.forEach { println(it) }
-//  println("manualMoreOne ${ParseService.manualListMoreOne.size}")
-//  println("update ${ParseService.updateSettlements.size}")
-//  println("repeatable ${ParseService.repeatableUpdateSettlements.size}")
+  println("manualMoreOne ${ParseService.manualListMoreOne.size}")
+  println("update ${ParseService.updateSettlements.size}")
+  println("repeatable ${ParseService.repeatableUpdateSettlements.size}")
 //  ParseService.repeatableUpdateSettlements.forEach { println(it) }
 //  println(SqlGenerationService().generateUpdateSql(ParseService().getUpdateSettlement()))
 }
