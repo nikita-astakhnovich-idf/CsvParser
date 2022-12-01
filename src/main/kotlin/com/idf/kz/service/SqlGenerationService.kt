@@ -49,7 +49,9 @@ class SqlGenerationService {
     updateList.forEach {
       updateSQLScript.append(getUpdateAddressSettlement(it))
       updateSQLScript.append(getUpdateAddressSettlementKato(it))
-      updateSQLScript.append(getUpdateAddress(it))
+      if (ParseService.setSettlementsId.contains(it.id)){
+        updateSQLScript.append(getUpdateAddress(it))
+      }
     }
     return updateSQLScript.toString()
   }
@@ -90,6 +92,7 @@ class SqlGenerationService {
   private fun getUpdateAddressSettlementAksuat(updateSettlement: UpdateSettlement): String{
     return "UPDATE address_settlement \n" +
         "SET address_district_id = ADDRESS_DISTRICT_ID_AKSUAT, " +
+        "region_id = REGION_ID_ABAI, " +
         "address_settlement_type_id = ${updateSettlement.addressSettlementTypeId}, " +
         "kato_id = ${updateSettlement.katoId}, " +
         "parent_name = ${getParentName(updateSettlement.parentName)} \n" +
