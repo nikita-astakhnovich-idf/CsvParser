@@ -1,6 +1,8 @@
 package com.idf.kz.service
 
+import com.idf.kz.converter.CsvWithCommaConverter
 import com.idf.kz.converter.CsvWithSemicolonConverter
+import com.idf.kz.model.Address
 import com.idf.kz.model.District
 import com.idf.kz.model.DistrictType
 import com.idf.kz.model.InsertSettlement
@@ -171,23 +173,26 @@ class ParseService {
   }
 
   companion object {
-    private const val DIRECTORY_PATH = "src/main/resources/KATO_17.10.2022_ru.csv"
-    private const val PROD_PATH = "src/main/resources/KATO SOLVA PROD.csv"
+    private const val DIRECTORY_PATH = "src/main/resources/DirectoryKato.csv"
+    private const val PROD_PATH = "src/main/resources/SettlementProdSolva.csv"
+    private const val DIRECTORY_PATH_ADDRESS = "src/main/resources/AddressProdSolva.csv"
 
     val settlementsKato: List<SettlementKATO> = CsvWithSemicolonConverter()
       .convert(DIRECTORY_PATH, SettlementKATO::class.java)
     val settlementsFromProd: List<ProductionSettlementKATO> = CsvWithSemicolonConverter()
       .convert(PROD_PATH, ProductionSettlementKATO::class.java)
 
+
+
     val settlementTypeRegex = Regex(
       SettlementType.values()
-      .joinToString(separator = "|") { it.typeRegex })
+        .joinToString(separator = "|") { it.typeRegex })
     private val settlementParentTypeRegex = Regex(
       SettlementParentType.values()
-      .joinToString(separator = "|") { it.typeRegex })
+        .joinToString(separator = "|") { it.typeRegex })
     private val districtRegex = Regex(
       DistrictType.values()
-      .joinToString(separator = "|") { it.typeRegex })
+        .joinToString(separator = "|") { it.typeRegex })
 
     val districts = mutableListOf<District>()
     val listForInsertSettlement = mutableListOf<Settlement>()
@@ -196,6 +201,10 @@ class ParseService {
     val repeatableUpdateSettlements = mutableListOf<Settlement>()
     val updateSettlements = mutableListOf<UpdateSettlement>()
     val insertSettlements = mutableListOf<InsertSettlement>()
+    val settlementsIdFromAddress: Set<String> = CsvWithCommaConverter()
+      .convert(DIRECTORY_PATH_ADDRESS, Address::class.java)
+      .map { it.settlementId }
+      .toSet()
   }
 }
 
