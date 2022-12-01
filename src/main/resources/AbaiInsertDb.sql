@@ -1,5 +1,165 @@
-INSERT INTO address_settlement (region_id, address_district_id, address_settlement_type_id, name, kato_id, parent_name,
-                                resource)
+C
+:
+\Users
+\nikita.astahnovich
+\.jdks
+\corretto-11.0.17
+\bin
+\java.exe "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2022.2\lib\idea_rt.jar=64375:C:\Program Files\JetBrains\IntelliJ IDEA 2022.2\bin" -Dfile.encoding=UTF-8 -classpath D:
+\test
+\kotlin
+\build
+\classes
+\kotlin
+\main;D
+:
+\test
+\kotlin
+\build
+\resources
+\main;C
+:
+\Users
+\nikita.astahnovich
+\.gradle
+\caches
+\modules-2
+\files-2.1
+\org.jetbrains.kotlin
+\kotlin-stdlib-jdk8
+\1.7.10
+\d70d7d2c56371f7aa18f32e984e3e2e998fe9081
+\kotlin-stdlib-jdk8-1.7.10.jar;C
+:
+\Users
+\nikita.astahnovich
+\.gradle
+\caches
+\modules-2
+\files-2.1
+\com.opencsv
+\opencsv
+\5.7.1
+\d707c095bc8c7c22fb3e377de774458a76229da4
+\opencsv-5.7.1.jar;C
+:
+\Users
+\nikita.astahnovich
+\.gradle
+\caches
+\modules-2
+\files-2.1
+\org.jetbrains.kotlin
+\kotlin-stdlib-jdk7
+\1.7.10
+\1ef73fee66f45d52c67e2aca12fd945dbe0659bf
+\kotlin-stdlib-jdk7-1.7.10.jar;C
+:
+\Users
+\nikita.astahnovich
+\.gradle
+\caches
+\modules-2
+\files-2.1
+\org.jetbrains.kotlin
+\kotlin-stdlib
+\1.7.10
+\d2abf9e77736acc4450dc4a3f707fa2c10f5099d
+\kotlin-stdlib-1.7.10.jar;C
+:
+\Users
+\nikita.astahnovich
+\.gradle
+\caches
+\modules-2
+\files-2.1
+\org.apache.commons
+\commons-text
+\1.10.0
+\3363381aef8cef2dbc1023b3e3a9433b08b64e01
+\commons-text-1.10.0.jar;C
+:
+\Users
+\nikita.astahnovich
+\.gradle
+\caches
+\modules-2
+\files-2.1
+\org.apache.commons
+\commons-lang3
+\3.12.0
+\c6842c86792ff03b9f1d1fe2aab8dc23aa6c6f0e
+\commons-lang3-3.12.0.jar;C
+:
+\Users
+\nikita.astahnovich
+\.gradle
+\caches
+\modules-2
+\files-2.1
+\commons-beanutils
+\commons-beanutils
+\1.9.4
+\d52b9abcd97f38c81342bb7e7ae1eee9b73cba51
+\commons-beanutils-1.9.4.jar;C
+:
+\Users
+\nikita.astahnovich
+\.gradle
+\caches
+\modules-2
+\files-2.1
+\org.apache.commons
+\commons-collections4
+\4.4\62ebe7544cb7164d87e0637a2a6a2bdc981395e8
+\commons-collections4-4.4.jar;C
+:
+\Users
+\nikita.astahnovich
+\.gradle
+\caches
+\modules-2
+\files-2.1
+\org.jetbrains.kotlin
+\kotlin-stdlib-common
+\1.7.10
+\bac80c520d0a9e3f3673bc2658c6ed02ef45a76a
+\kotlin-stdlib-common-1.7.10.jar;C
+:
+\Users
+\nikita.astahnovich
+\.gradle
+\caches
+\modules-2
+\files-2.1
+\org.jetbrains
+\annotations
+\13.0\919f0dfe192fb4e063e7dacadee7f8bb9a2672a9
+\annotations-13.0.jar;C
+:
+\Users
+\nikita.astahnovich
+\.gradle
+\caches
+\modules-2
+\files-2.1
+\commons-logging
+\commons-logging
+\1.2\4bfc12adfe4842bf07b657f0369c4cb522955686
+\commons-logging-1.2.jar;C
+:
+\Users
+\nikita.astahnovich
+\.gradle
+\caches
+\modules-2
+\files-2.1
+\commons-collections
+\commons-collections
+\3.2.2
+\8ad72fe39fa8c91eaaf12aadb21e0c3661fe26d5
+\commons-collections-3.2.2.jar com.idf.kz.MainKt
+INSERT INTO address_settlement (region_id, address_district_id, address_settlement_type_id, name, kato_id, parent_name, resource)
 VALUES (REGION_ID_ABAI, 284, 41, 'Акшабай', 101033102, 'Абралинский с.о.', null);
 
 INSERT INTO address_settlement_kato (kato_version, address_settlement_id, kato_id)
@@ -5448,7 +5608,7 @@ VALUES ('1', (SELECT LAST_INSERT_ID()), 104035403);
 
 INSERT INTO address_settlement (region_id, address_district_id, address_settlement_type_id, name, kato_id, parent_name,
                                 resource)
-VALUES (REGION_ID_ABAI, 288, 41, 'Жарбулак', 104055400, 'Кунарлинский с.о.', null);
+VALUES (REGION_ID_ABAI, 288, 41, 'Жарбұлақ', 104055400, 'Кунарлинский с.о.', null);
 
 INSERT INTO address_settlement_kato (kato_version, address_settlement_id, kato_id)
 VALUES ('1', (SELECT LAST_INSERT_ID()), 104055400);
@@ -5488,7 +5648,15 @@ VALUES ('1', (SELECT LAST_INSERT_ID()), 104061100);
 
 INSERT INTO address_settlement (region_id, address_district_id, address_settlement_type_id, name, kato_id, parent_name,
                                 resource)
-VALUES (REGION_ID_ABAI, 288, 41, 'Жаксылык', 104067203, 'Подборный с.о.', null);
+VALUES (REGION_ID_ABAI, 288, 41, 'Ақши', 104061400, 'Новошульбинский с.о.', null);
+
+INSERT INTO address_settlement_kato (kato_version, address_settlement_id, kato_id)
+VALUES ('1', (SELECT LAST_INSERT_ID()), 104061400);
+
+
+INSERT INTO address_settlement (region_id, address_district_id, address_settlement_type_id, name, kato_id, parent_name,
+                                resource)
+VALUES (REGION_ID_ABAI, 288, 41, 'Жақсылық', 104067203, 'Подборный с.о.', null);
 
 INSERT INTO address_settlement_kato (kato_version, address_settlement_id, kato_id)
 VALUES ('1', (SELECT LAST_INSERT_ID()), 104067203);
@@ -5496,7 +5664,7 @@ VALUES ('1', (SELECT LAST_INSERT_ID()), 104067203);
 
 INSERT INTO address_settlement (region_id, address_district_id, address_settlement_type_id, name, kato_id, parent_name,
                                 resource)
-VALUES (REGION_ID_ABAI, 288, 41, 'кызылтай', 104069303, 'Степной с.о.', null);
+VALUES (REGION_ID_ABAI, 288, 41, 'Қызылтай', 104069303, 'Степной с.о.', null);
 
 INSERT INTO address_settlement_kato (kato_version, address_settlement_id, kato_id)
 VALUES ('1', (SELECT LAST_INSERT_ID()), 104069303);
