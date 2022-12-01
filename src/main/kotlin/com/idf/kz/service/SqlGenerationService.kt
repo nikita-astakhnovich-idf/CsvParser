@@ -52,7 +52,7 @@ class SqlGenerationService {
     return "INSERT INTO address_settlement (region_id, address_district_id, address_settlement_type_id," +
         " name, kato_id, parent_name, resource)" +
         "\nVALUES (" +
-        "REGION_ID_ABAI, " +
+        "REGION_ID_ZHETYSU, " +
         "${insertSettlement.addressDistrictId}, " +
         "${insertSettlement.addressSettlementTypeId}, " +
         "'${insertSettlement.name}', " +
@@ -73,7 +73,7 @@ class SqlGenerationService {
 
   private fun getUpdateAddressSettlement(updateSettlement: UpdateSettlement): String {
     return "UPDATE address_settlement \n" +
-        "SET region_id = REGION_ID_ABAI, " +
+        "SET region_id = REGION_ID_ZHETYSU, " +
         "address_settlement_type_id = ${updateSettlement.addressSettlementTypeId}, " +
         "kato_id = ${updateSettlement.katoId}, " +
         "parent_name = ${getParentName(updateSettlement.parentName)} \n" +
@@ -88,7 +88,7 @@ class SqlGenerationService {
 
   private fun getUpdateAddress(updateSettlement: UpdateSettlement): String {
     return "UPDATE address \n" +
-        "SET region_id = REGION_ID_ABAI, \n" +
+        "SET region_id = REGION_ID_ZHETYSU, \n" +
         "district_id = (SELECT id FROM address_district WHERE name = '${updateSettlement.districtName}')\n" +
         "WHERE settlement_id = ${updateSettlement.id};\n\n"
   }

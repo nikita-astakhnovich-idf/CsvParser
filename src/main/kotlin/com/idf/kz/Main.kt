@@ -18,10 +18,10 @@ fun main() {
   val sqlUpdateScript = SqlGenerationService().generateUpdateSqlWithAddress(updateList)
   val sqlUpdateAksuatScript = SqlGenerationService().generateAksuatSql(aksuatUpdateList)
 //  println(parseService.getInsertSettlement().size)
-//  FileSaveService().save(SqlGenerationService().generateFullInsertSql(parseService.getInsertSettlement()),
-//      "abaiInsert2")
+  FileSaveService().save(SqlGenerationService().generateFullInsertSql(parseService.getInsertSettlement()),
+      "jetisyInsert2")
 //  ParseService.manualList.forEach { println(it) }
-  FileSaveService().save(sqlUpdateScript + sqlUpdateAksuatScript, "AbaiUpdateDb2")
+  FileSaveService().save(sqlUpdateScript + sqlUpdateAksuatScript, "jetisyUpdateDb2")
 //  println(AddressParseService.addressWithoutNull.count { it.districtName == "Аягоз" })
 
 
@@ -31,5 +31,6 @@ fun main() {
 //  println("manualMoreOne ${ParseService.manualListMoreOne.size}")
 //  println("update ${ParseService.updateSettlements.size}")
 //  println("repeatable ${ParseService.repeatableUpdateSettlements.size}")
+//  ParseService.repeatableUpdateSettlements.forEach { println(it) }
 //  println(SqlGenerationService().generateUpdateSql(ParseService().getUpdateSettlement()))
 }
