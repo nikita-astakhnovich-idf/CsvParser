@@ -178,8 +178,6 @@ class ParseService {
     val settlementsFromProd: List<ProductionSettlementKATO> = CsvWithSemicolonConverter()
       .convert(PROD_PATH, ProductionSettlementKATO::class.java)
 
-
-
     val settlementTypeRegex = Regex(
       SettlementType.values()
         .joinToString(separator = "|") { it.typeRegex })

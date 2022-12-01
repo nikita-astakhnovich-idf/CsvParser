@@ -7,22 +7,14 @@ import com.idf.kz.service.VerificationManualModelService
 
 fun main() {
   val parseService = ParseService()
-  val verificationManual = VerificationManualModelService(
-    ParseService.manualList,
-    ParseService.updateSettlements,
-    ParseService.settlementsFromProd
-  )
-
   val updateList = parseService.getUpdateSettlement()
-  val aksuatUpdateList = verificationManual.fillAksuatList()
   val insertList = parseService.getInsertSettlement()
 
   val sqlUpdateScript = SqlGenerationService().generateUpdateSqlWithAddress(updateList)
   val sqlInsertScript = SqlGenerationService().generateFullInsertSql(insertList)
-  val sqlUpdateAksuatScript = SqlGenerationService().generateAksuatSql(aksuatUpdateList)
 
-  FileSaveService().save(sqlUpdateScript + sqlUpdateAksuatScript, "AbaiUpdateDb2")
-  FileSaveService().save(sqlInsertScript, "AbaiInsertDb")
+  FileSaveService().save(sqlUpdateScript, "JetisyUpdateDb2")
+  FileSaveService().save(sqlInsertScript, "JetisyInsertDb2")
 
   println("all in districts  ${ParseService.districts.flatMap { it.settlements }.count()}")
   println("manual ${ParseService.manualList.size}")
