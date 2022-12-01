@@ -197,7 +197,7 @@ class ParseService {
     val repeatableUpdateSettlements = mutableListOf<Settlement>()
     val updateSettlements = mutableListOf<UpdateSettlement>()
     val insertSettlements = mutableListOf<InsertSettlement>()
-    val setSettlementsId: Set<String> = CsvWithCommaConverter()
+    val settlementsIdFromAddress: Set<String> = CsvWithCommaConverter()
       .convert(DIRECTORY_PATH_ADDRESS, Address::class.java)
       .map { it.settlementId }
       .toSet()
