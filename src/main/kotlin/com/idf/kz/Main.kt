@@ -14,12 +14,11 @@ fun main() {
   )
 
   println(parseService.getUpdateSettlement().size)
-  val districtUpdateList = verificationManual.fillDistrictList("Косшы")
+  val districtUpdateList = verificationManual.fillDistrictList("Сауран")
   println(districtUpdateList.size)
 
 
   val sqlUpdateDistrictScript =
-      SqlGenerationService().generateDistrictSql(districtUpdateList, "ADDRESS_DISTRICT_ID_KOSSHY")
-  println(districtUpdateList.size)
+      SqlGenerationService().generateDistrictSql(districtUpdateList, "ADDRESS_DISTRICT_ID_SAURAN")
   FileSaveService().save( sqlUpdateDistrictScript, "district")
 }

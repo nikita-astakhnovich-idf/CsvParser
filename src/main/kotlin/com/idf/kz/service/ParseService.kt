@@ -177,7 +177,7 @@ class ParseService {
 
     val settlementsKato: List<SettlementKATO> = CsvWithSemicolonConverter()
       .convert(DIRECTORY_PATH, SettlementKATO::class.java)
-    val settlementsFromProd: List<ProductionSettlementKATO> = CsvWithSemicolonConverter()
+    val settlementsFromProd: List<ProductionSettlementKATO> = CsvWithCommaConverter()
       .convert(PROD_PATH, ProductionSettlementKATO::class.java)
 
 
