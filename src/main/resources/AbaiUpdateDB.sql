@@ -5845,6 +5845,11 @@ SET kato_id = 103620200
 WHERE address_settlement_id = 7292
   AND kato_version = '1';
 
+UPDATE address
+SET region_id   = REGION_ID_ABAI,
+    district_id = (SELECT id FROM address_district WHERE name = 'Аягозский')
+WHERE settlement_id = 7292;
+
 UPDATE address_settlement
 SET address_settlement_type_id = 41,
     kato_id                    = 103620300,
@@ -5856,6 +5861,11 @@ SET kato_id = 103620300
 WHERE address_settlement_id = 7293
   AND kato_version = '1';
 
+UPDATE address
+SET region_id   = REGION_ID_ABAI,
+    district_id = (SELECT id FROM address_district WHERE name = 'Аягозский')
+WHERE settlement_id = 7293;
+
 UPDATE address_settlement
 SET address_settlement_type_id = 41,
     kato_id                    = 103620500,
@@ -5866,3 +5876,8 @@ UPDATE address_settlement_kato
 SET kato_id = 103620500
 WHERE address_settlement_id = 7295
   AND kato_version = '1';
+
+UPDATE address
+SET region_id   = REGION_ID_ABAI,
+    district_id = (SELECT id FROM address_district WHERE name = 'Аягозский')
+WHERE settlement_id = 7295;
