@@ -11,7 +11,6 @@ class SqlGenerationService {
       fullSqlScript.append(getInsertAddressSettlement(it))
       fullSqlScript.append(getInsertAddressSettlementKato(it))
     }
-    fullSqlScript.delete(fullSqlScript.length - 2, fullSqlScript.length - 1)
     return fullSqlScript.toString()
   }
 
