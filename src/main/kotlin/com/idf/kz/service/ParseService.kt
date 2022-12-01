@@ -169,9 +169,9 @@ class ParseService {
   }
 
   companion object {
-    private const val DIRECTORY_PATH = "src/main/resources/KATO_17.10.2022_ru.csv"
-    private const val PROD_PATH = "src/main/resources/KATO_SOLVA_PROD_MM.csv"
-    private const val DIRECTORY_PATH_ADDRESS = "src/main/resources/solva_kz_address.csv"
+    private const val DIRECTORY_PATH = "src/main/resources/DirectoryKato.csv"
+    private const val PROD_PATH = "src/main/resources/SettlementProdMM.csv"
+    private const val DIRECTORY_PATH_ADDRESS = "src/main/resources/AddressProdSolva.csv"
 
     val settlementsKato: List<SettlementKATO> = CsvWithSemicolonConverter()
       .convert(DIRECTORY_PATH, SettlementKATO::class.java)
